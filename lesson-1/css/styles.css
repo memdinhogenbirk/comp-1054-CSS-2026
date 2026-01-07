@@ -1,2 +1,59 @@
 @charset "UTF-8";
-
+/*named selector*/
+h2 {
+    color: red;
+    font-style: italic;
+}
+/*id selector*/
+#project {
+    color: olive;
+}
+/*class selector*/
+.about {
+    background-color: lightgray;
+}
+/*contextual/descendent selector*/
+section p {
+    color: darkorange;
+}
+.subproject p {
+    color: darkblue;
+}
+/*group selector*/
+h1, h2 {
+    font-family: Arial, sans-serif;
+}
+/*pseudo class selector <this order is best practice>*/
+a:link {
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:visited {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:focus {
+    background-color: yellow;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    color: orange;
+}
+/*structural pseudo class selector*/
+li:nth-child(3n) /*li:nth-child(3n) for every third child li:nth-child(3n+1 or 3n-1) to offset*/{
+    background-color: white;
+}
+li:nth-of-type(odd) {
+    font-weight: bold;
+}
+article section:last-of-type {
+    background-color: lightblue;
+}
+/*sibling and pseudo element selector*/
+h1 + p::first-line{
+    text-transform: uppercase;
+}
