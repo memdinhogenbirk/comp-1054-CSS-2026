@@ -16,6 +16,7 @@ body {
 	background: #FCC;
 	width: 80%;
 	margin: 0 auto;
+	padding: 1.5%;
 	/* STEP 1: Set the container to display: grid; */
 	display:grid;
 	/* STEP 7: Plot out the grid-template-areas */
