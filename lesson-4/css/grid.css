@@ -23,11 +23,11 @@ body {
 	                     "navbar maincontent asidebar"
 	                     "footer footer footer";
 	/* STEP 8: Control the width of the grid rows */
-	
+	grid-template-rows: auto 1fr auto;
 	/* STEP 9: Control the width of the grid columns (try the fr unit) */
-	
+	grid-template-columns: 1fr 3fr 1fr;
 	/* STEP 10b: Set the grid-gap */
-	
+	grid-gap: 2.5%;
 }
 
 header {
@@ -36,9 +36,9 @@ header {
 	/* STEP 2: Identify the header as a grid-area */
 	grid-area: myHeader;
 	/* STEP 11a: Fix the <header> - set display: flex; to have the <h1> and the <nav> sit beside each other */
-	
+	display: flex;
 	/* STEP 11b: Set them at either end of the <header> with justify-content: space-between; */
-
+	justify-content: space-between;
 	/* What do you think? Which of the three methods do you think was the most appropriate for the "Holy Grail" layout? */
 }
 
@@ -85,5 +85,5 @@ header,
 #container > aside,
 footer {
     /* STEP 10a: add some padding to the main layout containers to give the text some room to breathe - see the effect in the browser, then comment this out and head up to the #container rule for an alternative */
-    
+    padding: 2.5%;
 }
