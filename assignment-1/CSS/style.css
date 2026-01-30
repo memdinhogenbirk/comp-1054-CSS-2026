@@ -52,3 +52,15 @@ section:nth-of-type(2) text:first-of-type {
   vertical-align: text-top;
 
 }
+section:nth-of-type(4) p > em{
+  display: inline-block;
+  text-transform: uppercase;
+  transform: scaleX(5);
+  margin: 0 15rem;
+}
+section:nth-of-type(4) text > em {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 4rem;
+  display: flex;
+}
