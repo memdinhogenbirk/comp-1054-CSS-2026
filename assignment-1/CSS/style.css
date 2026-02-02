@@ -41,6 +41,18 @@ i, i::after{
   font-style: normal;
   font-weight: 600;
 }
+article:first-of-type{
+  display: flex;
+}
+article:first-of-type section{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 2rem;
+}
+article:first-of-type section p{
+  text-indent: auto;
+}
 section{
   display: flex;
   width: max-content;
