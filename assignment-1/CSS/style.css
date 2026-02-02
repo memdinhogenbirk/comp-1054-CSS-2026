@@ -14,6 +14,7 @@
     14. No 3rd-party CSS themes or frameworks are permitted. All CSS and HTML must be your own work.
     15. Only use CSS and HTML techniques that we have learned in class - code beyond the scope of the course content may be subject to a code review. Ensure that all work submitted adheres to Georgian College's Academic Integrity policies and procedures, available at https://cat.georgiancollege.ca/academic-regulations/integrity/
     */
+/*#region Normalize*/
 html {
   box-sizing: border-box;
 }
@@ -24,6 +25,8 @@ body{
   width: 100%;
   margin: 0;
 }
+/*#endregion*/
+/*#region Global*/
 html{
   background-color: black;
   color: #7FD3D3;
@@ -47,6 +50,21 @@ i, i::after{
   font-style: normal;
   font-weight: 600;
 }
+i::after {
+  content: "reverse|";
+  display: inline-block;
+  transform: scaleX(-1);/*Though you did not teach this in class, I did learn it in class when we were replicating the newspaper article. I used it then to increase the height of font, I'm using it now to reverse the font*/
+}
+section{
+  display: flex;
+  width: max-content;
+  line-height: 200%;
+  text-align: center;
+  width: auto;
+  justify-content: center;
+}
+/*#endregion Global*/
+/*#region First Article*/
 article:first-of-type{
   display: flex;
 }
@@ -59,19 +77,8 @@ article:first-of-type section{
 article:first-of-type section p{
   text-indent: 2rem;
 }
-section{
-  display: flex;
-  width: max-content;
-  line-height: 200%;
-  text-align: center;
-  width: auto;
-  justify-content: center;
-}
-i::after {
-  content: "reverse|";
-  display: inline-block;
-  transform: scaleX(-1);/*Though you did not teach this in class, I did learn it in class when we were replicating the newspaper article.*/
-}
+/*#endregion First Article, Paragraphs*/
+/*#region Second Article, Lyrics*/
 section:first-of-type em{
   text-decoration: line-through;
   text-transform: uppercase;
@@ -95,7 +102,6 @@ section:nth-of-type(2) text:hover b{
   font-size: 24px;
   cursor: pointer;
 }
-
 section:first-of-type b, section:nth-of-type(2) p > b{/*skin*/
   text-transform: uppercase;
   font-size: 24px;
@@ -119,6 +125,7 @@ section:nth-of-type(3) text{/*only silence*/
 section:nth-of-type(3) text em{/*only silence*/
   position: relative;
 }
+/*#region Sheet Music Style Lyrics*/
 section:nth-of-type(3) text em:first-of-type{bottom: 42px;}/*Oh*/
 section:nth-of-type(3) text em:nth-of-type(2){bottom: 28px;}/*Only*/
 section:nth-of-type(3) text em:nth-of-type(3){bottom: 42px;}/*Silence*/
@@ -147,12 +154,15 @@ section:nth-of-type(4) p > em{
   transform: scaleX(5);
   margin: 0 15rem;
 }
+/*#endregion Sheet Music Style Lyrics*/
 section:nth-of-type(4) text > em {
   font-size: 24px;
   text-transform: uppercase;
   margin: 4rem;
   display: flex;
 }
+/*#endregion Second Article, Lyrics*/
+/*#region footer*/
 footer{
   display: flex;
   font-family: sans-serif;
@@ -162,3 +172,4 @@ footer{
 footer p{
   padding: 1rem;
 }
+/*#endregion footer*/
