@@ -16,11 +16,6 @@
     */
 html {
   box-sizing: border-box;
-  background-color: #000000;
-  color: #7FD3D3;
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  justify-content: center;
 }
 h1, h2{
   text-align: center;
@@ -28,12 +23,24 @@ h1, h2{
 *, *::before, *::after {
   box-sizing: inherit;
 }
-body {
-  
+html{
+  background-color: #000000;
+  color: #7FD3D3;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-around;
 }
 i, i::after{
   text-transform: uppercase;
   font-size: 24px;
+}
+section{
+  display: flex;
+  width: max-content;
+  line-height: 200%;
+  text-align: center;
+  width: auto;
+  justify-content: center;
 }
 i::after {
   content: "reverse|";
@@ -51,11 +58,6 @@ section:nth-of-type(2) p em {
   margin-top: 4rem;
   margin-left: -3.5rem;
 }
-section{
-  border: 1px white solid;
-  width: max-content;
-  line-height: 200%;
-}
 section:nth-of-type(2) text:first-of-type {
   vertical-align: text-top;
 }
@@ -69,16 +71,15 @@ section:nth-of-type(2) text:hover b{
 section:first-of-type b, section:nth-of-type(2) p > b{/*skin*/
   text-transform: uppercase;
   font-size: 24px;
-  margin-right: 0;
-  margin-left: 3rem;
   text-decoration: underline;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -1rem;
 }
 section:first-of-type text, section:nth-of-type(2) text:last-of-type{/*end and begin*/
   display: flex;
-  flex-direction: column;
   width:min-content;
-  margin-right: 0.3rem;
-  margin-left: auto;
+  margin: 0 auto;
   text-align: center;
   padding-bottom: 1rem;
 }
