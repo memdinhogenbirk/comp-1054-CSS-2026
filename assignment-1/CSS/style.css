@@ -22,7 +22,9 @@ html {
   display: flex;
   justify-content: center;
 }
-
+h1, h2{
+  text-align: center;
+}
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -31,6 +33,7 @@ body {
 }
 i, i::after{
   text-transform: uppercase;
+  font-size: 24px;
 }
 i::after {
   content: "reverse|";
@@ -48,10 +51,67 @@ section:nth-of-type(2) p em {
   margin-top: 4rem;
   margin-left: -3.5rem;
 }
+section{
+  border: 1px white solid;
+  width: max-content;
+  line-height: 200%;
+}
 section:nth-of-type(2) text:first-of-type {
   vertical-align: text-top;
-
 }
+section:nth-of-type(2) text:hover b{
+  color: #e91e63;
+  text-transform: uppercase;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+section:first-of-type b, section:nth-of-type(2) p > b{/*skin*/
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-right: 0;
+  margin-left: 3rem;
+  text-decoration: underline;
+}
+section:first-of-type text, section:nth-of-type(2) text:last-of-type{/*end and begin*/
+  display: flex;
+  flex-direction: column;
+  width:min-content;
+  margin-right: 0.3rem;
+  margin-left: auto;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+section:nth-of-type(3) text{/*only silence*/
+  word-spacing: 1rem;
+  line-height: 600%;
+  position: relative;
+}
+section:nth-of-type(3) text em{/*only silence*/
+  position: relative;
+}
+section:nth-of-type(3) text em:first-of-type{bottom: 42px;}/*Oh*/
+section:nth-of-type(3) text em:nth-of-type(2){bottom: 28px;}/*Only*/
+section:nth-of-type(3) text em:nth-of-type(3){bottom: 42px;}/*Silence*/
+section:nth-of-type(3) text em:nth-of-type(4){bottom: 28px;}/*Can*/
+section:nth-of-type(3) text em:nth-of-type(5){bottom: 14px;}/*Restore*/
+section:nth-of-type(3) text em:nth-of-type(6){bottom: 42px;}/*My*/
+section:nth-of-type(3) text em:nth-of-type(7){bottom: 28px;}/*Sense*/
+section:nth-of-type(3) text em:nth-of-type(8){bottom: 14px;}/*Of*/
+section:nth-of-type(3) text em:nth-of-type(9){bottom: 28px;}/*Place*/
+section:nth-of-type(3) text em:nth-of-type(10){bottom: 14px;}/*I*/
+section:nth-of-type(3) text em:nth-of-type(12){top: 14px;}/*Before*/
+section:nth-of-type(3) text em:nth-of-type(13){bottom: 42px;}/*Oh*/
+section:nth-of-type(3) text em:nth-of-type(14){bottom: 28px;}/*Only*/
+section:nth-of-type(3) text em:nth-of-type(15){bottom: 42px;}/*Silence*/
+section:nth-of-type(3) text em:nth-of-type(16){bottom: 28px;}/*Can*/
+section:nth-of-type(3) text em:nth-of-type(17){bottom: 14px;}/*Repair*/
+section:nth-of-type(3) text em:nth-of-type(18){bottom: 42px;}/*My*/
+section:nth-of-type(3) text em:nth-of-type(19){bottom: 28px;}/*Sense*/
+section:nth-of-type(3) text em:nth-of-type(20){bottom: 14px;}/*Of*/
+section:nth-of-type(3) text em:nth-of-type(22){bottom: 28px;}/*I*/
+section:nth-of-type(3) text em:nth-of-type(23){bottom: 42px;}/*Lost*/
+section:nth-of-type(3) text em:nth-of-type(24){bottom: 28px;}/*Somewhere*/
 section:nth-of-type(4) p > em{
   display: inline-block;
   text-transform: uppercase;
