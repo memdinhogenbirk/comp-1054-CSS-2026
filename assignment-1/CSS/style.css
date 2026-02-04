@@ -40,6 +40,7 @@ h1, h2, h3{
   text-transform: uppercase;
   font-weight: 800;
   text-shadow: #7FD3D3;
+  margin: 1rem 0rem auto auto;
 }
 h1{
   font-size: 48px;
@@ -56,6 +57,7 @@ i::after {
   transform: scaleX(-1);/*Though you did not teach this in class, I did learn it in class when we were replicating the newspaper article. I used it then to increase the height of font, I'm using it now to reverse the font*/
 }
 section{
+  margin: 0 auto;
   display: flex;
   width: max-content;
   line-height: 200%;
