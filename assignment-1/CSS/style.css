@@ -34,10 +34,18 @@ html{
   display: flex;
   justify-content: space-around;
 }
-figure{
+div{
   background: #afabc9;
   background: radial-gradient(circle, #8783A2 10%, #333052 30%, black 50%);
-  padding: 9rem 0;
+  transform: scaleX(1.8) scaleY(.3);
+  width: 50%;
+  position: absolute;
+  height:50rem;
+  top:190px;
+  left: 25%;
+}
+figure, figcaption{
+  z-index: 1;
 }
 img{
   width: 800px;
@@ -46,6 +54,7 @@ header{
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: relative;
 }
 h1, h2, h3{
   text-align: center;
@@ -66,7 +75,8 @@ i, i::after{
 i::after {
   content: "reverse|";
   display: inline-block;
-  transform: scaleX(-1);/*Though you did not teach this in class, I did learn it in class when we were replicating the newspaper article. I used it then to increase the height of font, I'm using it now to reverse the font*/
+  transform: scaleX(-1);/*flip the after text on the X axis*/
+  /*Though you did not teach this in class, I did learn it in class when we were replicating the newspaper article. I used it then to increase the height of font, I'm using it now to reverse the font*/
 }
 section{
   display: flex;
@@ -93,6 +103,7 @@ article:first-of-type{
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 3fr;
   border-bottom: white solid 1px;
+  padding-top: 5rem;
 }
 article:first-of-type h1{
   grid-column: 1/-1;
