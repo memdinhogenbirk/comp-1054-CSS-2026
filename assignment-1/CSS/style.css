@@ -25,7 +25,10 @@ body{
   width: 100%;
   margin: 0;
 }
-/*#endregion*/
+/*#endregion Normalize*/
+
+/*=====================================================================================*/
+
 /*#region Global*/
 html{
   background-color: black;
@@ -38,10 +41,10 @@ main {
   display: flex;
   flex-direction: column;
 }
-div{
+div{/*SPOTLIGHT EFFECT*/
   background: #afabc9;
-  background: radial-gradient(circle, #8783A2 10%, #333052 30%, black 50%);
-  transform: scaleX(1.8) scaleY(.3);
+  background: radial-gradient(circle, #8783A2 10%, #333052 30%, black 50%);/*circular gradient, 3 color values, with stopping points defined with %*/
+  transform: scaleX(1.8) scaleY(.3);/*squish and stretch gradient*/
   width: 50%;
   position: absolute;
   height:50rem;
@@ -49,15 +52,13 @@ div{
   left: 25%;
   z-index: -1;
 }
-figure{
+figure{/*album cover image*/
   margin: 0 auto;
   z-index: 1;
 }
 
 figcaption{
   padding-top: 1rem;
-  z-index: -1;
-  position: relative;
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
@@ -102,7 +103,8 @@ i:hover::after {/*REVERSE*/
   border-right: 3px solid #e91e63;
   display: inline-block;
   transform: scaleX(-1);/*flip the after text on the X axis*/
-  /*Though you did not teach this in class, I did learn it in class when we were replicating the newspaper article. I used it then to increase the height of font, I'm using it now to reverse the font*/
+  /*Though you did not teach this in class, I did learn it in class when we were replicating the newspaper article. 
+  I used it then to increase the height of font, I'm using it now to reverse the font*/
 }
 section{
   display: flex;
@@ -112,6 +114,13 @@ section{
   text-align: center;
   width: auto;
   justify-content: center;
+}
+header p{
+  margin-top: 0;
+  margin-bottom: 5rem;
+}
+header h1{
+  margin-bottom: 0;
 }
 main a{
   color:#e91e63;
@@ -204,6 +213,8 @@ section:nth-of-type(3) span{/*only silence*/
 section:nth-of-type(3) span em{/*only silence*/
   position: relative;
 }
+
+/*=====================================================================================*/
 /*#region Sheet Music Style Lyrics*/
 section:nth-of-type(3) span em:first-of-type{bottom: 42px;}/*Oh*/
 section:nth-of-type(3) span em:nth-of-type(2){bottom: 28px;}/*Only*/
@@ -227,6 +238,8 @@ section:nth-of-type(3) span em:nth-of-type(20){bottom: 14px;}/*Of*/
 section:nth-of-type(3) span em:nth-of-type(22){bottom: 28px;}/*I*/
 section:nth-of-type(3) span em:nth-of-type(23){bottom: 42px;}/*Lost*/
 section:nth-of-type(3) span em:nth-of-type(24){bottom: 28px;}/*Somewhere*/
+/*#endregion Sheet Music Style Lyrics*/
+/*=====================================================================================*/
 
 section:nth-of-type(4) p > em{/*long long*/
   display: inline-block;
@@ -234,7 +247,7 @@ section:nth-of-type(4) p > em{/*long long*/
   transform: scaleX(5);
   margin: 0 15rem;
 }
-/*#endregion Sheet Music Style Lyrics*/
+
 section:nth-of-type(4) span > em {
   font-size: 24px;
   text-transform: uppercase;
@@ -242,6 +255,9 @@ section:nth-of-type(4) span > em {
   display: flex;
 }
 /*#endregion Second Article, Lyrics*/
+
+/*=====================================================================================*/
+
 /*#region footer*/
 footer{
   display: flex;
