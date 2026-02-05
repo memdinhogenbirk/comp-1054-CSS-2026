@@ -145,11 +145,15 @@ article:first-of-type section p{
 }
 /*#endregion First Article, Paragraphs*/
 /*#region Second Article, Lyrics*/
-section:first-of-type em{
+section:first-of-type em{/*STAMINAS GONE*/
   text-decoration: line-through;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 24px;
+  color: #e91e63;
+}
+section:first-of-type em:hover{
+  opacity: 20%;
 }
 section:nth-of-type(2) p em {
   display: inline-block;
