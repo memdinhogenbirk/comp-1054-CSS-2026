@@ -13,7 +13,9 @@
     13. Include some fine-print at the bottom of the page with links to any resources referenced in the creation of your assignment.
     14. No 3rd-party CSS themes or frameworks are permitted. All CSS and HTML must be your own work.
     15. Only use CSS and HTML techniques that we have learned in class - code beyond the scope of the course content may be subject to a code review. Ensure that all work submitted adheres to Georgian College's Academic Integrity policies and procedures, available at https://cat.georgiancollege.ca/academic-regulations/integrity/
-    TESTING A COMMIT TO SEE IF PAGES LOVES ME OR NOT*/
+    */
+/*=====================================================================================*/
+
 /*#region Normalize*/
 html {
   box-sizing: border-box;
@@ -46,25 +48,24 @@ div{/*SPOTLIGHT EFFECT*/
   background: radial-gradient(circle, #8783A2 10%, #333052 30%, black 50%);/*circular gradient, 3 color values, with stopping points defined with %*/
   transform: scaleX(1.8) scaleY(.3);/*squish and stretch gradient*/
   width: 50%;
-  position: absolute;
+  position: absolute;/*positioned absolute so it can be placed over the main content initially*/
   height:50rem;
   top:190px;
   left: 25%;
-  z-index: -1;
+  z-index: -1;/*moved down the z index to hide behind content instead of overlaying it*/
 }
-figure{/*album cover image*/
+figure{/*album cover image container*/
   margin: 0 auto;
-  z-index: 1;
 }
 
-figcaption{
+figcaption{/*Contains link for the image source*/
   padding-top: 1rem;
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
   font-size: 18px;
 }
-img{
+img{/*album cover image*/
   width: 800px;
 }
 header{
@@ -91,7 +92,7 @@ i, i::after{
 }
 i:hover{
   color: #e91e63;
-  text-shadow: #4f0a21 -1px -1px,
+  text-shadow: #4f0a21 -1px -1px,/*cool 3d text effect using stacked text shadows*/
     #4f0a21 -2px -2px,
     #4f0a21 -3px -3px,
     #4f0a21 -4px -4px,
@@ -115,6 +116,11 @@ section{
   width: auto;
   justify-content: center;
 }
+/*#endregion Global*/
+
+/*=====================================================================================*/
+
+/*#region Less specific (non global) selectors*/
 header p{
   margin-top: 0;
   margin-bottom: 5rem;
@@ -131,17 +137,22 @@ main a{
 article a:hover{
   color: #b01f4f;
 }
-/*#endregion Global*/
-/*#region First Article*/
+/*#endregion Less specific (non global) selectors*/
+
+/*=====================================================================================*/
+
+/*#region First Article (Overview)*/
 article:first-of-type{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-columns: 1fr 1fr;/*Two columns, equal sized*/
+  grid-template-rows: 1fr 3fr;/*Two rows, first row contains only heading (so smaller), second contains both paragraphs with their headers, side by side*/
   border-bottom: white solid 1px;
   padding-top: 5rem;
 }
 article:first-of-type h1{
-  grid-column: 1/-1;
+  grid-column-start: 1;/*heading starts at first column line (maybe I'm overthinking this, but I feel like these indexs should be based on the column, 
+  not the lines that separate them.)*/
+  grid-column-end: 3;/*end at last column line*/
   border-top: 1px solid white;
   padding-top: 2rem;
 }
@@ -152,7 +163,10 @@ article:first-of-type section{
 article:first-of-type section p{
   text-indent: 2rem;
 }
-/*#endregion First Article, Paragraphs*/
+/*#endregion First Article (Overview)*/
+
+/*=====================================================================================*/
+
 /*#region Second Article, Lyrics*/
 section:first-of-type em{/*STAMINAS GONE*/
   text-decoration: line-through;
@@ -181,7 +195,7 @@ section:nth-of-type(2) span b{
 }
 section:nth-of-type(2) span:hover b{/*effect and cause hover effect*/
   color: #e91e63;
-  text-shadow: #4f0a21 1px -1px,
+  text-shadow: #4f0a21 1px -1px,/*cool 3d text effect using stacked text shadows*/
     #4f0a21 2px -2px,
     #4f0a21 3px -3px,
     #4f0a21 4px -4px,
@@ -244,11 +258,11 @@ section:nth-of-type(3) span em:nth-of-type(24){bottom: 28px;}/*Somewhere*/
 section:nth-of-type(4) p > em{/*long long*/
   display: inline-block;
   text-transform: uppercase;
-  transform: scaleX(5);
+  transform: scaleX(5);/*Stretched long long so its longer.*/
   margin: 0 15rem;
 }
 
-section:nth-of-type(4) span > em {
+section:nth-of-type(4) span > em {/*left alone, pushed to the left, and by itself.*/
   font-size: 24px;
   text-transform: uppercase;
   margin: 4rem;
