@@ -7,6 +7,9 @@ Page contains some effects triggered by hover. If you see a word in bold that is
 Spotlight you see surrounding the album cover is not part of the image. Made using radial gradient and transform scale to squish and stretch it.
 Used both flex and grid properties.
 Sources are cited in the footer of the html page, with links.
+Theres a mini player for a youtube video of the song. It is sticky so it will remain at the bottom right of the page as you scroll, stopping at the footer so as to not
+obstruct the source links.
+Recommend adblocker to deny youtube ads, as the embedded video is from youtube and will play ads if you do not have an adblocker, thus delaying the song.
 */
 /*=====================================================================================*/
 
