@@ -125,7 +125,7 @@ div:first-of-type{
   display: flex;
   justify-content: flex-end;
   position: sticky;
-  top: 70vh;
+  top: 90vh;
   margin-bottom: -5rem;
 }
 div:last-of-type{/*SPOTLIGHT EFFECT*/
