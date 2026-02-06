@@ -39,6 +39,7 @@ main {
 }
 figure{/*album cover image container*/
   margin: 0 auto;
+  margin-top: -5rem;
 }
 
 figcaption{/*Contains link for the image source*/
@@ -121,12 +122,14 @@ main a{
   font-size: 18px;
   font-weight: bold;
 }
-div:first-of-type{
+div:first-of-type{/*Video player for song*/
   display: flex;
   justify-content: flex-end;
   position: sticky;
   top: 90vh;
-  margin-bottom: -5rem;
+}
+iframe{
+  border: 1px solid #7FD3D3;
 }
 div:last-of-type{/*SPOTLIGHT EFFECT*/
   background: #afabc9;
