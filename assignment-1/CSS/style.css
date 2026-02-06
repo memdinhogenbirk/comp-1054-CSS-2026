@@ -37,17 +37,6 @@ main {
   display: flex;
   flex-direction: column;
 }
-div{/*SPOTLIGHT EFFECT*/
-  background: #afabc9;
-  background: radial-gradient(circle, #8783A2 10%, #333052 30%, black 50%);/*circular gradient, 3 color values, with stopping points defined with %*/
-  transform: scaleX(1.8) scaleY(.3);/*squish and stretch gradient*/
-  width: 50%;
-  position: absolute;/*positioned absolute so it can be placed over the main content initially*/
-  height:50rem;
-  top:190px;
-  left: 25%;
-  z-index: -1;/*moved down the z index to hide behind content instead of overlaying it*/
-}
 figure{/*album cover image container*/
   margin: 0 auto;
 }
@@ -131,6 +120,24 @@ main a{
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
+}
+div:first-of-type{
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 70vh;
+  margin-bottom: -10rem;
+}
+div:last-of-type{/*SPOTLIGHT EFFECT*/
+  background: #afabc9;
+  background: radial-gradient(circle, #8783A2 10%, #333052 30%, black 50%);/*circular gradient, 3 color values, with stopping points defined with %*/
+  transform: scaleX(1.8) scaleY(.3);/*squish and stretch gradient*/
+  width: 50%;
+  position: absolute;/*positioned absolute so it can be placed over the main content initially*/
+  height:50rem;
+  top:190px;
+  left: 25%;
+  z-index: -1;/*moved down the z index to hide behind content instead of overlaying it*/
 }
 /*#endregion Less specific (non global) selectors*/
 
