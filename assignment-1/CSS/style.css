@@ -198,17 +198,26 @@ section:first-of-type em{/*STAMINAS GONE*/
 section:first-of-type em:hover{/*make stamina's gone "gone" when hovering*/
   opacity: 20%;
 }
-section:nth-of-type(2) p em{/*STAND (to weary to stand, so the word stand has keeled over)*/
+section:nth-of-type(2) p em{/*STAND (to weary to stand, so the word will keel over when hovered on)*/
   display: inline-block;
   color: #e91e63;
-  font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 18px;
+  transition: all ease-in-out 0.5s;
+}
+section:nth-of-type(2) p em:hover{/*STAND hover effect, flipped 90 degrees and moved down to look like its fallen over*/
   transform: rotate(90deg);/*if I can scale text then surely I can rotate it too*/
   vertical-align: top;
-  margin-bottom: 5rem;
-  margin-top: 3rem;
-  margin-left: -1.9rem;
+  font-size: 24px;
+  padding-left: 1rem;
+  padding-top: 3rem;
+  margin: 1rem 1rem 1rem -1rem;
+  text-shadow: #4f0a21 1px -1px,/*cool 3d text effect using stacked text shadows*/
+    #4f0a21 2px -2px,
+    #4f0a21 3px -3px,
+    #4f0a21 4px -4px,
+    #4f0a21 5px -5px;
 }
 section:first-of-type p > b, section:nth-of-type(2) p > b{/*SKIN before hover*/
   text-transform: uppercase;
@@ -227,13 +236,13 @@ section:first-of-type p > b:hover, section:nth-of-type(2) p > b:hover{/*SKIN hov
     #4f0a21 5px -5px;
   text-decoration: underline;/*if things are under it, surely it ought to have an underline?*/
 }
-section:first-of-type p > b + span, section:nth-of-type(2) p > b + span{/*Where I end and begin*/
+section:first-of-type p > b + span, section:nth-of-type(2) p > b + span{/*Where I end and begin before skin hover*/
   margin: 0 auto;
   display: flex;
-  width: 195px;
+  width: 195px;/*transitions do not like max min, require specified sizes. Hence why I didn't use max width here*/
   transition: all 0.5s ease-in-out;
 }
-section:first-of-type p > b:hover + span, section:nth-of-type(2) p > b:hover + span{/*SKIN + Where I end and begin*/
+section:first-of-type p > b:hover + span, section:nth-of-type(2) p > b:hover + span{/*Where I end and begin after skin hover*/
   width: 4rem;/*squished in so "Where I end and begin" is under "SKIN", as the song says*/
   padding-bottom: 1rem;
 }
