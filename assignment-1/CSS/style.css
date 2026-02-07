@@ -76,13 +76,12 @@ i, i::after{
   font-style: normal;
   font-weight: 600;
   color: #e91e63;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1)  0.5s;
+  transition: ease-in-out 0.5s;
 }
 i::after{
-  visibility: hidden;
+  margin-left: -6.5rem;
   font-size: 18px;
   content: "reverse";
-  border-right: 3px solid #e91e63;
 }
 i:hover{
   color: #e91e63;
@@ -100,6 +99,7 @@ i:hover::after {/*REVERSE*/
   content: "reverse";
   border-right: 3px solid #e91e63;/*made a line to act like a mirror*/
   display: inline-block;
+  margin-left: 0;
   transform: scaleX(-1);/*flip the after text on the X axis*/
   /*Though you did not teach this in class, I did learn it in class when we were replicating the newspaper article. 
   I used it then to increase the height of font, I'm using it now to reverse the font*/
@@ -136,7 +136,7 @@ main a{
   font-size: 18px;
   font-weight: bold;
 }
-div:first-of-type{/*Video player for song*/
+main > div:first-of-type{/*Video player for song*/
   display: flex;
   justify-content: flex-end;
   position: sticky;
@@ -145,7 +145,7 @@ div:first-of-type{/*Video player for song*/
 iframe{
   border: 1px solid #7FD3D3;
 }
-div:last-of-type{/*SPOTLIGHT EFFECT*/
+main > div:last-of-type{/*SPOTLIGHT EFFECT*/
   background: #afabc9;
   background: radial-gradient(circle, #8783A2 10%, #333052 30%, black 50%);/*circular gradient, 3 color values, with stopping points defined with %*/
   transform: scaleX(1.8) scaleY(.3);/*squish and stretch gradient*/
@@ -193,42 +193,59 @@ section:first-of-type em{/*STAMINAS GONE*/
   font-weight: 600;
   font-size: 24px;
   color: #e91e63;
+  transition: ease-in-out 0.5s;
 }
 section:first-of-type em:hover{/*make stamina's gone "gone" when hovering*/
   opacity: 20%;
 }
-section:nth-of-type(2) p em {/*STAND (to weary to stand, so the word stand has keeled over)*/
+section:nth-of-type(2) p em{/*STAND (to weary to stand, so the word stand has keeled over)*/
   display: inline-block;
+  color: #e91e63;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
   transform: rotate(90deg);/*if I can scale text then surely I can rotate it too*/
   vertical-align: top;
   margin-bottom: 5rem;
-  margin-top: 1.7rem;
-  margin-left: -1rem;
+  margin-top: 3rem;
+  margin-left: -1.9rem;
 }
-section:first-of-type b, section:nth-of-type(2) p > b{/*SKIN*/
+section:first-of-type p > b, section:nth-of-type(2) p > b{/*SKIN before hover*/
   text-transform: uppercase;
-  font-size: 24px;
-  text-decoration: underline;/*if things are under it, surely it ought to have an underline?*/
   display: flex;
   justify-content: center;
-  margin-bottom: -1rem;
+  color: #e91e63;
+  font-size: 18px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1)  0.5s;/*smooth transition for hover effect*/
 }
-section:first-of-type span, section:nth-of-type(2) span:last-of-type{/*SKIN + Where I end and begin*/
-  display: flex;
-  width:min-content;/*squished in so "Where I end and begin" is under "SKIN", as the song says*/
+section:first-of-type p > b:hover, section:nth-of-type(2) p > b:hover{/*SKIN hover*/
+  font-size: 24px;
+  text-shadow: #4f0a21 1px -1px,/*cool 3d text effect using stacked text shadows*/
+    #4f0a21 2px -2px,
+    #4f0a21 3px -3px,
+    #4f0a21 4px -4px,
+    #4f0a21 5px -5px;
+  text-decoration: underline;/*if things are under it, surely it ought to have an underline?*/
+}
+section:first-of-type p > b + span, section:nth-of-type(2) p > b + span{/*Where I end and begin*/
   margin: 0 auto;
-  text-align: center;
+  display: flex;
+  width: 195px;
+  transition: all 0.5s ease-in-out;
+}
+section:first-of-type p > b:hover + span, section:nth-of-type(2) p > b:hover + span{/*SKIN + Where I end and begin*/
+  width: 4rem;/*squished in so "Where I end and begin" is under "SKIN", as the song says*/
   padding-bottom: 1rem;
 }
 section:nth-of-type(2) span:first-of-type {
   vertical-align: text-top;/*tiny tweak to better align "Can't run anymore, too weary to" with 90 deg flipped "stand" (Hardly noticable when removed, but I notice*/
 }
-section:nth-of-type(2) span b{/*EFFECT and CAUSE*/
+section:nth-of-type(2) span:nth-of-type(2) b{/*EFFECT and CAUSE*/
   text-transform: uppercase;
   font-size: 18px;
   color: #e91e63;
 }
-section:nth-of-type(2) span:hover b{/*effect and cause hover effect*/
+section:nth-of-type(2) span:nth-of-type(2):hover b{/*effect and cause hover effect*/
   color: #e91e63;
   text-shadow: #4f0a21 1px -1px,/*cool 3d text effect using stacked text shadows*/
     #4f0a21 2px -2px,
@@ -279,9 +296,10 @@ section:nth-of-type(3) span em:nth-of-type(24){bottom: 28px;}/*Somewhere*/
 section:nth-of-type(4) p > em{/*long long*/
   display: inline-block;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
   font-weight: bold;
+  color:#e91e63;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1)  0.5s;/*smooth transition for hover effect*/
 }
 section:nth-of-type(4) p > em:hover{
@@ -291,21 +309,40 @@ section:nth-of-type(4) p > em:hover{
   font-style: italic;
   color:#e91e63;
 }
-section:nth-of-type(4) span > em {/*left alone, pushed to the left, and by itself.*/
-  font-size: 24px;
+section:nth-of-type(4) span > em {/*LEFT ALONE*/
   text-transform: uppercase;
-  margin: 4rem;
-  display: flex;
-}
-section:nth-of-type(5){
   font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  color:#e91e63;
+  transition: ease-in-out 0.5s;
+}
+section:nth-of-type(4) span > em:hover {/*LEFT ALONE, pushed to the left, and by itself.*/
+  text-transform: uppercase;
+  font-size: 24px;
+  padding-right: 30rem;
+  margin-right: 30rem;
+  color:#e91e63;
 }
 section:nth-of-type(5) em{
-  font-size: 24px;
+  font-size: 18px;
   text-transform: uppercase;
   font-style: normal;
   font-weight: bold;
   color: #e91e63;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1)  0.5s;
+}
+section:nth-of-type(5) span:hover em{
+  font-size: 24px;
+  text-shadow: #4f0a21 1px -1px,/*cool 3d text effect using stacked text shadows*/
+    #4f0a21 2px -2px,
+    #4f0a21 3px -3px,
+    #4f0a21 4px -4px,
+    #4f0a21 5px -5px;
+  cursor: default;/*Wanted mouse to appear as normal here, not text selector*/
+}
+section:nth-of-type(5) span:hover em:last-of-type{/*shrink never as now grows to emphasize the difference between the two words*/
+  font-size: 14px;
 }
 section:nth-of-type(5) small{
   font-size: 14px;
