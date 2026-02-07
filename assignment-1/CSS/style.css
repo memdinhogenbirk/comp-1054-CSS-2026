@@ -3,13 +3,15 @@ Michael Emdin-Hogenbirk
 
 Code has been split into collapsible regions.
 One sub region too.
-Page contains some effects triggered by hover. If you see a word in bold that is seemingly not doing anything else, hover it. Probably will do something.
+Almost all text effects are triggered by hover. If you see a word in red that is seemingly not doing anything else, hover it.
 Spotlight you see surrounding the album cover is not part of the image. Made using radial gradient and transform scale to squish and stretch it.
 Used both flex and grid properties.
 Sources are cited in the footer of the html page, with links.
 Theres a mini player for a youtube video of the song. It is sticky so it will remain at the bottom right of the page as you scroll, stopping at the footer so as to not
 obstruct the source links.
 Recommend adblocker to deny youtube ads, as the embedded video is from youtube and will play ads if you do not have an adblocker, thus delaying the song.
+
+I have commented everything, so if you are looking for a specific effect, cntrl+f the text and you will find the selectors.
 */
 /*=====================================================================================*/
 
@@ -32,7 +34,7 @@ body{
 html{
   background-color: black;
   color: #7FD3D3;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Orbitron", sans-serif;/*Orbitron font (main font) by Matt McInerney*/
   display: flex;
   justify-content: space-around;
 }
@@ -55,7 +57,7 @@ figcaption{/*Contains link for the image source*/
 img{/*album cover image*/
   width: 800px;
 }
-header{
+header{/*header contains main title and a subtitle for it*/
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -63,14 +65,14 @@ header{
 }
 h1, h2, h3{
   text-align: center;
-  font-family: "Turret Road", sans-serif;
+  font-family: "Turret Road", sans-serif;/*Turret Road font (headings) by Dale Sattler*/
   text-transform: uppercase;
   font-weight: 800;
 }
 h1{
   font-size: 48px;
 }
-i, i::after{
+i, i::after{/*REVERSE italics are used only for reverse effect, needn't be more specific*/
   text-transform: uppercase;
   font-size: 18px;
   font-style: normal;
@@ -78,12 +80,12 @@ i, i::after{
   color: #e91e63;
   transition: ease-in-out 0.5s;
 }
-i::after{
+i::after{/*REVERSE after text, pre added and hidden by overlaying with original REVERSE, so it can transition into place*/
   margin-left: -6.5rem;
   font-size: 18px;
   content: "reverse";
 }
-i:hover{
+i:hover{/*REVERSE hover*/
   color: #e91e63;
   font-size: 24px;
   text-shadow: #4f0a21 -1px -1px,/*cool 3d text effect using stacked text shadows*/
@@ -93,7 +95,7 @@ i:hover{
     #4f0a21 -5px -5px;
   cursor: default;
 }
-i:hover::after {/*REVERSE*/
+i:hover::after {/*Reversed REVERSE*/
   visibility: visible;
   font-size: 24px;
   content: "reverse";
@@ -104,7 +106,7 @@ i:hover::after {/*REVERSE*/
   /*Though you did not teach this in class, I did learn it in class when we were replicating the newspaper article. 
   I used it then to increase the height of font, I'm using it now to reverse the font*/
 }
-section{
+section{/*basic section layout*/
   display: flex;
   flex-direction: column;
   width: max-content;
@@ -116,7 +118,7 @@ section{
 a{
   color: #e91e63;
 }
-a:hover{
+a:hover{/*specifically for links*/
   color: #b01f4f;
 }
 /*#endregion Global*/
@@ -124,14 +126,14 @@ a:hover{
 /*=====================================================================================*/
 
 /*#region Less specific (non global) selectors*/
-header p{
+header p{/*subtitle "by metric"*/
   margin-top: 0;
   margin-bottom: 5rem;
 }
-header h1{
+header h1{/*main title*/
   margin-bottom: 0;
 }
-main a{
+main a{/*don't care about underlines in the footer, just wanted it gone from the paragraphs and what not*/
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -142,7 +144,7 @@ main > div:first-of-type{/*Video player for song*/
   position: sticky;
   top: 90vh;
 }
-iframe{
+iframe{/*the youtube video has a black background, without this, it disappears into the page whenever there are no lyrics on screen*/
   border: 1px solid #7FD3D3;
 }
 main > div:last-of-type{/*SPOTLIGHT EFFECT*/
@@ -161,33 +163,33 @@ main > div:last-of-type{/*SPOTLIGHT EFFECT*/
 /*=====================================================================================*/
 
 /*#region First Article (Overview)*/
-article:first-of-type{
+article:first-of-type{/*layout for the main heading of this block, and for the sections*/
   display: grid;
   grid-template-columns: 1fr 1fr;/*Two columns, equal sized*/
   grid-template-rows: 1fr 3fr;/*Two rows, first row contains only heading (so smaller), second contains both paragraphs with their headers, side by side*/
   border-bottom: white solid 1px;
   padding-top: 5rem;
 }
-article:first-of-type h1{
+article:first-of-type h1{/*article heading "OVERVIEW"*/
   grid-column-start: 1;/*heading starts at first column line (maybe I'm overthinking this, but I feel like these indexs should be based on the column, 
   not the lines that separate them.)*/
   grid-column-end: 3;/*end at last column line*/
   border-top: 1px solid white;
   padding-top: 2rem;
 }
-article:first-of-type section{
+article:first-of-type section{/*sections of OVERVIEW*/
   text-align: left;/*defaulted to centered text due to global section property, as most sections are for the lyrics. Here I wanted it aligned like a typical paragraph*/
   padding: 0 4rem;
 }
-article:first-of-type section p{
-  text-indent: 2rem;/*Indent the first line of each paragraph in the overview section, looks tidy in my opinion*/
+article:first-of-type section p{/*indenting paragraphs of OVERVIEW sections*/
+  text-indent: 2rem;
 }
 /*#endregion First Article (Overview)*/
 
 /*=====================================================================================*/
 
-/*#region Second Article, Lyrics*/
-section:first-of-type em{/*STAMINAS GONE*/
+/*#region Second Article, Lyrics (this is where the fun begins)*/
+section:first-of-type em{/*STAMINAS GONE before hover*/
   text-decoration: line-through;
   text-transform: uppercase;
   font-weight: 600;
@@ -195,10 +197,10 @@ section:first-of-type em{/*STAMINAS GONE*/
   color: #e91e63;
   transition: ease-in-out 0.5s;
 }
-section:first-of-type em:hover{/*make stamina's gone "gone" when hovering*/
+section:first-of-type em:hover{/*STAMINAS GONE hover, make stamina's gone "gone" when hovering*/
   opacity: 20%;
 }
-section:nth-of-type(2) p em{/*STAND (to weary to stand, so the word will keel over when hovered on)*/
+section:nth-of-type(2) p em{/*STAND before hover*/
   display: inline-block;
   color: #e91e63;
   font-weight: bold;
@@ -219,15 +221,18 @@ section:nth-of-type(2) p em:hover{/*STAND hover effect, flipped 90 degrees and m
     #4f0a21 4px -4px,
     #4f0a21 5px -5px;
 }
+section:nth-of-type(2) span:first-of-type {
+  vertical-align: text-top;/*tiny tweak to better align "Can't run anymore, too weary to" with 90 deg flipped "stand" (makes a difference)*/
+}
 section:first-of-type p > b, section:nth-of-type(2) p > b{/*SKIN before hover*/
   text-transform: uppercase;
   display: flex;
   justify-content: center;
   color: #e91e63;
   font-size: 18px;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1)  0.5s;/*smooth transition for hover effect*/
+  transition: all ease-in-out 0.3s;
 }
-section:first-of-type p > b:hover, section:nth-of-type(2) p > b:hover{/*SKIN hover*/
+section:first-of-type p > b:hover, section:nth-of-type(2) p > b:hover{/*SKIN hover (just changes the appearance of the word skin)*/
   font-size: 24px;
   text-shadow: #4f0a21 1px -1px,/*cool 3d text effect using stacked text shadows*/
     #4f0a21 2px -2px,
@@ -236,25 +241,22 @@ section:first-of-type p > b:hover, section:nth-of-type(2) p > b:hover{/*SKIN hov
     #4f0a21 5px -5px;
   text-decoration: underline;/*if things are under it, surely it ought to have an underline?*/
 }
-section:first-of-type p > b + span, section:nth-of-type(2) p > b + span{/*Where I end and begin before skin hover*/
+section:first-of-type p > b + span, section:nth-of-type(2) p > b + span{/*SKIN "Where I end and begin" before skin hover*/
   margin: 0 auto;
   display: flex;
-  width: 195px;/*transitions do not like max min, require specified sizes. Hence why I didn't use max width here*/
+  width: 195px;/*transitions do not like max min, require specified sizes. Hence why I didn't use width: max-content here*/
   transition: all 0.5s ease-in-out;
 }
-section:first-of-type p > b:hover + span, section:nth-of-type(2) p > b:hover + span{/*Where I end and begin after skin hover*/
-  width: 4rem;/*squished in so "Where I end and begin" is under "SKIN", as the song says*/
+section:first-of-type p > b:hover + span, section:nth-of-type(2) p > b:hover + span{/*SKIN "Where I end and begin" after skin hover (hover skin to transition the span)*/
+  width: 4rem;/*squished in so "Where I end and begin" stack up under "SKIN", as the song says*/
   padding-bottom: 1rem;
-}
-section:nth-of-type(2) span:first-of-type {
-  vertical-align: text-top;/*tiny tweak to better align "Can't run anymore, too weary to" with 90 deg flipped "stand" (Hardly noticable when removed, but I notice*/
 }
 section:nth-of-type(2) span:nth-of-type(2) b{/*EFFECT and CAUSE*/
   text-transform: uppercase;
   font-size: 18px;
   color: #e91e63;
 }
-section:nth-of-type(2) span:nth-of-type(2):hover b{/*effect and cause hover effect*/
+section:nth-of-type(2) span:nth-of-type(2):hover b{/*EFFECT and CAUSE hover effect*/
   color: #e91e63;
   text-shadow: #4f0a21 1px -1px,/*cool 3d text effect using stacked text shadows*/
     #4f0a21 2px -2px,
@@ -276,7 +278,7 @@ section:nth-of-type(3) span em{/*only silence... all words placed in their own e
 }
 
 /*=====================================================================================*/
-/*#region Sheet Music Style Lyrics*/
+/*#region Sheet Music Style Lyrics (no animation or hover here, just pure styling that took me a hot minute)*/
 section:nth-of-type(3) span em:first-of-type{bottom: 42px;}/*Oh*/
 section:nth-of-type(3) span em:nth-of-type(2){bottom: 28px;}/*Only*/
 section:nth-of-type(3) span em:nth-of-type(3){bottom: 42px;}/*Silence*/
@@ -302,23 +304,23 @@ section:nth-of-type(3) span em:nth-of-type(24){bottom: 28px;}/*Somewhere*/
 /*#endregion Sheet Music Style Lyrics*/
 /*=====================================================================================*/
 
-section:nth-of-type(4) p > em{/*long long*/
+section:nth-of-type(4) p > em{/*LONG LONG before hover*/
   display: inline-block;
   text-transform: uppercase;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;
   color:#e91e63;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1)  0.5s;/*smooth transition for hover effect*/
+  transition: all ease-in-out 0.3s;
 }
-section:nth-of-type(4) p > em:hover{
+section:nth-of-type(4) p > em:hover{/*LONG LONG after hover (gets longer)*/
   transform: scaleX(5);/*Stretched long long so its longer.*/
   margin: 0 15rem;
   font-size: 14px;
   font-style: italic;
   color:#e91e63;
 }
-section:nth-of-type(4) span > em {/*LEFT ALONE*/
+section:nth-of-type(4) span > em {/*LEFT ALONE before hover*/
   text-transform: uppercase;
   font-size: 18px;
   font-style: normal;
@@ -326,22 +328,22 @@ section:nth-of-type(4) span > em {/*LEFT ALONE*/
   color:#e91e63;
   transition: ease-in-out 0.5s;
 }
-section:nth-of-type(4) span > em:hover {/*LEFT ALONE, pushed to the left, and by itself.*/
+section:nth-of-type(4) span > em:hover {/*LEFT ALONE after hover, pushed to the left, and by itself.*/
   text-transform: uppercase;
   font-size: 24px;
   padding-right: 30rem;
-  margin-right: 30rem;
+  margin-right: 30rem;/*padding and margin used so the hover spot doesn't move with the text*/
   color:#e91e63;
 }
-section:nth-of-type(5) em{
+section:nth-of-type(5) em{/*NOW or NEVER before hover*/
   font-size: 18px;
   text-transform: uppercase;
   font-style: normal;
   font-weight: bold;
   color: #e91e63;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1)  0.5s;
+  transition: all ease-in-out 0.3s;
 }
-section:nth-of-type(5) span:hover em{
+section:nth-of-type(5) span:hover em{/*NOW or NEVER after hover base styling (makes both grow however, if you at the next selector...)*/
   font-size: 24px;
   text-shadow: #4f0a21 1px -1px,/*cool 3d text effect using stacked text shadows*/
     #4f0a21 2px -2px,
@@ -350,18 +352,18 @@ section:nth-of-type(5) span:hover em{
     #4f0a21 5px -5px;
   cursor: default;/*Wanted mouse to appear as normal here, not text selector*/
 }
-section:nth-of-type(5) span:hover em:last-of-type{/*shrink never as now grows to emphasize the difference between the two words*/
+section:nth-of-type(5) span:hover em:last-of-type{/*NOW still grows but NEVER shrinks (yin yang and all that jazz)*/
   font-size: 14px;
 }
-section:nth-of-type(5) small{
-  font-size: 14px;
+section:nth-of-type(5) small{/*In the song, these "now"s are a little softer, so I made them smaller*/
+  font-size: 12px;
 }
 /*#endregion Second Article, Lyrics*/
 
 /*=====================================================================================*/
 
 /*#region footer*/
-footer{
+footer{/*FOOTER contains sources, song credits*/
   display: flex;
   font-family: sans-serif;
   border-top: white 1px solid;
