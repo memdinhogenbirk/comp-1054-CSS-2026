@@ -28,60 +28,84 @@
 		------------------------------------------ */
 		/* Vertical */
 		.vertical-down {
-			
+			background-color: red;
 			/* default gradient, so you don't need to specify "to bottom" before the colors */
-
+			background: linear-gradient(purple, blue);
+			 /* or */
+			 /* background-image: linear-gradient(180deg, purple, blue); */
 		}
 		.vertical-up {
-
+			background: linear-gradient(to top, purple, blue);
+			 /* or */
+			 /* background-image: linear-gradient(0deg, purple, blue); */
+			 
 		}
 		/* Horizontal */
 		.horizontal-rt {
-
+			background: linear-gradient(to right, purple, blue);
+			 /* or */
+			 /* background-image: linear-gradient(90deg, purple, blue); */
+			 
 		}
 		.horizontal-lt {
-
+			background: linear-gradient(to left, purple, blue);
+			 /* or */
+			 /* background-image: linear-gradient(270deg, purple, blue); */
+			 
 		}
 		/* Diagonal Angles */
 		.angle-corners {
-
+			background: linear-gradient(to bottom right, purple, blue);
+			 /* or */
+			 /* background-image: linear-gradient(135deg, purple, blue); */
 		}
 		/* Angles via Degrees */
 		.angle-deg {
-
+			background: linear-gradient(45deg, purple, blue);
 		}
 
 		/* STEP 2: RADIAL GRADIENTS
 		------------------------------------------ */
 		.radial p {
 
+
 		}
 		.radial-center {
-
+			background: radial-gradient(purple, blue);
 		}
 		.radial-top {
-
+			background: radial-gradient(at top, purple, blue);
 		}
 		.radial-size-1 {
-
+			background: radial-gradient(ellipse at bottom, purple, blue);
+			 /* or */
+			 /* background: radial-gradient(circle at center, purple, blue); */
 		}
 		.radial-size-2 {
-
+			background: radial-gradient(circle at center, purple, blue);
+			 /* or */
+			 /* background: radial-gradient(circle at center, purple, blue, lightblue); */
 		}
 
 		/* STEP 3: LINEAR GRADIENTS WITH COLOR STOPS
 		------------------------------------------ */
-		.color-stops div {
+		.color-stops {
+			background: linear-gradient(purple 20%, blue 70%, lightblue 100%);
+			 /* or */
+			 /* background-image: linear-gradient(180deg, purple 30%, blue, lightblue 70%); */
 		}
 
 		.color-stops p {
+			background: linear-gradient(yellow 10%, green 70%);
 		}
-
+			
 		.color-stops {
 
 		}
 		/* STEP 4: Use a color gradient CSS generator - http://www.colorzilla.com/gradient-editor/ */
 		.gradient-generator {
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+28,2989d8+50,1e5799+75&0+0,0.8+7,1+19,1+81,0.8+92,0+100 */
+			background: linear-gradient(45deg,  rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 7%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 28%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 75%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 92%,rgba(30,87,153,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
 		}
 	</style>
