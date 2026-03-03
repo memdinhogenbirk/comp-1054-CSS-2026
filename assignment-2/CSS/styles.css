@@ -106,9 +106,14 @@ section h2 {
   margin: 0;
 }
 section li {
-  display: inline-block;
-  
-  
+  position: relative;
+}
+section li h3 {
+  position: relative;
+}
+section li p {
+  position: relative;
+  bottom: 39px;
 }
 section:first-of-type li h3 {
   color: olivedrab;
