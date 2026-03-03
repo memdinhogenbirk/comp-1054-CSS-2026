@@ -136,10 +136,10 @@ li[value*='32'] p {text-indent: 8rem;}
 li[value*='36'] p {text-indent: 7.5rem;}
 li[value*='47'] p {text-indent: 7.5rem;}
 li[value*='49'] p {text-indent: 15.5rem;}
-li[value*='52'] p {text-indent: 7.5rem;}
-li[value*='55'] p {text-indent: 7.5rem;}
-li[value*='56'] p {text-indent: 7.5rem;}
-li[value*='68'] p {text-indent: 7.5rem;}
-li[value*='72'] p {text-indent: 7.5rem;}
-li[value*='76'] p {text-indent: 7.5rem;}
+li[value*='52'] p {text-indent: 6.7rem;}
+li[value*='55'] p {text-indent: 5.2rem;}
+li[value*='56'] p {text-indent: 11.5rem;}
+li[value*='68'] p {text-indent: 20.5rem;}
+li[value*='72'] p {text-indent: 11rem;}
+li[value*='76'] p {text-indent: 8.5rem;}
 /*#endregion dumb list solution=================================================*/
