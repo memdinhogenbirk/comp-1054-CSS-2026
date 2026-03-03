@@ -105,6 +105,7 @@ section h2 {
   font-size: 40px;
   margin: 0;
 }
+/*#region dumb list solution=================================================*/
 section li {
   position: relative;
 }
@@ -113,15 +114,32 @@ section li h3 {
 }
 section li p {
   position: relative;
-  bottom: 39px;
+  bottom: 38px;
 }
 section:first-of-type li h3 {
   color: olivedrab;
   
 }
-section:nth-of-type(2) li h3{
+section:nth-of-type(2) li h3 {
   color: palevioletred;
 }
-section:last-of-type li h3{
+section:last-of-type li h3 {
   color: darkcyan;
 }
+li[value*='11'] p {text-indent: 7.5rem;}
+li[value*='12'] p {text-indent: 5.5rem;}
+li[value*='16'] p {text-indent: 9.9rem;}
+li[value*='20'] p {text-indent: 13.2rem;}
+li[value*='26'] p {text-indent: 7.1rem;}
+li[value*='31'] p {text-indent: 7.5rem;}
+li[value*='32'] p {text-indent: 8rem;}
+li[value*='36'] p {text-indent: 7.5rem;}
+li[value*='47'] p {text-indent: 7.5rem;}
+li[value*='49'] p {text-indent: 15.5rem;}
+li[value*='52'] p {text-indent: 7.5rem;}
+li[value*='55'] p {text-indent: 7.5rem;}
+li[value*='56'] p {text-indent: 7.5rem;}
+li[value*='68'] p {text-indent: 7.5rem;}
+li[value*='72'] p {text-indent: 7.5rem;}
+li[value*='76'] p {text-indent: 7.5rem;}
+/*#endregion dumb list solution=================================================*/
