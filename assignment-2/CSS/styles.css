@@ -1,6 +1,7 @@
 /*#region normalize ==========================================================================*/
 html {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 *, *::before, *::after {
   box-sizing: inherit;
@@ -10,6 +11,8 @@ header {
   display: grid;
   row-gap: 0rem;
   grid-template-areas: 'headerP''headerh1';
+  text-align: left;
+  justify-content: right;
 }
 header h1 {
   grid-area: headerh1;
@@ -17,8 +20,7 @@ header h1 {
   font-family: serif;
   text-transform: lowercase;
   font-weight: 100;
-  font-size: 100px;
-  justify-content: right;
+  font-size: 200px;
   margin: 0;
 }
 header p {
@@ -49,12 +51,21 @@ section {
 section:first-of-type
 {
   grid-area: section1;
+  border-top: 20px solid olivedrab;
 }
 section:nth-of-type(2) {
   grid-area: section2;
+  border-top: 20px solid palevioletred;
 }
 section:last-of-type {
   grid-area: section3;
+  border-top: 20px solid darkcyan;
+}
+footer {
+  display: flex;
+  justify-content: right;
+  width: 1100px;
+  text-transform: uppercase;
 }
 /*#endregion main grid =========================================================================*/
 figure {
