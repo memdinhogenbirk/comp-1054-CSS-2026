@@ -1,0 +1,89 @@
+/*#region normalize ==========================================================================*/
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+/*#endregion normalize =======================================================================*/
+header {
+  display: grid;
+  row-gap: 0rem;
+  grid-template-areas: 'headerP''headerh1';
+}
+header h1 {
+  grid-area: headerh1;
+  color: orangered;
+  font-family: serif;
+  text-transform: lowercase;
+  font-weight: 100;
+  font-size: 100px;
+  justify-content: right;
+  margin: 0;
+}
+header p {
+  text-transform: uppercase;
+  grid-area: headerP;
+}
+/*#region main grid =========================================================================*/
+main {
+  display: grid;
+  grid-template-areas: 'figure section1''figure section2''aside section3';
+  grid-template-columns: 1fr 1fr;
+  justify-items: right;
+  width: 1100px;
+}
+aside:first-of-type {
+  grid-area: figure;
+}
+aside:last-of-type {
+  grid-area: aside;
+  border: orangered 2px solid;
+  width: 400px;
+  height: max-content;
+  padding: 0rem 1rem;
+}
+section {
+  width: 500px;
+}
+section:first-of-type
+{
+  grid-area: section1;
+}
+section:nth-of-type(2) {
+  grid-area: section2;
+}
+section:last-of-type {
+  grid-area: section3;
+}
+/*#endregion main grid =========================================================================*/
+figure {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+figure em {
+  font-size: 100px;
+  font-family: monospace;
+  font-style: normal;
+  font-weight: 300;
+  line-break: auto;
+}
+figcaption p:first-of-type{
+  display: grid;
+  color: white;
+  position: absolute;
+  bottom: 5rem;
+  left: 120px;
+  width: 150px;
+}
+figcaption p:last-of-type {
+  transform: rotate(-90deg);
+  position: absolute;
+  left: -35px;
+  bottom: -300px;
+}
+aside:last-of-type p em{
+  font-style: normal;
+  text-transform: uppercase;
+}
