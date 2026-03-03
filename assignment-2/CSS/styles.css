@@ -46,7 +46,7 @@ footer {
 main {
   display: grid;
   grid-template-areas: 'figure section1''figure section2''aside section3';
-  grid-template-columns: 1fr 1fr;
+  
   column-gap: 2rem;
   justify-items: right;
 }
@@ -59,9 +59,6 @@ aside:last-of-type {
   width: 400px;
   height: max-content;
   padding: 0rem 1rem;
-}
-section {
-  
 }
 section:first-of-type
 {
@@ -112,7 +109,7 @@ section h2 {
   font-family: serif;
   font-weight: 100;
   font-size: 40px;
-  margin: 2rem 0 1.3rem 0;
+  margin: 2rem 0;
   line-height: 0;
 }
 section ol {
@@ -127,10 +124,12 @@ section li h3 {
   position: relative;
   text-transform: uppercase;
   margin: 0;
+  line-height: 0;
+  font-size: 16px;
 }
 section li p {
   position: relative;
-  bottom: 22px;
+  bottom: 12px;
   margin-bottom: 0;
   margin-top: 0;
   line-height: 1.5rem;
@@ -163,7 +162,7 @@ li[value*='49'] p {text-indent: 18.7rem;}
 li[value*='52'] p {text-indent: 8.7rem;}
 li[value*='55'] p {text-indent: 6.2rem;}
 li[value*='56'] p {text-indent: 13.5rem;}
-li[value*='68'] p {bottom: 0; padding-bottom: 1rem;}
+li[value*='68'] p {top: 10px; padding-bottom: 1.5rem;}
 li[value*='72'] p {text-indent: 13.6rem;}
 li[value*='76'] p {text-indent: 10.7rem;}
 /*#endregion dumb list solution=================================================*/
