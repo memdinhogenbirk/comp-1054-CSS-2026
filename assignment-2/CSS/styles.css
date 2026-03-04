@@ -33,7 +33,7 @@ header p {
   grid-area: headerP;
 }
 #container {
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
 footer {
