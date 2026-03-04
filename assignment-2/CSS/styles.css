@@ -58,10 +58,11 @@ aside:first-of-type {/*model picture lady*/
 }
 aside:last-of-type {/*on our cover*/
   grid-area: aside;
-  border: orangered 2px solid;
+  border: orange 2px solid;
   width: 400px;
   height: max-content;
   padding: 0rem 1rem;
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.5);
 }
 section:first-of-type
 {
