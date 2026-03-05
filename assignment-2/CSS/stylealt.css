@@ -1,0 +1,175 @@
+/*#region normalize ==========================================================================*/
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  width: 100%;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  width: 100%;
+  margin: 0;
+}
+/*#endregion normalize =======================================================================*/
+header {
+  display: grid;
+  row-gap: 0rem;
+  grid-template-areas: 'headerP''headerh1';
+  text-align: left;
+}
+header h1 {
+  grid-area: headerh1;
+  color: orangered;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: lowercase;
+  font-weight: 100;
+  font-size: 180px;
+  margin: 0;
+  letter-spacing: -20px;
+}
+header p {
+  text-transform: uppercase;
+  grid-area: headerP;
+}
+#container {
+  width: 70%;
+  margin: auto;
+}
+footer {
+  display: flex;
+  justify-content: right;
+  text-transform: uppercase;
+  width: 100%;
+}
+footer em {
+  color: orangered;
+  font-size: 20px;
+}
+/*#region main grid =========================================================================*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-items: right;
+  flex-wrap: wrap-reverse;
+  height: 100rem;
+  border: 1px solid red;
+}
+aside {/*model picture lady*/
+  margin-right: 2rem;
+}
+aside:last-of-type {/*on our cover*/
+  border: orange 2px solid;
+  width: 400px;
+  height: max-content;
+  padding: 0rem 1rem;
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.5);
+}
+section {
+    width: 50%;
+    height: max-content;
+}
+section:first-of-type
+{
+  border-top: 20px solid olivedrab;
+}
+section:nth-of-type(2) {
+  border-top: 20px solid palevioletred;
+}
+section:last-of-type {
+  border-top: 20px solid darkcyan;
+}
+/*#endregion main grid =========================================================================*/
+figure {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+figure em {
+  font-size: 100px;
+  font-family: monospace;
+  font-style: normal;
+  font-weight: 300;
+  line-break: auto;
+}
+figcaption p:first-of-type{
+  display: grid;
+  color: white;
+  position: absolute;
+  bottom: 5rem;
+  left: 120px;
+  width: 150px;
+}
+figcaption p:last-of-type {
+  transform: rotate(-90deg);
+  position: absolute;
+  left: -35px;
+  bottom: -300px;
+}
+aside:last-of-type p em{
+  font-style: normal;
+  text-transform: uppercase;
+}
+section h2 {
+  text-transform: lowercase;
+  font-family: serif;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 2rem 0;
+  line-height: 0;
+}
+section ol {
+  width: 90%;
+  margin-left: 4%;
+  margin-right: auto;
+}
+section li {
+  position: relative;
+}
+section li h3 {
+  position: relative;
+  text-transform: uppercase;
+  margin: 0 0 -.6rem 0;
+  text-wrap: wrap;
+  
+  font-size: 16px;
+}
+section li p {
+  position: relative;
+  bottom: 12px;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1.5rem;
+}
+section:first-of-type li h3 {
+  color: olivedrab;
+  
+}
+section:nth-of-type(2) li h3 {
+  color: palevioletred;
+}
+section:last-of-type li h3 {
+  color: darkcyan;
+}
+li::marker {
+  font-family:'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+/*#region dumb list solution=================================================*/
+li[value*='11'] p {text-indent: 7.3rem;}/*take time to*/
+li[value*='12'] p {text-indent: 5.3rem;}/*how to*/
+li[value*='16'] p {text-indent: 9.5rem;}/*womansday.com*/
+li[value*='20'] p {text-indent: 13.6rem;}/*reinventing date night*/
+li[value*='26'] p {text-indent: 7.1rem; width: 300px;}/*momfidence*/
+li[value*='31'] p {text-indent: 7.3rem;}/*take time to*/
+li[value*='32'] p {text-indent: 8.8rem;}/*beauty closet*/
+li[value*='36'] p {text-indent: 8.1rem;}/*pretty in red*/
+li[value*='47'] p {text-indent: 7.3rem;}/*take time to*/
+li[value*='49'] p {text-indent: 16.3rem;}/*4 fridays*/
+li[value*='52'] p {text-indent: 7.7rem;}/*your health*/
+li[value*='55'] p {text-indent: 5.2rem;}/*checkup*/
+li[value*='56'] p {text-indent: 11.5rem;}/*25 medical mistakes*/
+li[value*='68'] p {top: 10px; padding-bottom: 1.5rem;}/*the heart*/
+li[value*='72'] p {text-indent: 11.8rem;}/*your child's health*/
+li[value*='76'] p {text-indent: 9.2rem;}/*blast belly fat*/
+/*#endregion dumb list solution=================================================*/
