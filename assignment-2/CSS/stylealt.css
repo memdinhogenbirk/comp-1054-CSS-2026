@@ -33,7 +33,7 @@ header p {
   grid-area: headerP;
 }
 #container {
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 footer {
@@ -52,11 +52,12 @@ main {
   flex-direction: column;
   justify-items: right;
   flex-wrap: wrap-reverse;
-  height: 100rem;
+  height: 71.3rem;
   border: 1px solid red;
+  overflow: hidden;
 }
 aside {/*model picture lady*/
-  margin-right: 2rem;
+  border: solid 1px purple;
 }
 aside:last-of-type {/*on our cover*/
   border: orange 2px solid;
@@ -64,10 +65,13 @@ aside:last-of-type {/*on our cover*/
   height: max-content;
   padding: 0rem 1rem;
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.5);
+  margin-top: auto;
 }
 section {
-    width: 50%;
+    margin-left: 2rem;
+    width: 45%;
     height: max-content;
+    border: solid 1px red;
 }
 section:first-of-type
 {
@@ -115,7 +119,7 @@ section h2 {
   font-family: serif;
   font-weight: 100;
   font-size: 40px;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   line-height: 0;
 }
 section ol {
@@ -125,13 +129,19 @@ section ol {
 }
 section li {
   position: relative;
+  margin-bottom: -.5rem;
+}
+section li:last-of-type {
+  margin-bottom: -1rem;
+}
+section:last-of-type li:last-of-type {
+  margin-bottom: -2rem;
 }
 section li h3 {
   position: relative;
   text-transform: uppercase;
   margin: 0 0 -.6rem 0;
   text-wrap: wrap;
-  
   font-size: 16px;
 }
 section li p {
