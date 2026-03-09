@@ -16,7 +16,7 @@ header {
   display: grid;
   row-gap: 0rem;
   grid-template-areas: 'headerP''headerh1';
-  text-align: left;
+  justify-content: right;
 }
 header h1 {
   grid-area: headerh1;
@@ -24,23 +24,32 @@ header h1 {
   font-family: 'Courier New', Courier, monospace;
   text-transform: lowercase;
   font-weight: 100;
-  font-size: 180px;
+  font-size: 160px;
   margin: 0;
   letter-spacing: -20px;
 }
 header p {
   text-transform: uppercase;
   grid-area: headerP;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  word-spacing: -10px;
+  margin-bottom: 0;
 }
 #container {
-  width: 80%;
-  margin: auto;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
 }
 footer {
   display: flex;
   justify-content: right;
   text-transform: uppercase;
   width: 100%;
+  height: fit-content;
+}
+footer p {
+  margin-top: 0;
 }
 footer em {
   color: orangered;
@@ -50,14 +59,12 @@ footer em {
 main {
   display: flex;
   flex-direction: column;
-  justify-items: right;
-  flex-wrap: wrap-reverse;
-  height: 65.3rem;
-  border: 1px solid red;
+  flex-wrap: wrap-reverse;/*columns appear right to left instead of left to right*/
+  width: 894px;
+  height: 1060px;
   overflow: hidden;
 }
 aside:first-of-type {/*model picture lady*/
-  border: solid 1px purple;
   width: fit-content;
 }
 aside:last-of-type {/*on our cover*/
@@ -66,7 +73,7 @@ aside:last-of-type {/*on our cover*/
   height: max-content;
   padding: 0rem 1rem;
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.5);
-  margin-top: auto;
+  margin-top: 1rem;
 }
 aside:last-of-type h2{
   font-family: serif;
@@ -77,21 +84,27 @@ aside:last-of-type h2{
   margin: 0;
 }
 section {
-  width: 50%;
-  height: max-content;
-  border: solid 1px red;
+  width: 480px;
+  margin-left: 2rem;
 }
 section:first-of-type
 {
   border-top: 15px solid olivedrab;
+  height: 320px;
 }
 section:nth-of-type(2) {
   border-top: 15px solid palevioletred;
+  height: 228px;
 }
 section:last-of-type {
   border-top: 15px solid darkcyan;
+  height: 510px;
 }
 /*#endregion main grid =========================================================================*/
+img {
+  height: 707px;
+  width: 402px;
+}
 figure {
   position: relative;
   padding: 0;
@@ -124,7 +137,11 @@ figcaption p:last-of-type {
   transform: rotate(-90deg);
   position: absolute;
   left: -35px;
-  bottom: -310px;
+  bottom: -275px;
+}
+aside {
+  width: 50%;
+  justify-self: center;
 }
 aside:last-of-type p em{
   font-style: normal;
@@ -150,15 +167,17 @@ section h2 {
   font-size: 40px;
   margin: 1.5rem 0;
   line-height: 0;
+  letter-spacing: -2px;
 }
 section ol {
   width: 90%;
-  margin-left: 4%;
-  margin-right: auto;
+  margin-left: 12%;
+  padding: 0;
 }
 section li {
   position: relative;
   margin-bottom: -.5rem;
+  margin-right: 0;
 }
 section li:last-of-type {
   margin-bottom: -1rem;
@@ -200,20 +219,20 @@ li strong {
   text-transform: capitalize;
 }
 /*#region dumb list solution=================================================*/
-li[value*='11'] p {text-indent: 7.3rem;}/*take time to*/
+li[value*='11'] p {text-indent: 7.2rem;}/*take time to*/
 li[value*='12'] p {text-indent: 5.3rem; width: 90%;}/*how to*/
-li[value*='16'] p {text-indent: 9.5rem;}/*womansday.com*/
+li[value*='16'] p {text-indent: 9.5rem; width: 90%;}/*womansday.com*/
 li[value*='20'] p {text-indent: 13.6rem; width: 90%;}/*reinventing date night*/
-li[value*='26'] p {text-indent: 7.1rem; width: 70%;}/*momfidence*/
+li[value*='26'] p {text-indent: 7.1rem; width: 65%;}/*momfidence*/
 li[value*='31'] p {text-indent: 7.3rem;}/*take time to*/
 li[value*='32'] p {text-indent: 8.8rem; width: 90%;}/*beauty closet*/
 li[value*='36'] p {text-indent: 8.1rem; width: 90%;}/*pretty in red*/
 li[value*='47'] p {text-indent: 7.3rem;}/*take time to*/
-li[value*='49'] p {text-indent: 16.3rem; width: 90%;}/*4 fridays*/
+li[value*='49'] p {text-indent: 16.3rem; width: 87%;}/*4 fridays*/
 li[value*='52'] p {text-indent: 7.7rem;}/*your health*/
 li[value*='55'] p {text-indent: 5.2rem;}/*checkup*/
 li[value*='56'] p {text-indent: 11.5rem;}/*25 medical mistakes*/
 li[value*='68'] p {top: 10px; padding-bottom: 1.5rem; width: 75%;}/*the heart*/
 li[value*='72'] p {text-indent: 11.8rem; width: 95%;}/*your child's health*/
-li[value*='76'] p {text-indent: 9.2rem; width: 90%;}/*blast belly fat*/
+li[value*='76'] p {text-indent: 9.2rem; width: 85%;}/*blast belly fat*/
 /*#endregion dumb list solution=================================================*/
