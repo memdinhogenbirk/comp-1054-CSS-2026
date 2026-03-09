@@ -8,13 +8,15 @@ html {
   box-sizing: inherit;
 }
 body {
-  width: 100%;
-  margin: 0;
+  width: fit-content;
+  margin: 0 auto;
 }
+@media (max-width: 1000px){}
 /*#endregion normalize =======================================================================*/
 header {
   display: grid;
   row-gap: 0rem;
+  width: fit-content;
   grid-template-areas: 'headerP''headerh1';
   justify-content: right;
 }
@@ -38,8 +40,9 @@ header p {
 }
 #container {
   width: fit-content;
-  margin-right: auto;
-  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 footer {
   display: flex;
@@ -55,14 +58,19 @@ footer em {
   color: orangered;
   font-size: 20px;
 }
-/*#region main grid =========================================================================*/
+footer strong {
+  font-family: monospace;
+  padding-left: 1rem;
+  font-size: 20px;
+}
+/*#region main flex =========================================================================*/
 main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap-reverse;/*columns appear right to left instead of left to right*/
-  width: 894px;
+  width: auto;
   height: 1060px;
-  overflow: hidden;
+  align-content: center;
 }
 aside:first-of-type {/*model picture lady*/
   width: fit-content;
@@ -71,9 +79,11 @@ aside:last-of-type {/*on our cover*/
   border: orange 2px solid;
   width: 370px;
   height: max-content;
+  font-weight: bold;
   padding: 0rem 1rem;
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.5);
   margin-top: 1rem;
+  align-self: right;
 }
 aside:last-of-type h2{
   font-family: serif;
@@ -84,8 +94,9 @@ aside:last-of-type h2{
   margin: 0;
 }
 section {
-  width: 480px;
-  margin-left: 2rem;
+  width: 475px;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 section:first-of-type
 {
@@ -93,14 +104,14 @@ section:first-of-type
   height: 320px;
 }
 section:nth-of-type(2) {
-  border-top: 15px solid palevioletred;
+  border-top: 15px solid rgb(218, 56, 110);;
   height: 228px;
 }
 section:last-of-type {
-  border-top: 15px solid darkcyan;
+  border-top: 15px solid rgb(1, 156, 191);
   height: 510px;
 }
-/*#endregion main grid =========================================================================*/
+/*#endregion main flex =========================================================================*/
 img {
   height: 707px;
   width: 402px;
@@ -133,15 +144,17 @@ figcaption p:first-of-type{
   width: 150px;
   text-align: left;
 }
-figcaption p:last-of-type {
+figcaption p:last-of-type {/*keith lathrop*/
   transform: rotate(-90deg);
+  text-transform: uppercase;
   position: absolute;
-  left: -35px;
-  bottom: -275px;
+  left: -50px;
+  bottom: -260px;
+  margin: 0;
 }
 aside {
-  width: 50%;
   justify-self: center;
+  margin-right: 1rem;
 }
 aside:last-of-type p em{
   font-style: normal;
@@ -206,14 +219,15 @@ section:first-of-type li h3 {
   
 }
 section:nth-of-type(2) li h3 {
-  color: palevioletred;
+  color: rgb(218, 56, 110);
 }
 section:last-of-type li h3 {
-  color: darkcyan;
+  color: rgb(1, 156, 191);
 }
 li::marker {
   font-family:'Trebuchet MS', sans-serif;
   font-size: 20px;
+  font-weight: 100;
 }
 li strong {
   text-transform: capitalize;
@@ -228,7 +242,7 @@ li[value*='31'] p {text-indent: 7.3rem;}/*take time to*/
 li[value*='32'] p {text-indent: 8.8rem; width: 90%;}/*beauty closet*/
 li[value*='36'] p {text-indent: 8.1rem; width: 90%;}/*pretty in red*/
 li[value*='47'] p {text-indent: 7.3rem;}/*take time to*/
-li[value*='49'] p {text-indent: 16.3rem; width: 87%;}/*4 fridays*/
+li[value*='49'] p {text-indent: 16.3rem; width: 86%;}/*4 fridays*/
 li[value*='52'] p {text-indent: 7.7rem;}/*your health*/
 li[value*='55'] p {text-indent: 5.2rem;}/*checkup*/
 li[value*='56'] p {text-indent: 11.5rem;}/*25 medical mistakes*/
