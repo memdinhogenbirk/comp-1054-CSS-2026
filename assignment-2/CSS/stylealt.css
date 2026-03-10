@@ -142,7 +142,7 @@ section ol {
 }
 section li {
   position: relative;
-  margin-bottom: -.5rem;
+  margin-bottom: -.4rem;
   margin-right: 0;
 }
 section li:last-of-type {
@@ -233,75 +233,84 @@ section h2 {
   line-height: 0;
   letter-spacing: -2px;
 }
-@media (min-width: 1000px){
-  header h1 {font-size: 160px;letter-spacing: -20px;}
-  header p {font-size: 24px; word-spacing: -10px;}
-  footer em, footer strong {font-size: 20px;}
-  main {}
-  aside:last-of-type {width: 370px;}
-  aside:last-of-type h2 {font-size: 40px;}
-  section {width: 475px;}
-  section {border-top: 15px solid}
-  img {
-    height: 707px;
-    width: 402px;
-  }
-  figure em::after {/*this is literally here solely to underline the one in 31*/
-    margin-left: -3rem;
-    top: 26px;
-    letter-spacing: -13px;
-  }
-  figcaption p:first-of-type{
-    bottom: 3.5rem;
-    left: 80px;
-    width: 150px;
-  }
-  figcaption p:last-of-type {/*keith lathrop*/
-    left: -50px;
-    bottom: -260px;
-    margin: 0;
-  }
-  aside:last-of-type li::before {
-    border-left: solid 5px white;/*hiding value periods behind border*/
-    margin-left: -.8rem;
-    padding-right: .5rem;
-  }
-  section h2 {
-    font-size: 40px;
-    margin: 1.5rem 0;
-    letter-spacing: -2px;
-  }
-  /*#region dumb list solution=================================================*/
-  li[value*='11'] p {text-indent: 7.2rem;}/*take time to*/
-  li[value*='12'] p {text-indent: 5.3rem; width: 90%;}/*how to*/
-  li[value*='16'] p {text-indent: 9.5rem; width: 90%;}/*womansday.com*/
-  li[value*='20'] p {text-indent: 13.6rem; width: 90%;}/*reinventing date night*/
-  li[value*='26'] p {text-indent: 7.1rem; width: 65%;}/*momfidence*/
-  li[value*='31'] p {text-indent: 7.3rem;}/*take time to*/
-  li[value*='32'] p {text-indent: 8.8rem; width: 90%;}/*beauty closet*/
-  li[value*='36'] p {text-indent: 8.1rem; width: 90%;}/*pretty in red*/
-  li[value*='47'] p {text-indent: 7.3rem;}/*take time to*/
-  li[value*='49'] p {text-indent: 16.3rem; width: 86%;}/*4 fridays*/
-  li[value*='52'] p {text-indent: 7.7rem;}/*your health*/
-  li[value*='55'] p {text-indent: 5.2rem;}/*checkup*/
-  li[value*='56'] p {text-indent: 11.5rem;}/*25 medical mistakes*/
-  li[value*='68'] p {top: 10px; padding-bottom: 1.5rem; width: 75%;}/*the heart*/
-  li[value*='72'] p {text-indent: 11.8rem; width: 95%;}/*your child's health*/
-  li[value*='76'] p {text-indent: 9.2rem; width: 85%;}/*blast belly fat*/
+li[value*='11'] p {text-indent: 7.2rem;}/*take time to*/
+li[value*='12'] p {text-indent: 5.3rem; width: 90%;}/*how to*/
+li[value*='16'] p {text-indent: 9.5rem; width: 90%;}/*womansday.com*/
+li[value*='20'] p {text-indent: 13.6rem; width: 90%;}/*reinventing date night*/
+li[value*='26'] p {text-indent: 7.1rem; width: 65%;}/*momfidence*/
+li[value*='31'] p {text-indent: 7.3rem;}/*take time to*/
+li[value*='32'] p {text-indent: 8.8rem; width: 90%;}/*beauty closet*/
+li[value*='36'] p {text-indent: 8.1rem; width: 90%;}/*pretty in red*/
+li[value*='47'] p {text-indent: 7.3rem;}/*take time to*/
+li[value*='49'] p {text-indent: 16.3rem; width: 86%;}/*4 fridays*/
+li[value*='52'] p {text-indent: 7.7rem;}/*your health*/
+li[value*='55'] p {text-indent: 5.2rem;}/*checkup*/
+li[value*='56'] p {text-indent: 11.5rem;}/*25 medical mistakes*/
+li[value*='68'] p {top: 10px; padding-bottom: 1.5rem; width: 75%;}/*the heart*/
+li[value*='72'] p {text-indent: 11.8rem; width: 95%;}/*your child's health*/
+li[value*='76'] p {text-indent: 9.2rem; width: 85%;}/*blast belly fat*/
   /*#endregion dumb list solution=================================================*/
+@media (max-width: 930px){
+  main {
+    height: 1161px;
+  }
+  header h1 {
+    font-size: 120px;
+    letter-spacing: -7px;
+  }
+  aside {
+    margin-right: 0rem;
+  }
+  aside:last-of-type {
+    width: 300px;
+    padding: 0;
+  }
+  aside ol {
+    margin-left: 5px;
+  }
+  section ol{
+    margin-left: 2rem;
+  }
+  figcaption p:last-of-type {
+    left: 20px;
+    bottom: -280px;
+  }
 }
-@media (min-width: 360px){
-  header h1 {font-size: 60px; letter-spacing: -8px;}
-  header p {font-size: 12px; word-spacing: -5px;}
-  footer em, footer strong {font-size: 20px;}
-  aside:last-of-type {width: 120px;}
-  aside:last-of-type h2 {font-size: 16px;}
-  section {width: 240px;}
-  section {border-top: 8px solid}
-  main {height: 1200px;}/*temp*/
+@media screen and (max-width: 450px){
+  header h1 {
+    font-size: 58px;
+    letter-spacing: -7px;
+  }
+  header p {
+    font-size: 9px; 
+    word-spacing: -4px;
+  }
+  footer {font-size: 7px;}
+  footer em {font-size: 10px;}
+  footer strong {
+    font-size: 10px; 
+    padding: 0;
+  }
+  aside {margin-right: .25rem;}
+  aside:last-of-type {
+    width: 133px; 
+    font-size: 6px; 
+    padding: 0.2rem 0rem 0.2rem 0.2rem; 
+    margin-top: .35rem;
+    border: orange 1px solid;
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.5);
+    letter-spacing: -.3px;
+  }
+  aside:last-of-type ol { 
+    margin: 0; 
+    padding-left: 20px;
+  }
+  aside:last-of-type h2 {font-size: 14px;}
+  section {width: 171px; margin-right: .25rem; border-top: 5px solid;}
+  main {height: 381px;}
   img {
-    height: 200px;
-    width: 120px;
+    height: 255px;
+    width: 145px;
   }
   figure em::after {/*this is literally here solely to underline the one in 31*/
     margin-left: -12px;
@@ -319,51 +328,55 @@ section h2 {
     line-height: 30px;
   }
   figcaption p:last-of-type {/*keith lathrop*/
-    left: -50px;
-    bottom: -260px;
+    left: -20px;
+    bottom: -92px;
     margin: 0;
+    font-size: 6px;
   }
   aside:last-of-type li::before {
     border-left: solid 5px white;/*hiding value periods behind border*/
-    margin-left: -.8rem;
-    padding-right: .5rem;
+    margin-left: -.3rem;
+    padding-right: 0;
   }
   section h2 {
-    font-size: 20px;
-    margin: .5rem 0;
-    letter-spacing: -2px;
+    font-size: 14px;
+    margin: .4rem 0 -.4rem 0;
+    letter-spacing: -1px;
+  }
+  section li {
+    margin-bottom: -.13rem;
   }
   section li h3 {
-    margin: 0 0 -.2rem -.4rem;
-    font-size: 14px;
+    margin: 0 0 -.22rem -.29rem;
+    font-size: 6px;
     border-left: 3px solid white;/*hiding value periods using border*/
-    padding-left: 3px;
+    padding-left: 2px;
   }
   section li p {
     position: relative;
-    bottom: 13px;
+    bottom: 4px;
     margin-bottom: 0;
     margin-top: 0;
-    line-height: 1rem;
+    line-height: .5rem;
+    font-size: 6px;
   }
-  li::marker {font-size: 14px;}
-  section p {font-size: 14px;}
+  li::marker {font-size: 8px;}
   /*#region dumb list solution=================================================*/
-  li[value*='11'] p {text-indent: 6.3rem;}/*take time to*/
-  li[value*='12'] p {text-indent: 4.5rem; width: 90%;}/*how to*/
-  li[value*='16'] p {text-indent: 8.3rem; width: 90%;}/*womansday.com*/
-  li[value*='20'] p {text-indent: 9.6rem; width: 90%;}/*reinventing date night*/
-  li[value*='26'] p {text-indent: 7.1rem; width: 65%;}/*momfidence*/
-  li[value*='31'] p {text-indent: 7.3rem;}/*take time to*/
-  li[value*='32'] p {text-indent: 8.8rem; width: 90%;}/*beauty closet*/
-  li[value*='36'] p {text-indent: 8.1rem; width: 90%;}/*pretty in red*/
-  li[value*='47'] p {text-indent: 7.3rem;}/*take time to*/
-  li[value*='49'] p {text-indent: 8.3rem; width: 86%;}/*4 fridays*/
-  li[value*='52'] p {text-indent: 7.7rem;}/*your health*/
-  li[value*='55'] p {text-indent: 5.2rem;}/*checkup*/
-  li[value*='56'] p {text-indent: 11.5rem;}/*25 medical mistakes*/
-  li[value*='68'] p {top: 10px; padding-bottom: 1.5rem; width: 75%;}/*the heart*/
-  li[value*='72'] p {text-indent: 11.8rem; width: 95%;}/*your child's health*/
-  li[value*='76'] p {text-indent: 9.2rem; width: 85%;}/*blast belly fat*/
+  li[value*='11'] p {text-indent: 2.9rem;}/*take time to*/
+  li[value*='12'] p {text-indent: 2rem; width: 90%;}/*how to*/
+  li[value*='16'] p {text-indent: 3.6rem; width: 90%;}/*womansday.com*/
+  li[value*='20'] p {text-indent: 5.2rem; width: 90%;}/*reinventing date night*/
+  li[value*='26'] p {text-indent: 2.8rem; width: 70%;}/*momfidence*/
+  li[value*='31'] p {text-indent: 2.9rem;}/*take time to*/
+  li[value*='32'] p {text-indent: 3.4rem; width: 90%;}/*beauty closet*/
+  li[value*='36'] p {text-indent: 3.1rem; width: 90%;}/*pretty in red*/
+  li[value*='47'] p {text-indent: 2.9rem;}/*take time to*/
+  li[value*='49'] p {text-indent: 6.1rem; width: 86%;}/*4 fridays*/
+  li[value*='52'] p {text-indent: 2.9rem;}/*your health*/
+  li[value*='55'] p {text-indent: 2.1rem;}/*checkup*/
+  li[value*='56'] p {text-indent: 4.5rem;}/*25 medical mistakes*/
+  li[value*='68'] p {top: 3px; padding-bottom: .5rem; width: 75%;}/*the heart*/
+  li[value*='72'] p {text-indent: 4.5rem; width: 95%;}/*your child's health*/
+  li[value*='76'] p {text-indent: 3.6rem; width: 85%;}/*blast belly fat*/
   /*#endregion dumb list solution=================================================*/
 }
