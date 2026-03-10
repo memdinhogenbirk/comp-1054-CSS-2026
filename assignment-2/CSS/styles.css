@@ -79,13 +79,17 @@ aside:first-of-type {/*model picture lady*/
 }
 aside:last-of-type {/*on our cover*/
   border: orange 2px solid;
-  width: 370px;
+  width: 380px;
   height: max-content;
   font-weight: bold;
   padding: 0rem 1rem;
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.5);
   margin-top: 1rem;
   align-self: right;
+}
+aside:last-of-type p em{
+  display: inline-block;
+  width: 101%;
 }
 aside:last-of-type h2{
   font-family: serif;
@@ -218,6 +222,9 @@ aside:last-of-type ol{
   margin-top: 0;
   padding-top: 0;
 }
+aside:last-of-type li {
+  line-height: 1.5rem;
+}
 aside:last-of-type li::before {
   content: "";
   border-left: solid 5px white;/*hiding value periods behind border*/
@@ -253,31 +260,63 @@ li[value*='76'] p {text-indent: 9.2rem; width: 85%;}/*blast belly fat*/
 /*#endregion dumb list solution=================================================*/
 @media (max-width: 930px){
   main {
-    height: 1161px;
+    height: 1500px;
   }
   header h1 {
-    font-size: 120px;
+    font-size: 80px;
     letter-spacing: -7px;
   }
   aside {
-    margin-right: 0rem;
+    margin: 0;
+    padding: 0;
+  }
+  aside:first-of-type{
+    width: 40%;
   }
   aside:last-of-type {
-    width: 300px;
+    width: 40%;
+    margin-top: 1rem;
     padding: 0;
   }
   aside ol {
     margin-left: 5px;
   }
+  section {
+    width: 50%;
+    padding: 1rem 0;
+    margin-right: auto;
+  }
   section ol{
-    margin-left: 2rem;
+    justify-content: center;
+  }
+  section h3 {
+    padding: .5rem;
+  }
+  section li p {
+    position:unset;
+    text-wrap: wrap;
+    line-height: normal;
+  }
+  section li[value] p{
+    text-indent: 0;
+    width: 80%;
+  }
+  figure {
+    width:100%;
+    display: flex;
+    justify-content: center;
   }
   figcaption p:last-of-type {
-    left: 20px;
-    bottom: -280px;
+    left: 30px;
+    transform: none;
+    bottom: -450px;
+  }
+  img {
+    width: 100%;
+    height: auto;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   li[value*='68'] p {
     top: 0; padding-bottom: 0;
   }
@@ -326,16 +365,30 @@ li[value*='76'] p {text-indent: 9.2rem; width: 85%;}/*blast belly fat*/
     width: 80%;
   }
   figure {
-    width:fit-content;
+    width:100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  figcaption em{
+    position: relative;
+    bottom: 0px;
+    left: 0;
+  }
+  figcaption p:last-of-type {/*keith lathrop*/
+    left: -30px;
+    bottom: -200px;
+    transform: rotate(-90deg);
   }
   img {
-    width: 60%;
+    width: 80%;
     height: auto;
   }
+  aside:first-of-type{
+    width: 100%;
+  }
   aside:last-of-type {
-    width: 80%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
   }
