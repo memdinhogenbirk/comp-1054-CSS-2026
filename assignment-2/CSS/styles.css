@@ -52,7 +52,7 @@ main {
   flex-direction: column;
   flex-wrap: wrap-reverse;/*columns appear right to left instead of left to right*/
   width: auto;
-  height: 1060px;/*force two columns be limiting height*/
+  height: 1090px;/*force two columns be limiting height*/
   align-content: center;
 }
 /*#endregion main and div container===================================================================================*/
@@ -314,7 +314,7 @@ a ton of micro tweaks to make this fit on a medium sized screen or phone turned 
   figcaption p:last-of-type {
     left: 30px;
     transform: none;
-    bottom: -450px;
+    bottom: -600px;
   }
   img {
     width: 100%;
