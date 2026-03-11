@@ -97,7 +97,7 @@
 				display: block;
 				float: right;
 				padding-left: 20px;
-				margin: 1rem 1rem 0.5 1rem;
+				margin: 0 1rem 0.5 1rem;
 				width: 35%;
 				font-size: 1.2rem;
 				font-weight: bold;
@@ -107,7 +107,15 @@
 				border-left: 3px solid #CCC;
 			}
 			/* STEP 7b: Add leading quotation marks and style them */
-
+			.pullquote2::before {
+				content: "\201C";
+				display: block;
+				font-size: 120px;
+				float: left;
+				position: relative;
+				top: -3rem;
+				color: #CCC;
+			}
 			/* STEP 7c: Remove the class"pullquote2" from the HTML */
 			footer {
 				background: #ccc;
@@ -199,7 +207,7 @@
 		// STEP 4a: Get the 'Back to top' button from the DOM with a const topButton
 			const topButton = document.querySelector('footer a.top');
 		// STEP 8a: Assign any and all elements with the class="pullquote" to the const pullQuote
-		
+			const pullQuote = document.querySelector('.pullquote');
 		// STEP 2c: Build an event listener for the scroll event (https://developer.mozilla.org/en-US/docs/Web/Events/scroll)
 			window.addEventListener('scroll', function(){
 			// STEP 2d: Check if the scroll position is further down than the top of the navbar...
@@ -232,7 +240,7 @@
 				})
 			}
 			// STEP 8b: Write a forEach loop to duplicate the pullquote text and insert it into the page
-			
+			pullQuote.forEach(function(element) {
 				// STEP 8c: Get the parent element
 				
 				// STEP 8d: Clone the element (https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode)
@@ -240,7 +248,7 @@
 				// STEP 8e: Add a special class to the cloned SPAN element
 				
 				// STEP 8f: Insert cloned element into the DOM
-				
+			});	
 			
 			// STEP 9a: Move this entire JavaScript into an external file and put it into the /js folder
 			/* Animated scrolling of page to top function inspired by the great tutorial at https://dzone.com/articles/back-to-top-pure-javascript and the MDN page about scrollBy() at https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy */
