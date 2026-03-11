@@ -1,4 +1,4 @@
-/*#region normalize ==========================================================================*/
+/*#region normalize ==================================================================================================*/
 html {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -12,9 +12,10 @@ body {
   margin: 0 auto;
 }
 
-/*#endregion normalize =======================================================================*/
+/*#endregion normalize ===============================================================================================*/
+/*#region header======================================================================================================*/
 header {
-  display: grid;
+  display: grid;/*header displayed as grid for ease of positioning paragraph above h1*/
   row-gap: 0rem;
   width: fit-content;
   grid-template-areas: 'headerP''headerh1';
@@ -28,52 +29,34 @@ header h1 {
   font-weight: 100;
   font-size: 160px;
   margin: 0;
-  letter-spacing: -20px;
+  letter-spacing: -20px;/*better matching original*/
 }
 header p {
   text-transform: uppercase;
   grid-area: headerP;
   font-family: 'Courier New', Courier, monospace;
   font-size: 24px;
-  word-spacing: -10px;
+  word-spacing: -10px;/*better matching original*/
   margin-bottom: 0;
 }
+/*#endregion header===================================================================================================*/
+/*#region main and div container======================================================================================*/
 #container {
   width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-footer {
-  display: flex;
-  justify-content: right;
-  text-transform: uppercase;
-  width: 100%;
-  height: fit-content;
-}
-footer p {
-  margin-top: 0;
-}
-
-footer em {
-  color: orangered;
-  font-size: 20px;
-}
-footer strong {
-  font-family: monospace;
-  padding-left: 1rem;
-  font-size: 20px;
-}
-/*#region main flex =========================================================================*/
 main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap-reverse;/*columns appear right to left instead of left to right*/
   width: auto;
-  height: 1060px;
+  height: 1060px;/*force two columns be limiting height*/
   align-content: center;
 }
-
+/*#endregion main and div container===================================================================================*/
+/*#region asides =====================================================================================================*/
 aside:first-of-type {/*model picture lady*/
   width: fit-content;
 }
@@ -83,22 +66,45 @@ aside:last-of-type {/*on our cover*/
   height: max-content;
   font-weight: bold;
   padding: 0rem 1rem;
-  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.5);/*could have been the photocopier but it looks like there's a box shadow on this box*/
   margin-top: 1rem;
-  align-self: right;
 }
-aside:last-of-type p em{
+aside:last-of-type p em{/*"Red hot dinners and sweets to share" was wrapping prematurely*/
   display: inline-block;
   width: 101%;
+  font-style: normal;
+  text-transform: uppercase;
 }
-aside:last-of-type h2{
+aside:last-of-type h2{/*on our cover*/
   font-family: serif;
-  text-transform: lowercase;
+  text-transform: lowercase;/*lowercase like in magazine*/
   font-weight: 100;
   font-size: 40px;
   padding: 0;
   margin: 0;
 }
+aside {
+  justify-self: center;
+  margin-right: 1rem;
+}
+aside:last-of-type p{
+  margin: 0;
+}
+aside:last-of-type ol{
+  margin-top: 0;
+  padding-top: 0;
+}
+aside:last-of-type li {
+  line-height: 1.5rem;
+}
+aside:last-of-type li::before {
+  content: "";
+  border-left: solid 5px white;/*hiding value number decimals behind border*/
+  margin-left: -.8rem;
+  padding-right: .5rem;
+}
+/*#endregion asides===================================================================================================*/
+/*#region sections ===================================================================================================*/
 section {
   width: 475px;
   margin-left: 1rem;
@@ -106,38 +112,23 @@ section {
   border-top: 15px solid;
   height: auto;
 }
-section:first-of-type {
+section:first-of-type {/*colored lines above each section*/
   border-color: olivedrab;
 }
-section:nth-of-type(2) {
+section:nth-of-type(2) {/*colored lines above each section*/
   border-color: rgb(218, 56, 110);
 }
-section:last-of-type {
+section:last-of-type {/*colored lines above each section*/
   border-color: rgb(1, 156, 191);
 }
-/*#endregion main flex =========================================================================*/
-img {
-  height: 707px;
-  width: 402px;
-}
-figure {
-  position: relative;
-  padding: 0;
-  margin: 0;
-}
-figure em {/*31*/
-  font-size: 120px;
-  font-family: 'Arial Narrow', sans-serif;
-  font-style: normal;
-  line-break: auto;
-  line-height: 100px;
-}
-figure em::after {/*this is literally here solely to underline the one in 31*/
-  position: relative;
-  content: "--";
-  margin-left: -3rem;
-  top: 26px;
-  letter-spacing: -13px;
+section h2 {
+  text-transform: lowercase;
+  font-family: serif;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 1.5rem 0;
+  line-height: 0;
+  letter-spacing: -2px;
 }
 section ol {
   width: 90%;
@@ -164,83 +155,15 @@ section li h3 {
   border-left: 5px solid white;/*hiding value periods using border*/
   padding-left: 7px;
 }
-section li p {
+section li p {/*to get the list p's to align and wrap, I did this, and then individually indented/controlled them below*/
   position: relative;
   bottom: 12px;
   margin-bottom: 0;
   margin-top: 0;
   line-height: 1.5rem;
 }
-section:first-of-type li h3 {
-  color: olivedrab;
-  
-}
-section:nth-of-type(2) li h3 {
-  color: rgb(218, 56, 110);
-}
-section:last-of-type li h3 {
-  color: rgb(1, 156, 191);
-}
-li::marker {
-  font-family:'Trebuchet MS', sans-serif;
-  font-size: 20px;
-  font-weight: 100;
-}
-li strong {
-  text-transform: capitalize;
-}
-
-figcaption p:first-of-type{
-  display: grid;
-  color: white;
-  position: absolute;
-  bottom: 3.5rem;
-  left: 80px;
-  width: 150px;
-  text-align: left;
-}
-figcaption p:last-of-type {/*keith lathrop*/
-  transform: rotate(-90deg);
-  text-transform: uppercase;
-  position: absolute;
-  left: -50px;
-  bottom: -260px;
-  margin: 0;
-}
-aside {
-  justify-self: center;
-  margin-right: 1rem;
-}
-aside:last-of-type p em{
-  font-style: normal;
-  text-transform: uppercase;
-}
-aside:last-of-type p{
-  margin: 0;
-}
-aside:last-of-type ol{
-  margin-top: 0;
-  padding-top: 0;
-}
-aside:last-of-type li {
-  line-height: 1.5rem;
-}
-aside:last-of-type li::before {
-  content: "";
-  border-left: solid 5px white;/*hiding value periods behind border*/
-  margin-left: -.8rem;
-  padding-right: .5rem;
-}
-section h2 {
-  text-transform: lowercase;
-  font-family: serif;
-  font-weight: 100;
-  font-size: 40px;
-  margin: 1.5rem 0;
-  line-height: 0;
-  letter-spacing: -2px;
-}
-/*#region dumb list solution=================================================*/
+/*#endregion sections ================================================================================================*/
+/*#region dumb list solution==========================================================================================*/
 li[value*='11'] p {text-indent: 7.2rem;}/*take time to*/
 li[value*='12'] p {text-indent: 5.3rem; width: 90%;}/*how to*/
 li[value*='16'] p {text-indent: 9.5rem; width: 90%;}/*womansday.com*/
@@ -250,14 +173,96 @@ li[value*='31'] p {text-indent: 7.3rem;}/*take time to*/
 li[value*='32'] p {text-indent: 8.8rem; width: 90%;}/*beauty closet*/
 li[value*='36'] p {text-indent: 8.1rem; width: 90%;}/*pretty in red*/
 li[value*='47'] p {text-indent: 7.3rem;}/*take time to*/
-li[value*='49'] p {text-indent: 16.3rem; width: 86%;}/*4 fridays*/
-li[value*='52'] p {text-indent: 7.7rem;}/*your health*/
+li[value*='49'] p {text-indent: 16.3rem; width: 86%;}/*4 fridays
+PLEASE NOTE: I changed the value for the above in the html. (it said "heart disease" at the end of the line, but its just "disease" in the magazine)
+Though I could have used ::before, hidden it and re-written it, I figured it was unintentional on your part*/
+li[value*='52'] p {text-indent: 7.7rem;}/*your health 
+PLEASE NOTE: I changed the value for the above in the html. (it said 54, but its 52 in the magazine)
+Again, though I could have used ::before, hidden it and re-written it, I figured it was unintentional on your part
+And lets be honest, there is no world where one would do that instead of editing the html text*/
 li[value*='55'] p {text-indent: 5.2rem;}/*checkup*/
 li[value*='56'] p {text-indent: 11.5rem;}/*25 medical mistakes*/
 li[value*='68'] p {top: 10px; padding-bottom: 1.5rem; width: 75%;}/*the heart*/
 li[value*='72'] p {text-indent: 11.8rem; width: 95%;}/*your child's health*/
 li[value*='76'] p {text-indent: 9.2rem; width: 85%;}/*blast belly fat*/
-/*#endregion dumb list solution=================================================*/
+/*#endregion dumb list solution=======================================================================================*/
+/*#region list globals ===============================================================================================*/
+li::marker {
+  font-family:'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+li strong {
+  text-transform: capitalize;/*title cased strong elements in lists a la magazine page*/
+}
+/*#endregion list globals ============================================================================================*/
+/*#region figure =====================================================================================================*/
+img {
+  height: 707px;
+  width: 402px;
+}
+figure {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+figure em {/*31*/
+  font-size: 120px;
+  font-family: 'Arial Narrow', sans-serif;
+  font-style: normal;
+  line-break: auto;
+  line-height: 100px;
+}
+figure em::after {/*this is literally here solely to underline the one in 31*/
+  position: relative;
+  content: "--";
+  margin-left: -3rem;
+  top: 26px;
+  letter-spacing: -13px;
+}
+figcaption p:first-of-type{/*using grid to easily position figcaption*/
+  display: grid;
+  color: white;
+  position: absolute;
+  bottom: 3.5rem;
+  left: 80px;
+  width: 150px;
+  text-align: left;
+}
+figcaption p:last-of-type {/*keith lathrop turned sideways and floating around down next to the next aside a la magazine page*/
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  position: absolute;
+  left: -50px;
+  bottom: -260px;
+  margin: 0;
+}
+/*#endregion figure ==================================================================================================*/
+/*#region footer======================================================================================================*/
+footer {
+  display: flex;
+  justify-content: right;
+  text-transform: uppercase;
+  width: 100%;
+  height: fit-content;
+}
+footer p {
+  margin-top: 0;
+}
+
+footer em {/*lil footer dot*/
+  color: orangered;
+  font-size: 20px;
+}
+footer strong {
+  font-family: monospace;
+  padding-left: 1rem;
+  font-size: 20px;
+}
+/*#endregion footer===================================================================================================*/
+/*#region smaller screen media========================================================================================*/
+/*Not much to say here
+a ton of micro tweaks to make this fit on a medium sized screen or phone turned sideways*/
 @media (max-width: 930px){
   main {
     height: 1500px;
@@ -316,6 +321,13 @@ li[value*='76'] p {text-indent: 9.2rem; width: 85%;}/*blast belly fat*/
     height: auto;
   }
 }
+/*#endregion smaller screen media=====================================================================================*/
+/*#region mobile screen media=========================================================================================*/
+/*Again, not much to say here
+a ton of micro tweaks to make this fit on a vertically held phone
+Main difference being it now displays as one column
+I also made a version of this in stylealt where it displays the same as it does on your regular screen, preserving the magazine layout.
+Issue with that is it was near impossible to read and one would need to zoom in to see anything*/
 @media screen and (max-width: 600px) {
   li[value*='68'] p {
     top: 0; padding-bottom: 0;
@@ -397,3 +409,4 @@ li[value*='76'] p {text-indent: 9.2rem; width: 85%;}/*blast belly fat*/
     width: fit-content;
   }
 }
+/*#endregion mobile screen media=====================================================================================*/
