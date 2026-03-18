@@ -16,3 +16,47 @@ html {
 	width: 80%;
 	margin: 0 auto;
 }
+header{
+	margin-bottom: 2rem;
+}
+ul {
+	display: flex;
+	margin: 0;
+	padding-left: 0;
+}
+li {
+	list-style: none;
+	margin-left: 0;
+}
+a {
+	text-decoration: none;
+	border: transparent 2px solid;
+	background-color: transparent;
+	color: black;
+	font-weight: bold;
+	padding: 1rem;
+	margin: 0;
+
+}
+a.visible{
+	border: 2px solid black;
+	border-radius: 10px 10px 0 0;
+	background-color: lightgray;
+	border-bottom: none;
+}
+div[role="tabpanel"]{
+	border: 2px solid black;
+	background-color: lightgray;
+	margin-top: 1rem;
+	position: absolute;
+	z-index: -1;
+	padding: 1rem;
+	visibility: hidden;
+}
+div[role="tabpanel"].visible{
+	visibility: visible;
+}
+footer{
+	position: absolute;
+	bottom: 1px;
+}
