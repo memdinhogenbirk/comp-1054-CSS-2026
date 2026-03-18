@@ -1,48 +1,37 @@
 const panels = document.querySelectorAll('[role="tabpanel"]');
-const tabs = document.querySelectorAll('[role="tab"]');
+const tabs = document.querySelectorAll('li a');
 
 tabs.forEach((tab) =>{
+    //check for click event on each tab
     tab.addEventListener('click', ()=>{
+        //when any tab is clicked
+        //begin by removing class visbile from all elements
         tabs.forEach((t) =>{t.classList.remove('visible')});
         panels.forEach((p) =>{p.classList.remove('visible')});
+        //add visible to tab that has been clicked
         tab.classList.add('visible');
-    })
-})
-
-
-
-const tab1 = document.querySelector('[href="#tabpanel1"]');
-const tab2 = document.querySelector('[href="#tabpanel2"]');
-const tab3 = document.querySelector('[href="#tabpanel3"]');
-
-const panel1 = document.getElementById('tabpanel1');
-const panel2 = document.getElementById('tabpanel2');
-const panel3 = document.getElementById('tabpanel3');
-
-
-tab1.addEventListener("click", () =>{
-    panel1.classList.add('visible');
-    tab1.classList.add('visible');
-    panel2.classList.remove('visible');
-    tab2.classList.remove('visible');
-    panel3.classList.remove('visible');
-    tab3.classList.remove('visible');
+        //get the text written in clicked tabs href attribute
+        currentTab = tab.getAttribute('href');
+        //go through all panels
+        panels.forEach((panel) =>{
+            /*if the resulting string from concatonating # and the panel id is
+            equal to href text, add class visible*/
+            if(currentTab === '#' + panel.id){
+                //add class visible to it
+                panel.classList.add('visible');
+            };
+            /*
+            Alternatively, whilst trying to figure out how to do this within the 
+            scope of the course I learned I can also use the built in methods 
+            .includes, or .endsWith
+            example:
+                currentTab.includes(panel.id)
+                currentTab.endsWith(panel.id)
+            Ultimately the same results are achieved in this case
+            */
+        });
+    });
 });
-tab2.addEventListener("click", () =>{
-    panel2.classList.add('visible');
-    tab2.classList.add('visible');
-    panel1.classList.remove('visible');
-    tab1.classList.remove('visible');
-    panel3.classList.remove('visible');
-    tab3.classList.remove('visible');
-});
-tab3.addEventListener("click", () =>{
-    panel3.classList.add('visible');
-    tab3.classList.add('visible');
-    panel1.classList.remove('visible');
-    tab1.classList.remove('visible');
-    panel2.classList.remove('visible');
-    tab2.classList.remove('visible');
-});
+
 
 //203625
