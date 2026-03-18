@@ -22,6 +22,23 @@ details {
 	padding: 0 1rem;
 	background-color: whitesmoke;
 }
+/*animate open and close of panel*/
+details {
+  /* Set an initial max-height that only fits the summary */
+  max-height: 3rem; 
+  overflow: hidden;
+  /* Apply a transition to max-height */
+  transition: max-height 0.4s ease-in-out; 
+}
+details:not([open]){
+  max-height: 3rem;
+}
+/* When the 'open' attribute is present, increase max-height */
+details[open] {
+  /* Set a value large enough to fit all your content */
+  max-height: 20em; 
+}
+
 /* STEP 3b: Adjacent sibling DETAILS elements don't need a top border */
 details ~ details {/*or details + details*/
 	border-top: none;
