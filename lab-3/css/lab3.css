@@ -38,7 +38,7 @@ a {
 	margin: 0;
 
 }
-a.visible{
+a.active{
 	border: 2px solid black;
 	border-radius: 10px 10px 0 0;
 	background-color: lightgray;
@@ -53,8 +53,8 @@ div[role="tabpanel"]{
 	padding: 1rem;
 	visibility: hidden;
 }
-div[role="tabpanel"].visible{
-	visibility: visible;
+div[role="tabpanel"].active{
+	visibility: active;
 }
 /*keeping footer out of the way*/
 footer{
