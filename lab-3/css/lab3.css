@@ -16,25 +16,26 @@ html {
 	width: 80%;
 	margin: 0 auto;
 }
+
 header{
-	margin-bottom: 2rem;
+	margin-bottom: 2rem;/*small gap for under header*/
 }
+
 ul {
-	display: flex;
+	display: flex;/*display ul left to right flexrow*/
 	margin: 0;
-	padding-left: 0;
+	padding-left: 0;/*ensure first tab lines up with panel box*/
 }
 li {
-	list-style: none;
-	margin-left: 0;
+	list-style: none;/*get rid of bullet points*/
 }
 a {
 	border-radius: 10px 10px 0 0;
-	text-decoration: none;
-	border: transparent 2px solid;
-	border-bottom: none;
+	text-decoration: none;/*get rid of anchor default underline*/
+	border: transparent 2px solid;/*hide border but keep size for no shrinkage between tabs clicked*/
+	border-bottom: none;/*cut off bottom at panel line*/
 	background-color: lightgray;
-	color: black;
+	color: black;/*change anchor font color from blue to black*/
 	font-weight: bold;
 	padding: 1rem;
 	margin: 0;
@@ -43,20 +44,21 @@ a {
 a.active{
 	border: 2px solid black;
 	background-color: white;
-	border-bottom: none;
+	border-bottom: none;/*rely on white background color to cover panel border*/
+	position: relative;
+	z-index: 2;/*ensure active anchor appears on top to cover panel border*/
 }
 div[role="tabpanel"]{
 	border: 2px solid black;
-	background-color: white;
 	margin-top: 1rem;
-	position: absolute;
-	width: 80%;
+	position: absolute;/*keep all panels in the same spot*/
+	width: 80%;/*ensure they don't span the whole page*/
 	padding: 1rem;
-	visibility: hidden;
+	visibility: hidden;/*hide until active class is added*/
 }
 div[role="tabpanel"].active{
 	visibility: visible;
-	z-index: -1;
+	z-index: 0;/*keep panel behind anchor with active class*/
 }
 /*keeping footer out of the way*/
 footer{

@@ -1,5 +1,13 @@
 const panels = document.querySelectorAll('[role="tabpanel"]');
 const tabs = document.querySelectorAll('li a');
+const defaultTab = document.querySelector('a[href="#tabpanel1"]')
+const defaultPanel = document.getElementById('tabpanel1');
+
+//on page load, make first panel and tab active so theres not just 3 grey tabs and no panels
+document.addEventListener('DOMContentLoaded',()=>{
+    defaultTab.classList.add('active');
+    defaultPanel.classList.add('active');
+})
 
 tabs.forEach((tab) =>{
     //check for click event on each tab
@@ -34,4 +42,4 @@ tabs.forEach((tab) =>{
 });
 
 
-//203625
+//access code for lab so I don't get locked out 203625
