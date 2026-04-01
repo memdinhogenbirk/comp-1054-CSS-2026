@@ -10,16 +10,32 @@ table {
 
 td, th {
     border-top: 1px solid grey;
-    padding: 1em;
+    padding: 1em 0.5em;
     white-space: nowrap;
 }
+thead tr th {
+    text-align: center;
+}
+/*target rank column to align left + padding*/
+tbody tr td:nth-of-type(1) {
+    text-align: left;
+    padding-left: 1em;
+}
+tbody tr td:nth-of-type(12) {
+    color: green;
+}
+/*target every td past the ranks to align center */
+tbody tr td:nth-of-type(n+2) {
+    text-align: center;
+}
+/*target first two column headers to align like the original website*/
 thead tr th:nth-of-type(-n+2) {
     text-align: left;
 }
+/*eliminate default heading margins to bring closer together*/
 h1,h2 {
     margin: 0;
 }
-
 caption {
     padding: 1em;
     text-align: left;
@@ -27,13 +43,13 @@ caption {
 tbody th {
     text-align: left;
 }
-tbody tr:nth-child(even) {
+tbody tr:nth-child(odd) {
   background-color: rgba(207, 202, 202, 0.356);
 }
 tbody th img {
     width: 40px;
     vertical-align: middle;
 }
-caption {
-    /* font-size: 150%; */
+th.sort-up, th.sort-down, .active {
+    background-color: #CCEEFF;
 }
