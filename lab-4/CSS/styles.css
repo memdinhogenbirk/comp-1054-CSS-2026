@@ -1,0 +1,39 @@
+@charset "utf-8";
+html {
+    font: 100%/1.2 "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+table {
+    border-collapse: collapse;
+    table-layout: auto;
+    width: 100%;
+}
+
+td, th {
+    border-top: 1px solid grey;
+    padding: 1em;
+    white-space: nowrap;
+}
+thead tr th:nth-of-type(-n+2) {
+    text-align: left;
+}
+h1,h2 {
+    margin: 0;
+}
+
+caption {
+    padding: 1em;
+    text-align: left;
+}
+tbody th {
+    text-align: left;
+}
+tbody tr:nth-child(even) {
+  background-color: rgba(207, 202, 202, 0.356);
+}
+tbody th img {
+    width: 40px;
+    vertical-align: middle;
+}
+caption {
+    /* font-size: 150%; */
+}
