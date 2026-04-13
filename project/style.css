@@ -6,29 +6,78 @@ html {
   box-sizing: border-box;
   font-family: sans-serif;
   width: 100%;
+  background-color: aqua;
 }
 *, *::before, *::after {
   box-sizing: inherit;
 }
-svg {
+svg {/*shrinking these images for the time being*/
   width: 30px;
   height: 30px;
 }
-
-head{}
-body{}
-header{}
-header .container{}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+body{
+  width: 80%;
+  margin: 0 auto;
+}
+.skip-link{
+  background-color: yellow;
+  padding: 5rem 1rem;
+  margin: 1rem;
+  border-radius: 500px;
+}
+header{
+  margin: auto;
+  margin-top: 5rem;
+  width: fit-content;  
+  border: 10px solid black;
+  background-color: gray;
+}
+header .container{
+  background-color: gray;
+  padding: 1rem;
+  margin: .5rem;
+  border: 10px dotted yellow;
+}
 header h1{}
 header h2{}
 header p{}
 header a{}
-nav{}
-nav ul{}
-nav ul li{}
+nav{
+  display: flex; 
+  margin: 0 auto;
+  border-right: 10px solid black;
+  border-left: 10px solid black;
+  width: fit-content;
+}
+nav ul{
+  padding: 2rem 0 0;
+  display: flex; 
+  border-right: 5px solid gray;
+  border-left: 5px solid gray;
+  margin: 0rem 1rem 1rem;
+  /* flex-wrap: wrap; */
+}
+nav ul li{
+  padding: 1rem;
+  border-top: solid 5px gray;
+  border-bottom: solid 5px gray;
+  background-color: lightgray;
+}
 nav ul li a{}
-main{}
-main > .container{}
+main{
+  border: 10px solid black;
+  background-color: brown;
+}
+main > .container{
+  padding: 1rem;
+}
 #about{}
 #about .container{}/*2 sections*/
 /*first section 1 h2, 3 p, 1 blockquote + p*/
