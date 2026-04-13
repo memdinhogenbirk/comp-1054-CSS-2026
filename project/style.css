@@ -20,7 +20,7 @@ li{
 }
 a{
   text-decoration: none;
-  color: black;
+  color: blue;
 }
 body{
   width: 80%;
@@ -78,8 +78,103 @@ main{
 main > .container{
   padding: 1rem;
 }
-#about{}
-#about .container{}/*2 sections*/
+#about section:first-of-type{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#about section:first-of-type h2{
+  display: flex;
+  border: 20px solid gray;
+  border-radius: 10rem 10rem 0 0;
+  align-items: center;
+  padding: 0 4rem;
+  font-size: 50px;
+  width: min-content;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+}
+#about section:first-of-type > p:first-of-type{
+  padding: 4rem;
+  margin: 0 1rem;
+  width: 59%;
+  border: 20px solid gray;
+  font-size: 30px;
+}
+#about section:first-of-type > p:nth-of-type(2), 
+#about section:first-of-type blockquote + p{
+  padding: 1rem;
+  margin: 1rem;
+  width: 25%;
+  border: 20px solid gray;
+}
+#about section:first-of-type blockquote{
+  padding: 1rem;
+  margin: 1rem;
+  width: 40%;
+  border: 20px solid gray;
+  font-size: 20px;
+}
+/*second section first article*/
+#about section:nth-of-type(2){
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+#about section:nth-of-type(2) h2{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  border: 20px solid gray;
+  border-radius: 10rem 10rem 0 0;
+  align-items: center;
+  padding: 0 4rem;
+  font-size: 50px;
+  width: min-content;
+  margin: 0 auto;
+}
+#about section:nth-of-type(2) > p:first-of-type{
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  border: 20px solid gray;
+}
+#about section:nth-of-type(2) > p:nth-of-type(2){
+  grid-column: 2/3;
+  grid-row: 2 / 3;
+}
+#about section:nth-of-type(2) ul{
+  grid-column: 2/3;
+  grid-row: 2 / 3;
+  margin: 0;
+  padding: 0;
+}
+#about section:nth-of-type(2) ul li{
+  background-color: darkslategrey;
+  padding: 0 1rem;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  width: 250px;
+}
+#about section:nth-of-type(2) ul li:nth-of-type(1){margin-left: 0rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(2){margin-left: 2rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(3){margin-left: 4rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(4){margin-left: 6rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(5){margin-left: 8rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(6){margin-left: 10rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(7){margin-left: 12rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(8){margin-left: 14rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(9){margin-left: 16rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(10){margin-left: 18rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(11){margin-left: 20rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(12){margin-left: 22rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(13){margin-left: 24rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(14){margin-left: 26rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(15){margin-left: 28rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(16){margin-left: 30rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(17){margin-left: 32rem;}
+
 /*first section 1 h2, 3 p, 1 blockquote + p*/
 /*second section 1 h2, 4 p, 1 ul, 1 a in fourth paragraph*/
 #guidelines{}
