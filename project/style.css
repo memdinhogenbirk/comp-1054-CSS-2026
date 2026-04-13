@@ -2,10 +2,19 @@
 are used to construct the building*/
 
 @charset "UTF-8";
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  width: 100%;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 svg {
   width: 30px;
   height: 30px;
 }
+
 head{}
 body{}
 header{}
