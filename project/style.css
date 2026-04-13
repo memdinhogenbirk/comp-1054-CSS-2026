@@ -3,4 +3,38 @@ svg {
   width: 30px;
   height: 30px;
 }
+head{}
+body{}
+header{}
+header .container{}
+header h1{}
+header h2{}
+header p{}
+header a{}
+nav{}
+nav ul{}
+nav ul li{}
+nav ul li a{}
+main{}
+main > .container{}
+#about{}
+#about .container{}/*2 sections*/
+/*first section 1 h2, 3 p, 1 blockquote + p*/
+/*second section 1 h2, 4 p, 1 ul, 1 a in fourth paragraph*/
+#guidelines{}
+#guidelines .container{}/*1 section*/
+/*1 h2, 1 h3, 4 p, 1 a, 1 a in first p*/
+#contribute{}
+#contribute .container{}/*2 sections + 1 footer*/
+/*first section 1 h2, 2 p, 1 a in second p*/
+/*second section 1 h3, 1 ol with 4 li, 1 a in first li, 1 a in third li*/
+
+#files{}/*footer 1 h3, 3 a*//*footer is within #contribute*/
+#profile{}
+/*profile is an aside, with 1 h4, 1 ul with 4 li, 1 a in third li, 1 a in fourth li, and 1 a after the ul*/
+#styles{}
+/*styles is an aside, with 1 h2, 1 ul with 3 li, 1 span and 1 a in each li, and 1 a after the ul*/
+.page-footer{}
+.page-footer .container{}
+/*page footer contains 3 p, 1 ul with 4 li, 1 a in each li, 4 a in second p, 1 a in third p*/
 /*current plan. Turn html into a city. Try to make buildings, cars, people, a skyline, etc.*/
