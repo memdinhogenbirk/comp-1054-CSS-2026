@@ -1,3 +1,6 @@
+/*changing idea, thinking an apartment building which spans the height of the page, as the user scrolls, elements
+are used to construct the building*/
+
 @charset "UTF-8";
 svg {
   width: 30px;
@@ -37,4 +40,3 @@ main > .container{}
 .page-footer{}
 .page-footer .container{}
 /*page footer contains 3 p, 1 ul with 4 li, 1 a in each li, 4 a in second p, 1 a in third p*/
-/*current plan. Turn html into a city. Try to make buildings, cars, people, a skyline, etc.*/
