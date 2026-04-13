@@ -73,48 +73,48 @@ nav ul li{
 nav ul li a{}
 main{
   border: 10px solid black;
-  background-color: brown;
+  background-color: rgb(121, 22, 22);
 }
 main > .container{
-  padding: 1rem;
+  padding: 0rem;
 }
 #about section:first-of-type{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-#about section:first-of-type h2{
+section h2{
+  width: 100%;
   display: flex;
-  border: 20px solid gray;
-  border-radius: 10rem 10rem 0 0;
-  align-items: center;
-  padding: 0 4rem;
-  font-size: 50px;
-  width: min-content;
-  margin: 0;
-  text-align: center;
   justify-content: center;
+  font-size: 50px;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  background-color: gray;
+  
 }
-#about section:first-of-type > p:first-of-type{
+section p,
+#about section:first-of-type blockquote > p{
+  border: 30px solid rgb(56, 53, 53);
+  border-bottom: solid 50px rgb(118, 113, 113);
+  background-color: rgb(159, 118, 51);
+  border-top: 1px solid black;
+  font-size: 25px;
+  width: 450px;
+  border-radius: 15rem 15rem 0 0;
+  margin: 1rem;
   padding: 4rem;
-  margin: 0 1rem;
-  width: 59%;
-  border: 20px solid gray;
-  font-size: 30px;
 }
-#about section:first-of-type > p:nth-of-type(2), 
-#about section:first-of-type blockquote + p{
-  padding: 1rem;
-  margin: 1rem;
-  width: 25%;
-  border: 20px solid gray;
+#about section:first-of-type blockquote > p{
+  width: 100%;
+  border-top: 1px solid black;
+  padding: 5rem;
 }
-#about section:first-of-type blockquote{
-  padding: 1rem;
-  margin: 1rem;
-  width: 40%;
-  border: 20px solid gray;
-  font-size: 20px;
+#about section:first-of-type > p:nth-of-type(3){
+  width: 100%;
+  border-top: 1px solid black;
+  padding: 5rem;
 }
 /*second section first article*/
 #about section:nth-of-type(2){
@@ -149,23 +149,23 @@ main > .container{
   justify-content: center;
   width: 250px;
 }
-#about section:nth-of-type(2) ul li:nth-of-type(1){margin-left: 0rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(2){margin-left: 2rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(3){margin-left: 4rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(4){margin-left: 6rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(5){margin-left: 8rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(6){margin-left: 10rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(7){margin-left: 12rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(8){margin-left: 14rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(9){margin-left: 16rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(10){margin-left: 18rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(11){margin-left: 20rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(12){margin-left: 22rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(13){margin-left: 24rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(14){margin-left: 26rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(15){margin-left: 28rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(16){margin-left: 30rem;}
-#about section:nth-of-type(2) ul li:nth-of-type(17){margin-left: 32rem;}
+#about section:nth-of-type(2) ul li:nth-of-type(1){}
+#about section:nth-of-type(2) ul li:nth-of-type(2){}
+#about section:nth-of-type(2) ul li:nth-of-type(3){}
+#about section:nth-of-type(2) ul li:nth-of-type(4){}
+#about section:nth-of-type(2) ul li:nth-of-type(5){}
+#about section:nth-of-type(2) ul li:nth-of-type(6){}
+#about section:nth-of-type(2) ul li:nth-of-type(7){}
+#about section:nth-of-type(2) ul li:nth-of-type(8){}
+#about section:nth-of-type(2) ul li:nth-of-type(9){}
+#about section:nth-of-type(2) ul li:nth-of-type(10){}
+#about section:nth-of-type(2) ul li:nth-of-type(11){}
+#about section:nth-of-type(2) ul li:nth-of-type(12){}
+#about section:nth-of-type(2) ul li:nth-of-type(13){}
+#about section:nth-of-type(2) ul li:nth-of-type(14){}
+#about section:nth-of-type(2) ul li:nth-of-type(15){}
+#about section:nth-of-type(2) ul li:nth-of-type(16){}
+#about section:nth-of-type(2) ul li:nth-of-type(17){}
 
 /*first section 1 h2, 3 p, 1 blockquote + p*/
 /*second section 1 h2, 4 p, 1 ul, 1 a in fourth paragraph*/
