@@ -25,6 +25,7 @@ a{
 body{
   width: 80%;
   margin: 0 auto;
+  position: relative;
 }
 .skip-link{
   background-color: yellow;
@@ -100,7 +101,7 @@ section p,
   background-color: rgb(159, 118, 51);
   border-top: 1px solid black;
   font-size: 25px;
-  width: 450px;
+  width: 30rem;
   border-radius: 15rem 15rem 0 0;
   margin: 1rem;
   padding: 4rem;
@@ -257,12 +258,13 @@ section p,
 }
 #contribute .container ol{
   list-style-type: upper-roman;
-  border: gray 10px solid;
+  border: rgb(56, 53, 53) 40px solid;
+  border-top: none;
   border-radius: 40% 40% 0 0;
   padding: 5rem 4rem;
   width: 80%;
   margin: 0;
-  border-bottom: none;
+  border-bottom: 40px solid rgb(148, 148, 148);
   background-color: rgb(136, 84, 2);
 }
 #contribute .container ol li{
@@ -278,15 +280,65 @@ section p,
   background-color: gray;
   
 }
-#profile{}
-/*profile is an aside, with 1 h4, 1 ul with 4 li, 1 a in third li, 1 a in fourth li, and 1 a after the ul*/
-#styles{}
-/*styles is an aside, with 1 h2, 1 ul with 3 li, 1 span and 1 a in each li, and 1 a after the ul*/
+
+.profile, 
+#styles{
+  position: absolute;
+  bottom: 10rem;
+  padding: 1rem;
+  width: 15%;
+  height: 40rem;
+  border-top: 10px solid rgb(191, 141, 16);
+  border-bottom: 10px solid rgb(191, 141, 16);
+  z-index: 1;
+}
+.profile ul, #styles ul{
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+.profile{left: 1rem;}
+#styles{right: 1rem;}
+.profile::after,
+#styles::after{
+  content: "";
+  position: absolute;
+  border: 10px solid rgb(191, 141, 16);
+  border-top: transparent 10px solid;
+  height: 49rem;
+  left: 43%;
+  top: -2rem;
+  z-index: -2;
+}
+.profile::before,
+#styles::before{
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: rgb(216, 2, 2);
+  z-index: -1;
+}
+#styles li > span{
+  display: flex;
+  flex-direction: column;
+}
+
 .page-footer{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 10px solid black;
+  background-color: rgb(24, 144, 15);
+  position: absolute;
+  bottom: -14rem;
+  left: -12.5%;
+  width: 125%;
 }
-.page-footer .container{}
+.page-footer .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: saddlebrown;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
 /*page footer contains 3 p, 1 ul with 4 li, 1 a in each li, 4 a in second p, 1 a in third p*/
