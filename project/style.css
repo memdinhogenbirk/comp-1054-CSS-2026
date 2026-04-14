@@ -182,24 +182,102 @@ section p,
 #about section:nth-of-type(2) ul li:nth-of-type(15){margin-left: 36%;}
 #about section:nth-of-type(2) ul li:nth-of-type(16){margin-left: 27%;}
 #about section:nth-of-type(2) ul li:nth-of-type(17){margin-left: 18%;}
+#about section:nth-of-type(2) ul + p{
+  width: 100%;
+  padding: 6rem;
+  margin-bottom: 0;
+  position: relative;
+}
+#about section:nth-of-type(2) p:last-of-type{
+  background-color: rgb(148, 148, 148);
+  border-radius: 0;
+  margin-top: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 20px solid rgb(148, 148, 148);
 
+}
 /*first section 1 h2, 3 p, 1 blockquote + p*/
 /*second section 1 h2, 4 p, 1 ul, 1 a in fourth paragraph*/
-#guidelines p{
-  border: 20px solid black;
+#guidelines{
+  display: flex;
+}
+#guidelines p:first-of-type{
+  width: 100%;
+  padding: 6rem;
+  margin: 5rem 5rem 0 5rem;
+}
+#guidelines h3{
+  font-size: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 5rem;
+  width: 100%;
+  background-color: gray;
+}
+#guidelines p:nth-of-type(2),
+#guidelines p:nth-of-type(3){
+  border: none;
   border-radius: 0;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
+  font-size: 20px;
+  padding: 1rem;
+  margin: 1rem 5rem;
+  position: relative;
+}
+#guidelines p:nth-of-type(2)::after{
+  content: "";
+  height: 634px;
+  border-left: rgb(191, 141, 16) 10px solid;
+  border-right: rgb(191, 141, 16) 10px solid;
+  position: absolute;
+  box-sizing: content-box;
+  width: 100%;
+  left: -10px;
+  top: -17px;
+}
+#guidelines section > a:last-of-type{
+  width: 100%;
+  text-align: center;
 }
 #guidelines .container{}/*1 section*/
 /*1 h2, 1 h3, 4 p, 1 a, 1 a in first p*/
-#contribute{}
-#contribute .container{}/*2 sections + 1 footer*/
-/*first section 1 h2, 2 p, 1 a in second p*/
-/*second section 1 h3, 1 ol with 4 li, 1 a in first li, 1 a in third li*/
+#contribute section:last-of-type{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem auto 0 auto;
+  width: 80%;
+  border: gray 10px solid;
+  border-radius: 40% 40% 0 0;
+  font-size: 20px;
+  background-color: rgb(148, 148, 148);
+  border-bottom: none;
+}
+#contribute .container ol{
+  list-style-type: upper-roman;
+  border: gray 10px solid;
+  border-radius: 40% 40% 0 0;
+  padding: 5rem 4rem;
+  width: 80%;
+  margin: 0;
+  border-bottom: none;
+  background-color: rgb(136, 84, 2);
+}
+#contribute .container ol li{
+  list-style: revert;
+  padding: 1rem;
+}
 
-#files{}/*footer 1 h3, 3 a*//*footer is within #contribute*/
+#files{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: gray;
+  
+}
 #profile{}
 /*profile is an aside, with 1 h4, 1 ul with 4 li, 1 a in third li, 1 a in fourth li, and 1 a after the ul*/
 #styles{}
