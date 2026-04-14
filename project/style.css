@@ -1,5 +1,9 @@
-/*changing idea, thinking an apartment building which spans the height of the page, as the user scrolls, elements
-are used to construct the building*/
+/*Now plan is castle tower thingy
+TO DO:
+- change top sign thingy to flag thingy
+- give top of tower merlons
+- find cool fonts
+- make mobile not awful*/
 
 @charset "UTF-8";
 html {
@@ -304,6 +308,7 @@ section p,
   content: "";
   position: absolute;
   border: 10px solid rgb(191, 141, 16);
+  border-radius: 0 0 8px 8px;
   border-top: transparent 10px solid;
   height: 49rem;
   left: 43%;
@@ -337,6 +342,7 @@ section p,
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 7rem;
   text-align: center;
   background-color: saddlebrown;
   clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
