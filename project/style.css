@@ -46,17 +46,25 @@ body{
   right: 40%;
 }
 header{
-  margin: 0;
-  margin-top: 10rem;
+  margin: 10rem 0 1rem 0;
   width: fit-content;
   border-left: none;
   background-color: rgb(216, 2, 2);
   position: relative;
 }
+header::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: aqua 10.4rem solid;
+  border-top: transparent 10.4rem solid;
+  border-bottom: transparent 10.3rem solid;
+  border-left: transparent 10.4rem solid;
+}
 header::after{
   content: "";
   position: absolute;
-  top: -1.8rem;
+  top: -1.7rem;
   left: 0;
   height: 122.9%;
   border: rgb(191, 141, 16) solid 10px;
@@ -64,8 +72,7 @@ header::after{
 }
 header .container{
   background-color: rgb(216, 2, 2);
-  padding: 1rem;
-  margin: .5rem;
+  padding: 1rem 1rem 1rem 2rem;
   border: 10px double yellow;
   border-right: transparent 10px double;
 }
@@ -73,7 +80,9 @@ header h1{
   font-family: "Pirata One", serif;
   font-size: 50px;
 }
-header h2{}
+header h2{
+  width: 70%;
+}
 header p{}
 header a{}
 nav{
@@ -90,14 +99,17 @@ nav ul{
   /* flex-wrap: wrap; */
 }
 nav ul li{
-  padding: 1rem;
+  padding: 1rem 0;
   border: solid 5px gray;
   border-bottom: none;
-  background-color: lightgray;
+  background-color: gray;
   text-align: center;
-  width: 8rem;
+  width: 12vw;
+  height: 5rem;
 }
-nav ul li a{}
+nav ul li a{
+  font-size: 20px;
+}
 main{
   border: 10px solid gray;
   background-color: rgb(101, 99, 99);
@@ -364,8 +376,16 @@ section p{
   padding: 0;
   list-style-position: inside;
 }
-.profile{left: 1rem;}
-#styles{right: 1rem;}
+.profile .container, 
+#styles .container{
+  border: yellow double 10px;
+  border-bottom: transparent 10px solid;
+  border-top: none;
+  padding: 1rem;
+  height: 39.4rem;
+}
+.profile{left: -2rem; padding: 0;}
+#styles{right: -2rem; padding: 0;}
 .profile::after,
 #styles::after{
   content: "";
