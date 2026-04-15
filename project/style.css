@@ -3,7 +3,8 @@ TO DO:
 - change top sign thingy to flag thingy
 - give top of tower merlons
 - find cool fonts
-- make mobile not awful*/
+- make mobile not awful
+DEFAULT WIDE SCREEN LIMIT OUGHT TO BE 1000px*/
 
 @charset "UTF-8";
 
@@ -117,11 +118,14 @@ section h2{
   padding: 0;
   margin: 0 0 1rem 0;
   text-transform: uppercase;
+  text-align: center;
   background-color: gray;
   font-family: "Pirata One", serif;
 }
-section p,
-#about section:first-of-type blockquote > p{
+#about section blockquote{
+  margin: 2rem 0;
+}
+section p{
   border: 30px solid rgb(56, 53, 53);
   border-bottom: solid 50px rgb(118, 113, 113);
   background-color: rgb(159, 118, 51);
@@ -132,11 +136,13 @@ section p,
   margin: 1rem;
   padding: 4rem;
 }
+
 #about section:first-of-type > p:nth-of-type(3),
 #about section:first-of-type blockquote > p{
   width: 100%;
   border-top: 1px solid black;
   padding: 5rem;
+  margin: 0;
 }
 /*second section first article*/
 
@@ -229,19 +235,22 @@ section p,
 }
 /*first section 1 h2, 3 p, 1 blockquote + p*/
 /*second section 1 h2, 4 p, 1 ul, 1 a in fourth paragraph*/
-#guidelines{
+#guidelines section{
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 #guidelines p:first-of-type{
   width: 100%;
   padding: 6rem;
-  margin: 5rem 5rem 0 5rem;
+  margin: 0;
 }
 #guidelines h3{
   font-size: 50px;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 5rem;
+  margin: 0;
   width: 100%;
   background-color: gray;
   font-family: "Pirata One", serif;
@@ -251,30 +260,52 @@ section p,
   border: none;
   border-radius: 0;
   font-size: 20px;
-  padding: 1rem;
-  margin: 1rem 5rem;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 30rem;
+  position: relative;
+  background-color: rgb(216, 2, 2);
+  border-right: yellow 20px double;
+  border-left: yellow 20px double;
+}
+#guidelines p:nth-of-type(2){
   position: relative;
 }
-#guidelines p:nth-of-type(2)::after{
+#guidelines p:nth-of-type(2)::before{
   content: "";
-  height: 634px;
-  border-left: rgb(191, 141, 16) 10px solid;
-  border-right: rgb(191, 141, 16) 10px solid;
+  border-top: 20px solid rgb(191, 141, 16);
   position: absolute;
-  box-sizing: content-box;
-  width: 100%;
-  left: -10px;
-  top: -17px;
+  top: 0px;
+  left: -3rem;
+  width: 34rem;
+  
+}
+#guidelines p:nth-of-type(3){
+  border-bottom: 20px solid transparent;
+  padding-bottom: 15rem;
+  position: relative;
+  
+}
+#guidelines p:nth-of-type(3)::after{
+  content: "";
+  position: absolute;
+  border: 15.05rem solid rgb(101, 99, 99);
+  border-left: transparent 15.05rem solid;
+  border-right: transparent 15.05rem solid;
+  border-top: transparent 15.05rem solid;
+  left: -1.3rem;
+  bottom: -1.3rem;
+  pointer-events: none;
 }
 #guidelines p:last-of-type{
   margin-bottom: 0;
 }
 /*review guidelines*/
 #guidelines section > a:last-of-type{
-  width: 100%;
   text-align: center;
   padding: 2rem;
-  margin: 0 16.4rem 2rem 16.4rem;
+  width: 30rem;
+  margin: 0 0 2rem 0;
   background-color: gray;
   font-family: "Pirata One", serif;
   font-size: 40px;
@@ -298,7 +329,7 @@ section p,
   border: rgb(56, 53, 53) 40px solid;
   border-top: none;
   border-radius: 40% 40% 0 0;
-  padding: 5rem 4rem;
+  padding: 5rem 5rem;
   width: 80%;
   margin: 0;
   border-bottom: 40px solid rgb(148, 148, 148);
@@ -308,7 +339,7 @@ section p,
   list-style: revert;
   padding: 1rem;
 }
-
+/*footer div*/
 #files{
   width: 100%;
   display: flex;
@@ -321,12 +352,11 @@ section p,
 .profile, 
 #styles{
   position: absolute;
-  bottom: 10rem;
+  bottom: 4rem;
   padding: 1rem;
-  width: 15%;
+  width: 11.5rem;
   height: 40rem;
   border-top: 10px solid rgb(191, 141, 16);
-  border-bottom: 10px solid rgb(191, 141, 16);
   z-index: 1;
 }
 .profile ul, #styles ul{
@@ -344,7 +374,7 @@ section p,
   border-radius: 0 0 8px 8px;
   border-top: transparent 10px solid;
   height: 49rem;
-  left: 43%;
+  left: 44.5%;
   top: -2rem;
   z-index: -2;
 }
@@ -353,7 +383,8 @@ section p,
   position: absolute;
   content: "";
   inset: 0;
-  background-color: rgb(216, 2, 2);
+  border: rgb(216, 2, 2) solid 5.75rem;
+  border-bottom: transparent solid 5.75rem;
   z-index: -1;
 }
 #styles li > span{
@@ -367,10 +398,11 @@ section p,
   justify-content: center;
   background-color: rgb(24, 144, 15);
   position: absolute;
-  bottom: -14rem;
+  bottom: -19.5rem;
   left: -12.5%;
   width: 125%;
 }
+/*dirt path*/
 .page-footer .container{
   display: flex;
   flex-direction: column;
