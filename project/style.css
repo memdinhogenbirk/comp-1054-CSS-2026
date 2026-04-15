@@ -28,7 +28,11 @@ li{
 }
 a{
   text-decoration: none;
-  color: blue;
+  color: gold;
+}
+a:hover{
+  font-weight: bolder;
+  /* text-transform: uppercase; */
 }
 body{
   width: 80%;
@@ -60,6 +64,7 @@ header::before{
   border-top: transparent 10.4rem solid;
   border-bottom: transparent 10.3rem solid;
   border-left: transparent 10.4rem solid;
+  pointer-events: none;
 }
 header::after{
   content: "";
@@ -106,9 +111,12 @@ nav ul li{
   text-align: center;
   width: 12vw;
   height: 5rem;
+  text-shadow: -1px 0px rgb(56, 53, 53);
+  text-transform: uppercase;
 }
 nav ul li a{
   font-size: 20px;
+  color: rgb(212, 212, 212);
 }
 main{
   border: 10px solid gray;
@@ -133,6 +141,8 @@ section h2{
   text-align: center;
   background-color: gray;
   font-family: "Pirata One", serif;
+  color: rgb(176, 176, 176);
+  text-shadow: -2px 0px rgb(56, 53, 53);
 }
 #about section blockquote{
   margin: 2rem 0;
@@ -147,6 +157,8 @@ section p{
   border-radius: 15rem 15rem 0 0;
   margin: 1rem;
   padding: 4rem;
+  color: rgb(87, 53, 3);
+  text-shadow: -1px 0px rgb(56, 53, 53);
 }
 
 #about section:first-of-type > p:nth-of-type(3),
@@ -163,6 +175,7 @@ section p{
   width: 60%;
   padding: 5rem;
 }
+/*some examples of...*/
 #about section:nth-of-type(2) p:nth-of-type(2){
   padding: 0.5rem;
   margin: 0;
@@ -172,6 +185,9 @@ section p{
   background-color: rgb(148, 148, 148);
   border-radius: 0;
   width: 60%;
+  color: rgb(118, 113, 113);
+  text-shadow: -1px 0px rgb(56, 53, 53);
+  text-transform: uppercase;
 }
 #about section:nth-of-type(2) ul{
   margin: 0;
@@ -191,6 +207,9 @@ section p{
   display: flex;
   justify-content: center;
   position: relative;
+  color: rgb(118, 113, 113);
+  text-shadow: -1px 0px rgb(56, 53, 53);
+  font-size: 18px;
 }
 #about section:nth-of-type(2) ul li::before{
   content: "";
@@ -253,6 +272,9 @@ section p{
   align-items: center;
   width: 100%;
 }
+#guidelines section:first-of-type > a{
+  text-shadow: -2px 1px rgb(56, 53, 53);
+}
 #guidelines p:first-of-type{
   width: 100%;
   padding: 6rem;
@@ -266,6 +288,8 @@ section p{
   width: 100%;
   background-color: gray;
   font-family: "Pirata One", serif;
+  color: rgb(176, 176, 176);
+  text-shadow: -2px 0px rgb(56, 53, 53);
 }
 #guidelines p:nth-of-type(2),
 #guidelines p:nth-of-type(3){
@@ -321,6 +345,12 @@ section p{
   background-color: gray;
   font-family: "Pirata One", serif;
   font-size: 40px;
+}
+#contribute h3{
+  color: rgb(176, 176, 176);
+  text-shadow: -2px 0px rgb(56, 53, 53);
+  font-family: 'Pirata One', serif;
+  font-size: 50px;
 }
 #contribute section p:first-of-type{
   padding: 5rem;
@@ -406,6 +436,7 @@ section p{
   border: rgb(216, 2, 2) solid 5.75rem;
   border-bottom: transparent solid 5.75rem;
   z-index: -1;
+  pointer-events: none;
 }
 #styles li > span{
   display: flex;
