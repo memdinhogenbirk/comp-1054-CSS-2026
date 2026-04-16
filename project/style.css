@@ -469,6 +469,7 @@ section p{
 /*asides (entrance banners on posts)*/
 .profile{left: -6rem; padding: 0;}
 #styles{right: -6rem; padding: 0;}
+/*banner posts*/
 .profile::after,
 #styles::after{
   content: "";
@@ -518,4 +519,38 @@ section p{
   /*googled, "how to make element shaped like trapezoid"
   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path*/
 }
-/*page footer contains 3 p, 1 ul with 4 li, 1 a in each li, 4 a in second p, 1 a in third p*/
+.page-footer .container ul li:nth-of-type(2){
+  display: flex;
+  justify-content: center;
+}
+.page-footer .container ul li:nth-of-type(2) a{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: fit-content;
+}
+@media (max-width: 990px) and (min-width: 840px) {
+  body {
+    width: 100%;
+  }
+  .page-footer {
+    left: 0;
+  }
+  .profile{left: 0rem;}
+  #styles{right: 0rem;}
+  nav ul li{
+    width: 15vw;
+  }
+  .profile .container, 
+  #styles .container{
+    height: 24.3rem;
+  }
+  .profile,
+  #styles{
+    height: 25rem;
+  }
+  .profile::after,
+  #styles::after{
+    height: 30rem;
+  }
+}
