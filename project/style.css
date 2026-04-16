@@ -353,6 +353,7 @@ section p{
   font-family: "Pirata One", serif;
   font-size: 40px;
 }
+/*castle entrance/door*/
 #contribute h3{
   color: rgb(176, 176, 176);
   text-shadow: -2px 0px rgb(56, 53, 53);
@@ -529,7 +530,7 @@ section p{
   align-content: center;
   width: fit-content;
 }
-@media (max-width: 990px) and (min-width: 840px) {
+@media (max-width: 990px) {
   body {
     width: 100%;
   }
@@ -553,4 +554,20 @@ section p{
   #styles::after{
     height: 30rem;
   }
+  #contribute section:last-of-type{
+    width: 100%;
+    border: none;
+  }
+  header{
+    width: 100%;
+  }
+}
+/*squeezing out a little more space for slightly smaller screens*/
+@media (max-width: 799px) and (min-width: 710px){
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 709px){
+
 }
