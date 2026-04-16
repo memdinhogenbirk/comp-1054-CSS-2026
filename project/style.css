@@ -289,6 +289,7 @@ section p{
   padding: 6rem;
   margin: 0;
 }
+/*tl:dr heading*/
 #guidelines h3{
   font-size: 50px;
   text-transform: uppercase;
@@ -300,6 +301,7 @@ section p{
   color: rgb(176, 176, 176);
   text-shadow: -2px 0px rgb(56, 53, 53);
 }
+/*tl:dr paragraphs*/
 #guidelines p:nth-of-type(2),
 #guidelines p:nth-of-type(3){
   border: none;
@@ -609,59 +611,70 @@ section p{
   }
   header{
     text-align: center;
-    margin: 10rem 0 2.3rem 0;
-    width: fit-content;
-    border-left: none;
-    background-color: rgb(216, 2, 2);
-    position: relative;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
   }
   header::before{
-    content: "";
-    position: absolute;
-    inset: 0;
     border: none;
   }
   header::after{
-    content: "";
-    position: absolute;
-    top: -1.7rem;
-    left: 48%;
+    left: 46.5%;
     height: 122.9%;
-    border: rgb(191, 141, 16) solid 10px;
-    border-top: transparent 10px solid;
     z-index: -1;
   }
   header .container{
-    background-color: rgb(216, 2, 2);
     padding: 1rem;
     border: 10px double yellow;
     border-bottom: transparent 10px double;
   }
   header h1{
-    font-family: "Pirata One", serif;
-    font-size: 50px;
     margin: auto;
   }
   header h2{    
-    font-family: 'Quintessential', serif;
     margin: auto;
-    width: fit-content;
   }
   /*nav bar/merlons for big screen, redesign as banner for portrait*/
   nav{
     
   }
   nav ul{
-    
+    display: flex;
+    flex-wrap: wrap;
   }
   nav ul li{
-    
+    width: 30vw;
+    height: 3rem;
+    padding: 0;
   }
   nav ul li a{
-    
+    padding: .1rem;
+    color: gold;
+  }
+  #guidelines p:nth-of-type(2),
+  #guidelines p:nth-of-type(3){
+    width: 80%;
+    margin: 0;
+  }
+  #guidelines p:nth-of-type(2)::before{
+    inset: 0;
+    left: -7.5%;
+    width: 115%;
+  }
+  #guidelines p:nth-of-type(3)::after{
+    content: "";
+    position: absolute;
+    border: 40.05vw solid rgb(101, 99, 99);
+    border-left: transparent 40.05vw solid;
+    border-right: transparent 40.05vw solid;
+    border-top: none;
+    left: -1.3rem;
+    bottom: -1.3rem;
+    pointer-events: none;
+  }
+  #guidelines section > a:last-of-type{
+    width: 100%;
+    padding: 1rem 0;
   }
 }
 @media (max-width: 610px){
@@ -682,6 +695,7 @@ section p{
   #about section:nth-of-type(2) ul li:nth-of-type(15),
   #about section:nth-of-type(2) ul li:nth-of-type(16),
   #about section:nth-of-type(2) ul li:nth-of-type(17){
-    margin-left: 10rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
