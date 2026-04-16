@@ -698,4 +698,13 @@ section p{
     margin-left: auto;
     margin-right: auto;
   }
+  /*beyond this point, the plan is to reduce the asides to ONE banner, and shrink the surrounding border/walls of
+  the front entrance to try and preserve the door, but as of right now, I am out of time, and must go write my last exam
+  I also need to
+  - fix the skip-link sun
+  - maybe try and adjust all the p/windows to look more consistent
+  - adjust padding for smaller screens in the p/windows
+  - go through and comment everything
+  - make sure colors are consistent
+  - finish top header/banner*/
 }
