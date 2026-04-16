@@ -18,8 +18,9 @@ html {
   box-sizing: inherit;
 }
 svg {/*shrinking these images for the time being*/
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
+  fill: gold;
 }
 p{font-family: "Quintessential", serif;}
 li{
@@ -50,20 +51,21 @@ body{
   right: 40%;
 }
 header{
-  margin: 10rem 0 1rem 0;
+  margin: 10rem 0 2.3rem 0;
   width: fit-content;
   border-left: none;
   background-color: rgb(216, 2, 2);
   position: relative;
+  width: 50rem;
 }
 header::before{
   content: "";
   position: absolute;
   inset: 0;
-  border: aqua 10.4rem solid;
-  border-top: transparent 10.4rem solid;
-  border-bottom: transparent 10.3rem solid;
-  border-left: transparent 10.4rem solid;
+  border: aqua 10.9rem solid;
+  border-top: transparent 13.5rem solid;
+  border-bottom: transparent 13.5rem solid;
+  border-left: transparent 10.5rem solid;
   pointer-events: none;
 }
 header::after{
@@ -87,9 +89,13 @@ header h1{
 }
 header h2{
   width: 70%;
+  font-family: 'Quintessential', serif;
 }
 header p{}
-header a{}
+header .container > a{
+  font-family: 'Quintessential', serif;
+  font-size: 25px;
+}
 nav{
   display: flex; 
   margin: 0 auto;
@@ -109,13 +115,13 @@ nav ul li{
   border-bottom: none;
   background-color: gray;
   text-align: center;
-  width: 12vw;
+  width: 12.5vw;
   height: 5rem;
   text-shadow: -1px 0px rgb(56, 53, 53);
   text-transform: uppercase;
 }
 nav ul li a{
-  font-size: 20px;
+  font-size: 18px;
   color: rgb(212, 212, 212);
 }
 main{
