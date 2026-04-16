@@ -387,14 +387,59 @@ section p{
   list-style: revert;
   padding: 1rem;
 }
-/*footer div*/
+/*footer div source files (bridge to castle entrance)*/
 #files{
   width: 100%;
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+#files .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: gray;
-  
+  margin: 0 auto 3.55rem auto;
+
+}
+
+#files .container a{
+  color: gold;
+  text-transform: uppercase;
+  font-family: 'Quintessential', serif;
+  font-size: 20px;
+  padding: .5rem;
+  width: 100%;
+  margin: 1rem auto 0 auto;
+  position: relative;
+}
+#files .container a::before{
+  position: absolute;
+  content: "";
+  border: transparent 20px solid;
+  border-bottom: rgb(148, 148, 148) solid 20px;
+  width: 100%;
+  top: -40px;
+  left: 0;
+}
+/*entrance steps (footer inside main)*/
+#files h3{
+  width: 62%;
+  margin: 0 auto;
+  background-color: rgb(176, 176, 176);
+}
+#files .container a:first-of-type{
+  background-color: rgb(176, 176, 176);
+  width: 66%;
+}
+#files .container a:nth-of-type(2){
+  background-color: rgb(176, 176, 176);
+  width: 70%;
+}
+#files .container a:nth-of-type(3){
+  background-color: rgb(176, 176, 176);
+  width: 74%;
 }
 
 .profile, 
@@ -420,8 +465,9 @@ section p{
   padding: 1rem;
   height: 39.4rem;
 }
-.profile{left: -2rem; padding: 0;}
-#styles{right: -2rem; padding: 0;}
+/*asides (entrance banners on posts)*/
+.profile{left: -6rem; padding: 0;}
+#styles{right: -6rem; padding: 0;}
 .profile::after,
 #styles::after{
   content: "";
@@ -457,7 +503,7 @@ section p{
   position: absolute;
   bottom: -19.5rem;
   left: -12.5%;
-  width: 125%;
+  width: 100vw;
 }
 /*dirt path*/
 .page-footer .container{
@@ -468,5 +514,7 @@ section p{
   text-align: center;
   background-color: saddlebrown;
   clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  /*googled, "how to make element shaped like trapezoid"
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path*/
 }
 /*page footer contains 3 p, 1 ul with 4 li, 1 a in each li, 4 a in second p, 1 a in third p*/
