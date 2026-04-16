@@ -127,6 +127,7 @@ nav ul li a{
 main{
   border: 10px solid gray;
   background-color: rgb(101, 99, 99);
+  border-bottom: none;
 }
 main > .container{
   padding: 0rem;
@@ -387,7 +388,6 @@ section p{
   list-style: revert;
   padding: 1rem;
 }
-/*footer div source files (bridge to castle entrance)*/
 #files{
   width: 100%;
   display: flex;
@@ -400,7 +400,7 @@ section p{
   display: flex;
   flex-direction: column;
   background-color: gray;
-  margin: 0 auto 3.55rem auto;
+  margin: 0 auto;
 
 }
 
@@ -425,27 +425,28 @@ section p{
 }
 /*entrance steps (footer inside main)*/
 #files h3{
-  width: 62%;
+  width: 62.3%;
   margin: 0 auto;
   background-color: rgb(176, 176, 176);
+  color: rgb(212, 212, 212)
 }
 #files .container a:first-of-type{
   background-color: rgb(176, 176, 176);
-  width: 66%;
+  width: 66.3%;
 }
 #files .container a:nth-of-type(2){
   background-color: rgb(176, 176, 176);
-  width: 70%;
+  width: 70.3%;
 }
 #files .container a:nth-of-type(3){
   background-color: rgb(176, 176, 176);
-  width: 74%;
+  width: 74.3%;
 }
 
 .profile, 
 #styles{
   position: absolute;
-  bottom: 4rem;
+  bottom: 20rem;
   padding: 1rem;
   width: 11.5rem;
   height: 40rem;
@@ -500,10 +501,10 @@ section p{
   flex-wrap: wrap;
   justify-content: center;
   background-color: rgb(24, 144, 15);
-  position: absolute;
-  bottom: -19.5rem;
-  left: -12.5%;
   width: 100vw;
+  position: relative;
+  left: -12.5%;
+  bottom: 0;
 }
 /*dirt path*/
 .page-footer .container{
