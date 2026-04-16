@@ -520,6 +520,10 @@ section p{
   /*googled, "how to make element shaped like trapezoid"
   https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path*/
 }
+.page-footer .container ul{
+  margin: 0;
+  padding: 0;
+}
 .page-footer .container ul li:nth-of-type(2){
   display: flex;
   justify-content: center;
@@ -537,11 +541,11 @@ section p{
   .page-footer {
     left: 0;
   }
-  .profile{left: 0rem;}
-  #styles{right: 0rem;}
   nav ul li{
     width: 15vw;
   }
+  .profile{left: 0rem;}
+  #styles{right: 0rem;}
   .profile .container, 
   #styles .container{
     height: 24.3rem;
@@ -563,11 +567,63 @@ section p{
   }
 }
 /*squeezing out a little more space for slightly smaller screens*/
-@media (max-width: 799px) and (min-width: 710px){
+@media (max-width: 799px){
   nav ul li a{
     font-size: 16px;
   }
 }
 @media (max-width: 709px){
-
+  section p{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #about section:nth-of-type(2) > p:nth-of-type(1){
+    width: 100%;
+  }
+  #about section:nth-of-type(2) p:nth-of-type(2){
+    width: 100%;
+  }
+  .page-footer .container p:first-of-type{
+    width: 50%;
+    margin: 1rem auto
+  }
+  .profile .container, 
+  #styles .container{
+    padding: 0.2rem;
+  }
+  .profile,
+  #styles{
+    width: 11rem;
+  }
+  .profile .container h4, 
+  #styles .container h2{
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .profile::before,
+  #styles::before{
+    border-width: 5.5rem;
+  }
+}
+@media (max-width: 610px){
+  #about section:nth-of-type(2) ul li:nth-of-type(1),
+  #about section:nth-of-type(2) ul li:nth-of-type(2),
+  #about section:nth-of-type(2) ul li:nth-of-type(3),
+  #about section:nth-of-type(2) ul li:nth-of-type(4),
+  #about section:nth-of-type(2) ul li:nth-of-type(5),
+  #about section:nth-of-type(2) ul li:nth-of-type(6),
+  #about section:nth-of-type(2) ul li:nth-of-type(7),
+  #about section:nth-of-type(2) ul li:nth-of-type(8),
+  #about section:nth-of-type(2) ul li:nth-of-type(9),
+  #about section:nth-of-type(2) ul li:nth-of-type(10),
+  #about section:nth-of-type(2) ul li:nth-of-type(11),
+  #about section:nth-of-type(2) ul li:nth-of-type(12),
+  #about section:nth-of-type(2) ul li:nth-of-type(13),
+  #about section:nth-of-type(2) ul li:nth-of-type(14),
+  #about section:nth-of-type(2) ul li:nth-of-type(15),
+  #about section:nth-of-type(2) ul li:nth-of-type(16),
+  #about section:nth-of-type(2) ul li:nth-of-type(17){
+    margin-left: 10rem;
+  }
 }
