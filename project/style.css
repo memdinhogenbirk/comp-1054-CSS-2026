@@ -743,15 +743,16 @@ section p{
   main{
     border: none;
   }
-  #guidelines *{
-    
+  #guidelines .container *{
+    display: flex;
+    flex-direction: column;
+    margin-right: unset;
   }
-  #guidelines section > p{
-    width: unset;
-    margin-right: 1rem;
+  #guidelines section p:first-of-type{
+    margin-right: unset;
   }
-  #guidelines p:first-of-type{
-    margin-right: 1rem;
+  #guidelines section > a:last-of-type{
+    /* width: auto; */
   }
   section p,
   #about section:nth-of-type(2) > p:nth-of-type(1),
@@ -759,9 +760,6 @@ section p{
     border-right: none;
     margin-right: 1rem;
     border-top: none;
-  }
-  #guidelines section > a:last-of-type{
-    
   }
   /*beyond this point, the plan is to reduce the asides to ONE banner, and shrink the surrounding border/walls of
   the front entrance to try and preserve the door, but as of right now, I am out of time, and must go write my last exam
