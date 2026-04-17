@@ -393,10 +393,10 @@ section p{
   list-style: revert;
   padding: 1rem;
 }
+/*entrance steps (footer inside main)*/
 #files{
   width: 100%;
   display: flex;
-  justify-content: center;
   text-align: center;
 }
 
@@ -428,7 +428,6 @@ section p{
   top: -40px;
   left: 0;
 }
-/*entrance steps (footer inside main)*/
 #files h3{
   width: 62.3%;
   margin: 0 auto;
@@ -697,6 +696,38 @@ section p{
   #about section:nth-of-type(2) ul li:nth-of-type(17){
     margin-left: auto;
     margin-right: auto;
+  }
+  #styles::after{
+    content: none;
+  }
+  .profile{
+    bottom: 37rem;
+  }
+  .profile::after{
+    height: 45rem;
+  }
+  #styles{
+    left: 0;
+    border-top: none;
+  }
+  #files .container a{
+    margin: 1rem 0 0 auto;
+    text-align: right;
+  }
+  #files .container a::before{
+    border-right: none;
+  }
+  #files h3{
+    margin: 0 0 0 auto;
+  }
+  #files .container a:first-of-type{
+    width: 50%;
+  }
+  #files .container a:nth-of-type(2){
+    width: 50%;
+  }
+  #files .container a:nth-of-type(3){
+    width: 50%;
   }
   /*beyond this point, the plan is to reduce the asides to ONE banner, and shrink the surrounding border/walls of
   the front entrance to try and preserve the door, but as of right now, I am out of time, and must go write my last exam
