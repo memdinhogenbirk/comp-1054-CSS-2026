@@ -1,13 +1,5 @@
-/*Now plan is castle tower thingy
-TO DO:
-- change top sign thingy to flag thingy
-- give top of tower merlons
-- find cool fonts
-- make mobile not awful
-DEFAULT WIDE SCREEN LIMIT OUGHT TO BE 1000px*/
-
 @charset "UTF-8";
-
+/*#region basic normalize, base html el settings ========================================================*/
 html {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -17,10 +9,22 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
-svg {/*shrinking these images for the time being*/
+/*#endregion basic normalize, base html el settings======================================================*/
+/*#region globals =======================================================================================*/
+svg {/*star images*/
   width: 100px;
   height: 100px;
   fill: gold;
+}
+body{
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+main{
+  border: 10px solid gray;
+  background-color: rgb(101, 99, 99);
+  border-bottom: none;
 }
 p{font-family: "Quintessential", serif;}
 li{
@@ -33,13 +37,45 @@ a{
 }
 a:hover{
   font-weight: bolder;
-  /* text-transform: uppercase; */
 }
-body{
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
+/*#region subglobals section generic selectors============================================================*/
+
+section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+section p{
+  border: 30px solid rgb(56, 53, 53);
+  border-bottom: solid 50px rgb(118, 113, 113);
+  background-color: rgb(159, 118, 51);
+  border-top: 1px solid black;
+  font-size: 25px;
+  width: 30rem;
+  border-radius: 15rem 15rem 0 0;
+  margin: 1rem;
+  padding: 4rem;
+  color: rgb(87, 53, 3);
+  text-shadow: -1px 0px rgb(56, 53, 53);
+}
+section h2{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: gray;
+  font-family: "Pirata One", serif;
+  color: rgb(176, 176, 176);
+  text-shadow: -2px 0px rgb(56, 53, 53);
+}
+/*#endregion subglobals section generic selectors============================================================*/
+/*#endregion globals =======================================================================================*/
+
+/*skip to main content (sun in the sky)*/
 .skip-link{
   display: flex;
   background-color: yellow;
@@ -54,7 +90,7 @@ body{
   width: 15rem;
   margin: auto;
 }
-/*big flag for landscape/bigger screen, redesign incoming for portrait*/
+/*region header (big flag/banner thingy)===========================================================*/
 header{
   margin: 3rem 0 2.3rem 0;
   width: fit-content;
@@ -96,12 +132,11 @@ header h2{
   width: 70%;
   font-family: 'Quintessential', serif;
 }
-header p{}
 header .container > a{
   font-family: 'Quintessential', serif;
   font-size: 25px;
 }
-/*nav bar/merlons for big screen, redesign as banner for portrait*/
+/*#region subheader nav bar (castle merlons)=============================================================*/
 nav{
   display: flex; 
   margin: 0 auto;
@@ -130,50 +165,15 @@ nav ul li a{
   font-size: 18px;
   color: rgb(212, 212, 212);
 }
-main{
-  border: 10px solid gray;
-  background-color: rgb(101, 99, 99);
-  border-bottom: none;
-}
+/*#endregion subheader nav bar (castle merlons)=============================================================*/
+/*#endregion header (big flag/banner thingy)================================================================*/
 main > .container{
   padding: 0rem;
 }
-section{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-section h2{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  font-size: 50px;
-  padding: 0;
-  margin: 0 0 1rem 0;
-  text-transform: uppercase;
-  text-align: center;
-  background-color: gray;
-  font-family: "Pirata One", serif;
-  color: rgb(176, 176, 176);
-  text-shadow: -2px 0px rgb(56, 53, 53);
-}
+/*#region about article(first article)=========================================================================*/
 #about section blockquote{
   margin: 2rem 0;
 }
-section p{
-  border: 30px solid rgb(56, 53, 53);
-  border-bottom: solid 50px rgb(118, 113, 113);
-  background-color: rgb(159, 118, 51);
-  border-top: 1px solid black;
-  font-size: 25px;
-  width: 30rem;
-  border-radius: 15rem 15rem 0 0;
-  margin: 1rem;
-  padding: 4rem;
-  color: rgb(87, 53, 3);
-  text-shadow: -1px 0px rgb(56, 53, 53);
-}
-
 #about section:first-of-type > p:nth-of-type(3),
 #about section:first-of-type blockquote > p{
   width: 100%;
@@ -182,7 +182,6 @@ section p{
   margin: 0;
 }
 /*second section first article*/
-
 #about section:nth-of-type(2) > p:nth-of-type(1){
   margin-bottom: 0;
   width: 60%;
@@ -242,6 +241,7 @@ section p{
   right: -20px;
   bottom: 0px;
 }
+/*#region subabout article(mid castle stairs)===============================================================*/
 #about section:nth-of-type(2) ul li:nth-of-type(1){margin-left: 18%;}
 #about section:nth-of-type(2) ul li:nth-of-type(2){margin-left: 27%;}
 #about section:nth-of-type(2) ul li:nth-of-type(3){margin-left: 36%;}
@@ -259,6 +259,7 @@ section p{
 #about section:nth-of-type(2) ul li:nth-of-type(15){margin-left: 36%;}
 #about section:nth-of-type(2) ul li:nth-of-type(16){margin-left: 27%;}
 #about section:nth-of-type(2) ul li:nth-of-type(17){margin-left: 18%;}
+/*#endregion subabout article(mid castle stairs)===============================================================*/
 #about section:nth-of-type(2) ul + p{
   width: 100%;
   padding: 6rem;
@@ -275,10 +276,9 @@ section p{
   flex-direction: column;
   text-align: center;
   border: 20px solid rgb(148, 148, 148);
-
 }
-/*first section 1 h2, 3 p, 1 blockquote + p*/
-/*second section 1 h2, 4 p, 1 ul, 1 a in fourth paragraph*/
+/*#endregion about article(first article)=========================================================================*/
+/*#region guidelines article(second article)=========================================================================*/
 #guidelines section{
   display: flex;
   flex-direction: column;
@@ -361,7 +361,8 @@ section p{
   font-family: "Pirata One", serif;
   font-size: 40px;
 }
-/*castle entrance/door*/
+/*#endregion guidelines article(second article)=========================================================================*/
+/*#region contribute (third and final article, castle entrance/door)====================================================*/
 #contribute h3{
   color: rgb(176, 176, 176);
   text-shadow: -2px 0px rgb(56, 53, 53);
@@ -397,13 +398,12 @@ section p{
   list-style: revert;
   padding: 1rem;
 }
-/*entrance steps (footer inside main)*/
+/*#region subcontribute, files (entrance steps, footer inside main)========================================================*/
 #files{
   width: 100%;
   display: flex;
   text-align: center;
 }
-
 #files .container {
   width: 100%;
   display: flex;
@@ -412,7 +412,6 @@ section p{
   margin: 0 auto;
 
 }
-
 #files .container a{
   color: gold;
   text-transform: uppercase;
@@ -451,6 +450,9 @@ section p{
   background-color: rgb(176, 176, 176);
   width: 74.3%;
 }
+/*#endregion subcontribute, files (entrance steps, footer inside main)========================================================*/
+/*#endregion contribute (third and final article, castle entrance/door)====================================================*/
+/*#region asides (entrance banners on posts)=====================================================================================*/
 .profile h4, 
 #styles h2{
   font-family: 'Pirata One';
@@ -480,7 +482,6 @@ section p{
   padding: 1rem;
   height: 39.4rem;
 }
-/*asides (entrance banners on posts)*/
 .profile{left: -6rem; padding: 0;}
 #styles{right: -6rem; padding: 0;}
 /*banner posts*/
@@ -510,7 +511,8 @@ section p{
   display: flex;
   flex-direction: column;
 }
-
+/*#endregion asides (entrance banners on posts)=====================================================================================*/
+/*#region body footer (lawn and path)=====================================================================================*/
 .page-footer{
   display: flex;
   flex-wrap: wrap;
@@ -547,6 +549,8 @@ section p{
   align-content: center;
   width: fit-content;
 }
+/*#endregion body footer (lawn and path)=====================================================================================*/
+/*#region smaller screen @media (body now covers whole screen)==================================================================*/
 @media (max-width: 990px) {
   body {
     width: 100%;
@@ -579,12 +583,14 @@ section p{
     width: 100%;
   }
 }
+/*#endregion smaller screen @media (body now covers whole screen)=======================================================*/
 /*squeezing out a little more space for slightly smaller screens*/
 @media (max-width: 799px){
   nav ul li a{
     font-size: 16px;
   }
 }
+/*#region even smaller screen @media (header banner switches to vertical display, windows extend to sides of castle)=======*/
 @media (max-width: 709px){
   header .container > a{
     display: flex;
@@ -707,6 +713,8 @@ section p{
     padding: 1rem 0;
   }
 }
+/*#endregion even smaller screen @media (header banner switches to vertical display, windows extend to sides of castle)=======*/
+/*#region small tablet screen @media (middle castle stairs become a ladder)===================================================*/
 @media (max-width: 610px){
   #about section:nth-of-type(2) ul li:nth-of-type(1),
   #about section:nth-of-type(2) ul li:nth-of-type(2),
@@ -811,9 +819,12 @@ section p{
     background-color: saddlebrown;
     clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
     /*googled, "how to make element shaped like trapezoid"
-    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path*/
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path
+    Now effect only angles the right side of the container*/
   }  
 }
+/*#endregion small tablet screen @media (middle castle stairs become a ladder)===================================================*/
+/*#region mobile portrait screen @media (castle entrance adjusted)===============================================================*/
 @media (max-width: 475px){
   #files .container a, #files .container h3{
     text-align: right;
@@ -838,3 +849,4 @@ section p{
     border-width: 5rem;
   }
 }
+/*#endregion mobile portrait screen @media (castle entrance adjusted)===============================================================*/
