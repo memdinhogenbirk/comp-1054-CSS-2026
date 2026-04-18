@@ -21,26 +21,31 @@ body{
   margin: 0 auto;
   position: relative;
 }
+/*up until one of the smaller media screen selectors, main retains a border*/
 main{
   border: 10px solid gray;
   background-color: rgb(101, 99, 99);
   border-bottom: none;
 }
+/*there's only one h1 and it resides in the header*/
 h1{
   font-family: "Pirata One", serif;
   font-size: 50px;
 }
 p{font-family: "Quintessential", serif;}
+/*defaulting to removing list markers*/
 li{
   list-style: none;
   font-family: "Quintessential", serif;
 }
+/*making ALL anchors gold to distinguish them from rest of text. If text is yellow, its a link*/
 a{
   text-decoration: none;
   color: gold;
 }
+/*tiny effect to distinguish anchor hover. Using text shadow as it does not move anything around*/
 a:hover{
-  font-weight: bolder;
+  text-shadow: 1px 1px 10px black;
 }
 /*#region subglobals section generic selectors============================================================*/
 section{
@@ -48,7 +53,7 @@ section{
   flex-wrap: wrap;
   justify-content: center;
 }
-/*default castle window effect (tweaked throughout code to accommodate situational instances)*/
+/*default castle window effect (tweaked throughout code to accommodate situational instances/media screen changes)*/
 section p{
   border: 30px solid rgb(56, 53, 53);
   border-bottom: solid 50px rgb(118, 113, 113);
@@ -62,7 +67,7 @@ section p{
   color: rgb(87, 53, 3);
   text-shadow: -1px 0px rgb(56, 53, 53);
 }
-/*default h2 headings (made to look like stone beams running the width of the castle)*/
+/*default h2 headings (made to look like stone beams running the width of the castle. Effect looks best when main has border->wider screens)*/
 section h2{
   width: 100%;
   display: flex;
@@ -80,7 +85,7 @@ section h2{
 /*#endregion subglobals section generic selectors============================================================*/
 /*#endregion globals =======================================================================================*/
 
-/*skip to main content (sun in the sky)*/
+/*skip to main content (sun in the sky, part of body, but nothing else)*/
 .skip-link{
   display: flex;
   background-color: yellow;
@@ -151,7 +156,6 @@ nav ul{
   margin: 0;
   width: 100%;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
 }
 nav ul li{
   padding: 1rem 0;
@@ -183,7 +187,6 @@ main > .container{
   padding: 5rem;
   margin: 0;
 }
-/*second section first article*/
 #about section:nth-of-type(2) > p:nth-of-type(1){
   margin-bottom: 0;
   width: 60%;
@@ -269,6 +272,8 @@ main > .container{
 }
 #about section:nth-of-type(2) p:last-of-type{
   background-color: rgb(148, 148, 148);
+  color: rgb(118, 113, 113);
+  text-shadow: -1px 0px rgb(56, 53, 53);
   border-radius: 0;
   margin-top: 0;
   width: 100%;
@@ -336,8 +341,7 @@ main > .container{
 #guidelines p:nth-of-type(3){
   border-bottom: 20px solid transparent;
   padding-bottom: 15rem;
-  position: relative;
-  
+  position: relative; 
 }
 /*mid castle banner tails effect*/
 #guidelines p:nth-of-type(3)::after{
@@ -413,7 +417,6 @@ main > .container{
   flex-direction: column;
   background-color: gray;
   margin: 0 auto;
-
 }
 #files .container a{
   color: gold;
@@ -674,7 +677,10 @@ Handled differently than small screen top banner because these banners do not sh
   header h2{    
     margin: auto;
   }
-  /*nav bar/merlons condensed for smaller screens*/
+  /*nav bar/merlons condensed for smaller screens
+  I was planning on changing the nav to be an additional banner hanging from the top, but that would remove the merlons,
+  which I would then have to add back through some border/::before/::after tomfoolery. So I elected to keep them
+  and condense them so they stack on top of eachother*/
   nav ul{
     display: flex;
     flex-wrap: wrap;
@@ -779,6 +785,7 @@ Handled differently than small screen top banner because these banners do not sh
     display: flex;
     flex-direction: row;
   }
+  /*tiny margin additional to try to give the portrait oriented castle the appearance of depth*/
   #guidelines h3,
   #guidelines section > a:last-of-type,
   #guidelines p:first-of-type,
