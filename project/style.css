@@ -41,18 +41,22 @@ body{
   position: relative;
 }
 .skip-link{
+  display: flex;
   background-color: yellow;
+  color: red;
   padding: 5rem 1rem;
   border-radius: 50%;
   width: fit-content;
   text-align: center;
-  position: absolute;
-  top: -15rem;
   right: 40%;
+  font-family: 'Pirata One';
+  font-size: 30px;
+  width: 15rem;
+  margin: auto;
 }
 /*big flag for landscape/bigger screen, redesign incoming for portrait*/
 header{
-  margin: 10rem 0 2.3rem 0;
+  margin: 3rem 0 2.3rem 0;
   width: fit-content;
   border-left: none;
   background-color: rgb(216, 2, 2);
@@ -461,6 +465,7 @@ section p{
   height: 40rem;
   border-top: 10px solid rgb(191, 141, 16);
   z-index: 1;
+  font-family: "Quintessential", serif;
 }
 .profile ul, #styles ul{
   margin: 0;
@@ -581,6 +586,10 @@ section p{
   }
 }
 @media (max-width: 709px){
+  header .container > a{
+    display: flex;
+    flex-direction: column;
+  }
   section p{
     width: 100%;
     margin-left: 0;
@@ -634,7 +643,7 @@ section p{
     bottom: -10px;
   }
   header::after{
-    left: 46.5%;
+    left: 47.5%;
     height: 122.9%;
     z-index: -2;
   }
@@ -803,16 +812,7 @@ section p{
     clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
     /*googled, "how to make element shaped like trapezoid"
     https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path*/
-  }
-  /*beyond this point, the plan is to reduce the asides to ONE banner, and shrink the surrounding border/walls of
-  the front entrance to try and preserve the door, but as of right now, I am out of time, and must go write my last exam
-  I also need to
-  - fix the skip-link sun
-  - maybe try and adjust all the p/windows to look more consistent
-  - adjust padding for smaller screens in the p/windows
-  - go through and comment everything
-  - make sure colors are consistent
-  - finish top header/banner*/
+  }  
 }
 @media (max-width: 475px){
   #files .container a, #files .container h3{
