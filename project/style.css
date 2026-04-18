@@ -447,7 +447,11 @@ section p{
   background-color: rgb(176, 176, 176);
   width: 74.3%;
 }
-
+.profile h4, 
+#styles h2{
+  font-family: 'Pirata One';
+  font-size: 20px;
+}
 .profile, 
 #styles{
   position: absolute;
@@ -614,19 +618,39 @@ section p{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    background-color: unset;
+    border-top: 1rem solid rgb(191, 141, 16);
+    border: 10px double yellow;
+    padding-bottom: 15rem;
+    border-bottom-color: transparent;
+    border-top: none;
   }
   header::before{
     border: none;
+    border: 35vw solid rgb(216, 2, 2);
+    border-bottom-color: transparent;
+    left: -10px;
+    z-index: -1;
+    bottom: -10px;
   }
   header::after{
     left: 46.5%;
     height: 122.9%;
-    z-index: -1;
+    z-index: -2;
   }
   header .container{
-    padding: 1rem;
     border: 10px double yellow;
-    border-bottom: transparent 10px double;
+    border: unset;
+    background-color: unset;
+    position: relative;
+  }
+  header .container::before{
+    content: "";
+    position: absolute;
+    width: 70vw;
+    top: 0;
+    left: -10px;
+    border-top: 20px solid rgb(191, 141, 16);
   }
   header h1{
     margin: auto;
@@ -634,10 +658,7 @@ section p{
   header h2{    
     margin: auto;
   }
-  /*nav bar/merlons for big screen, redesign as banner for portrait*/
-  nav{
-    
-  }
+  /*nav bar/merlons condensed for smaller screens*/
   nav ul{
     display: flex;
     flex-wrap: wrap;
@@ -710,7 +731,10 @@ section p{
   #styles{
     left: 0;
     border-top: none;
-    bottom: 25rem;
+    bottom: 23rem;
+  }
+  #styles .container{
+    height: 25rem;
   }
   #files .container a{
     margin: 1rem 0 0 auto;
@@ -773,8 +797,8 @@ section p{
   .page-footer .container{
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
-    text-align: right;
+    padding: 0 1rem 1rem 10rem;
+    text-align: center;
     background-color: saddlebrown;
     clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
     /*googled, "how to make element shaped like trapezoid"
@@ -789,4 +813,28 @@ section p{
   - go through and comment everything
   - make sure colors are consistent
   - finish top header/banner*/
+}
+@media (max-width: 475px){
+  #files .container a, #files .container h3{
+    text-align: right;
+    padding-right: .5rem;
+  }
+  #contribute .container ol{
+    list-style: none;
+    padding-right: 1rem;
+    padding-left: 2rem;
+  }
+  #contribute .container:nth-of-type(2) h3{
+    width: 340px;
+    text-align: center;
+    padding-left: 4rem;
+  }
+  .profile,
+  #styles{
+    width: 10rem;
+  }
+  .profile::before,
+  #styles::before{
+    border-width: 5rem;
+  }
 }
