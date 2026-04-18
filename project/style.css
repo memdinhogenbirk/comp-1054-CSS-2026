@@ -26,6 +26,10 @@ main{
   background-color: rgb(101, 99, 99);
   border-bottom: none;
 }
+h1{
+  font-family: "Pirata One", serif;
+  font-size: 50px;
+}
 p{font-family: "Quintessential", serif;}
 li{
   list-style: none;
@@ -39,12 +43,12 @@ a:hover{
   font-weight: bolder;
 }
 /*#region subglobals section generic selectors============================================================*/
-
 section{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+/*default castle window effect (tweaked throughout code to accommodate situational instances)*/
 section p{
   border: 30px solid rgb(56, 53, 53);
   border-bottom: solid 50px rgb(118, 113, 113);
@@ -58,6 +62,7 @@ section p{
   color: rgb(87, 53, 3);
   text-shadow: -1px 0px rgb(56, 53, 53);
 }
+/*default h2 headings (made to look like stone beams running the width of the castle)*/
 section h2{
   width: 100%;
   display: flex;
@@ -120,14 +125,11 @@ header::after{
   border: rgb(191, 141, 16) solid 10px;
   border-top: transparent 10px solid;
 }
+/*top banner yellow border trim*/
 header .container{
   padding: 1rem 1rem 1rem 2rem;
   border: 10px double yellow;
   border-right: transparent 10px double;
-}
-header h1{
-  font-family: "Pirata One", serif;
-  font-size: 50px;
 }
 header h2{
   width: 70%;
@@ -304,7 +306,7 @@ main > .container{
   color: rgb(176, 176, 176);
   text-shadow: -2px 0px rgb(56, 53, 53);
 }
-/*tl:dr paragraphs*/
+/*tl:dr paragraphs(mid castle banner)*/
 #guidelines p:nth-of-type(2),
 #guidelines p:nth-of-type(3){
   border: none;
@@ -321,6 +323,7 @@ main > .container{
 #guidelines p:nth-of-type(2){
   position: relative;
 }
+/*mid castle banner dowel*/
 #guidelines p:nth-of-type(2)::before{
   content: "";
   border-top: 20px solid rgb(191, 141, 16);
@@ -336,6 +339,7 @@ main > .container{
   position: relative;
   
 }
+/*mid castle banner tails effect*/
 #guidelines p:nth-of-type(3)::after{
   content: "";
   position: absolute;
@@ -496,6 +500,8 @@ main > .container{
   top: -2rem;
   z-index: -2;
 }
+/*using borders as both a background color and a banner tails effect (silly but works)
+Handled differently than small screen top banner because these banners do not shrink or grow dynamically*/
 .profile::before,
 #styles::before{
   position: absolute;
@@ -665,9 +671,6 @@ main > .container{
     left: -10px;
     border-top: 20px solid rgb(191, 141, 16);
   }
-  header h1{
-    margin: auto;
-  }
   header h2{    
     margin: auto;
   }
@@ -679,17 +682,15 @@ main > .container{
   nav ul li{
     width: 30vw;
     height: 3rem;
-    padding: 0;
+    padding: 1rem 0 0 0;
   }
-  nav ul li a{
-    padding: .1rem;
-    color: gold;
-  }
+  /*mid castle banner is now flexible with the viewport*/
   #guidelines p:nth-of-type(2),
   #guidelines p:nth-of-type(3){
     width: 80vw;
     margin: 0;
   }
+  /*banner dowel adjusted so it shrinks/grows with banner*/
   #guidelines p:nth-of-type(2)::before{
     inset: 0;
     left: -20px;
