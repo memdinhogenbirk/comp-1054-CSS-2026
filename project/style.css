@@ -152,7 +152,6 @@ nav ul{
 }
 nav ul li{
   padding: 1rem 0;
-  border: solid 5px gray;
   border-bottom: none;
   background-color: gray;
   text-align: center;
@@ -189,9 +188,9 @@ main > .container{
 }
 /*some examples of...*/
 #about section:nth-of-type(2) p:nth-of-type(2){
-  padding: 0.5rem;
+  padding: 1rem;
   margin: 0;
-  border: 10px solid rgb(148, 148, 148);
+  border: unset;
   font-size: 20px;
   text-align: center;
   background-color: rgb(148, 148, 148);
@@ -208,7 +207,6 @@ main > .container{
 }
 #about section:nth-of-type(2) ul li{
   background-color: rgb(148, 148, 148);;
-  border: 10px solid rgb(148, 148, 148);
   border-top: solid 20px rgb(118, 113, 113);
   border-right: solid 20px rgb(68, 58, 58);
   border-left: none;
@@ -275,7 +273,7 @@ main > .container{
   display: flex;
   flex-direction: column;
   text-align: center;
-  border: 20px solid rgb(148, 148, 148);
+  border: unset;
 }
 /*#endregion about article(first article)=========================================================================*/
 /*#region guidelines article(second article)=========================================================================*/
@@ -716,26 +714,12 @@ main > .container{
 /*#endregion even smaller screen @media (header banner switches to vertical display, windows extend to sides of castle)=======*/
 /*#region small tablet screen @media (middle castle stairs become a ladder)===================================================*/
 @media (max-width: 610px){
-  #about section:nth-of-type(2) ul li:nth-of-type(1),
-  #about section:nth-of-type(2) ul li:nth-of-type(2),
-  #about section:nth-of-type(2) ul li:nth-of-type(3),
-  #about section:nth-of-type(2) ul li:nth-of-type(4),
-  #about section:nth-of-type(2) ul li:nth-of-type(5),
-  #about section:nth-of-type(2) ul li:nth-of-type(6),
-  #about section:nth-of-type(2) ul li:nth-of-type(7),
-  #about section:nth-of-type(2) ul li:nth-of-type(8),
-  #about section:nth-of-type(2) ul li:nth-of-type(9),
-  #about section:nth-of-type(2) ul li:nth-of-type(10),
-  #about section:nth-of-type(2) ul li:nth-of-type(11),
-  #about section:nth-of-type(2) ul li:nth-of-type(12),
-  #about section:nth-of-type(2) ul li:nth-of-type(13),
-  #about section:nth-of-type(2) ul li:nth-of-type(14),
-  #about section:nth-of-type(2) ul li:nth-of-type(15),
-  #about section:nth-of-type(2) ul li:nth-of-type(16),
-  #about section:nth-of-type(2) ul li:nth-of-type(17){
+/*#region subabout article(mid castle stairs become ladder)===============================================================*/
+  #about section:nth-of-type(2) ul li:nth-of-type(n){
     margin-left: auto;
     margin-right: auto;
   }
+  /*#endregion subabout article(mid castle stairs become ladder)===============================================================*/
   #styles::after{
     content: none;
   }
@@ -765,9 +749,7 @@ main > .container{
     margin: 0 0 0 auto;
     font-size: 40px;
   }
-  #files .container a:first-of-type,
-  #files .container a:nth-of-type(2),
-  #files .container a:nth-of-type(3),
+  #files .container a:nth-of-type(n),
   #files h3{
     width: 80%;
   }
@@ -805,8 +787,7 @@ main > .container{
     margin-right: 1rem;
   }
   section p,
-  #about section:nth-of-type(2) > p:nth-of-type(1),
-  #about section:nth-of-type(2) p:nth-of-type(2){
+  #about section:nth-of-type(2) p:nth-of-type(n){
     border-right: none;
     margin-right: 1rem;
     border-top: none;
@@ -820,7 +801,7 @@ main > .container{
     clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
     /*googled, "how to make element shaped like trapezoid"
     https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path
-    Now effect only angles the right side of the container*/
+    Now the effect only angles the right side of the container*/
   }  
 }
 /*#endregion small tablet screen @media (middle castle stairs become a ladder)===================================================*/
