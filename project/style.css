@@ -99,6 +99,7 @@ header{
   position: relative;
   width: 50rem;
 }
+/*top banner triangular flag tails effect*/
 header::before{
   content: "";
   position: absolute;
@@ -109,6 +110,7 @@ header::before{
   border-left: transparent 10.5rem solid;
   pointer-events: none;
 }
+/*top banner flagpole*/
 header::after{
   content: "";
   position: absolute;
@@ -119,7 +121,6 @@ header::after{
   border-top: transparent 10px solid;
 }
 header .container{
-  background-color: rgb(216, 2, 2);
   padding: 1rem 1rem 1rem 2rem;
   border: 10px double yellow;
   border-right: transparent 10px double;
@@ -654,7 +655,6 @@ main > .container{
   header .container{
     border: 10px double yellow;
     border: unset;
-    background-color: unset;
     position: relative;
   }
   header .container::before{
@@ -687,13 +687,13 @@ main > .container{
   }
   #guidelines p:nth-of-type(2),
   #guidelines p:nth-of-type(3){
-    width: 80%;
+    width: 80vw;
     margin: 0;
   }
   #guidelines p:nth-of-type(2)::before{
     inset: 0;
-    left: -7.5%;
-    width: 115%;
+    left: -20px;
+    width: 80vw;
   }
   #guidelines p:nth-of-type(3)::after{
     content: "";
