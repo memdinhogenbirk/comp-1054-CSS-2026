@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/*FONTS FROM GOOGLE FONTS
+- Pirata One Designed by Rodrigo Fuenzalida, Nicolas Massi 
+- Quintessential Designed by Astigmatic 
+*/
 /*#region basic normalize, base html el settings ========================================================*/
 html {
   box-sizing: border-box;
@@ -67,7 +71,8 @@ section p{
   color: rgb(87, 53, 3);
   text-shadow: -1px 0px rgb(56, 53, 53);
 }
-/*default h2 headings (made to look like stone beams running the width of the castle. Effect looks best when main has border->wider screens)*/
+/*default h2 headings (made to look like stone beams running the width of the castle. 
+Effect looks best when main has border->wider screens)*/
 section h2{
   width: 100%;
   display: flex;
@@ -95,7 +100,7 @@ section h2{
   width: fit-content;
   text-align: center;
   right: 40%;
-  font-family: 'Pirata One';
+  font-family: 'Pirata One', serif;
   font-size: 30px;
   width: 15rem;
   margin: auto;
@@ -211,6 +216,7 @@ main > .container{
   padding: 0;
   width: 100%;
 }
+/*#region subabout mid castle steps 3d effect==========================================*/
 #about section:nth-of-type(2) ul li{
   background-color: rgb(148, 148, 148);;
   border-top: solid 20px rgb(118, 113, 113);
@@ -227,6 +233,7 @@ main > .container{
   text-shadow: -1px 0px rgb(56, 53, 53);
   font-size: 18px;
 }
+/*triangle created with borders to hide top left corner*/
 #about section:nth-of-type(2) ul li::before{
   content: "";
   border: 10px solid rgb(118, 113, 113);
@@ -236,6 +243,7 @@ main > .container{
   left: 0;
   top: -20px;
 }
+/*triangle created with borders to hide bottom right corner*/
 #about section:nth-of-type(2) ul li::after{
   content: "";
   border: 10px solid rgb(101, 99, 99);
@@ -245,7 +253,9 @@ main > .container{
   right: -20px;
   bottom: 0px;
 }
+/*#region subabout mid castle steps 3d effect==========================================*/
 /*#region subabout article(mid castle stairs)===============================================================*/
+/*individually margin-ed to stagger the steps*/
 #about section:nth-of-type(2) ul li:nth-of-type(1){margin-left: 18%;}
 #about section:nth-of-type(2) ul li:nth-of-type(2){margin-left: 27%;}
 #about section:nth-of-type(2) ul li:nth-of-type(3){margin-left: 36%;}
@@ -270,6 +280,8 @@ main > .container{
   margin-bottom: 0;
   position: relative;
 }
+/*Join Style Stage...
+altered paragraph to appear as part of preceding paragraph/window*/
 #about section:nth-of-type(2) p:last-of-type{
   background-color: rgb(148, 148, 148);
   color: rgb(118, 113, 113);
@@ -461,7 +473,7 @@ main > .container{
 /*#region asides (entrance banners on posts)=====================================================================================*/
 .profile h4, 
 #styles h2{
-  font-family: 'Pirata One';
+  font-family: 'Pirata One', serif;
   font-size: 20px;
 }
 .profile, 
@@ -598,7 +610,7 @@ Handled differently than small screen top banner because these banners do not sh
     font-size: 16px;
   }
 }
-/*#region even smaller screen @media (header banner switches to vertical display, windows extend to sides of castle)=======*/
+/*#region even smaller screen @media (header banner switches to vertical display, castle windows extend to sides of castle)=======*/
 @media (max-width: 709px){
   header .container > a{
     display: flex;
@@ -609,16 +621,14 @@ Handled differently than small screen top banner because these banners do not sh
     margin-left: 0;
     margin-right: 0;
   }
-  #about section:nth-of-type(2) > p:nth-of-type(1){
-    width: 100%;
-  }
-  #about section:nth-of-type(2) p:nth-of-type(2){
+  #about section:nth-of-type(2) p:nth-of-type(n){
     width: 100%;
   }
   .page-footer .container p:first-of-type{
     width: 50%;
     margin: 1rem auto
   }
+  /*micro adjustments to aside banners to squeeze in more screen space for other elements*/
   .profile .container, 
   #styles .container{
     padding: 0.2rem;
@@ -718,7 +728,7 @@ Handled differently than small screen top banner because these banners do not sh
     padding: 1rem 0;
   }
 }
-/*#endregion even smaller screen @media (header banner switches to vertical display, windows extend to sides of castle)=======*/
+/*#endregion even smaller screen @media (header banner switches to vertical display, castle windows extend to sides of castle)=======*/
 /*#region small tablet screen @media (middle castle stairs become a ladder)===================================================*/
 @media (max-width: 610px){
 /*#region subabout article(mid castle stairs become ladder)===============================================================*/
