@@ -389,7 +389,7 @@ altered paragraph to appear as part of preceding paragraph/window*/
 #contribute section p:first-of-type{
   padding: 5rem;
 }
-/*door surrounding stone*/
+/*stone surrounding door*/
 #contribute section:last-of-type{
   display: flex;
   flex-wrap: wrap;
@@ -573,6 +573,7 @@ Handled differently than small screen top banner because these banners do not sh
 }
 /*#endregion body footer (lawn and path)=====================================================================================*/
 /*#region smaller screen @media (body now covers whole screen)==================================================================*/
+/*lots of micro adjustments to whatever needed it*/
 @media (max-width: 990px) {
   body {
     width: 100%;
@@ -649,6 +650,7 @@ Handled differently than small screen top banner because these banners do not sh
   #styles::before{
     border-width: 5.5rem;
   }
+  /*header gets overhauled, flips to veritcal banner*/
   header{
     text-align: center;
     width: 70%;
@@ -661,6 +663,7 @@ Handled differently than small screen top banner because these banners do not sh
     border-bottom-color: transparent;
     border-top: none;
   }
+  /*header banner tails*/
   header::before{
     border: none;
     border: 35vw solid rgb(216, 2, 2);
@@ -669,6 +672,7 @@ Handled differently than small screen top banner because these banners do not sh
     z-index: -1;
     bottom: -10px;
   }
+  /*header banner post adjustments to accommodate*/
   header::after{
     left: 47.5%;
     height: 122.9%;
@@ -679,6 +683,7 @@ Handled differently than small screen top banner because these banners do not sh
     border: unset;
     position: relative;
   }
+  /*header banner horizontal dowel*/
   header .container::before{
     content: "";
     position: absolute;
@@ -715,6 +720,7 @@ Handled differently than small screen top banner because these banners do not sh
     left: -20px;
     width: 80vw;
   }
+  /*mid castle banner tail effect (triangle to hide background) adjusted*/
   #guidelines p:nth-of-type(3)::after{
     content: "";
     position: absolute;
@@ -726,6 +732,7 @@ Handled differently than small screen top banner because these banners do not sh
     bottom: -1.3rem;
     pointer-events: none;
   }
+  /*review full guidelines link now extends full width*/
   #guidelines section > a:last-of-type{
     width: 100%;
     padding: 1rem 0;
@@ -734,12 +741,12 @@ Handled differently than small screen top banner because these banners do not sh
 /*#endregion even smaller screen @media (header banner switches to vertical display, castle windows extend to sides of castle)=======*/
 /*#region small tablet screen @media (middle castle stairs become a ladder)===================================================*/
 @media (max-width: 610px){
-/*#region subabout article(mid castle stairs become ladder)===============================================================*/
+  /*mid castle stairs now become ladder*/
   #about section:nth-of-type(2) ul li:nth-of-type(n){
     margin-left: auto;
     margin-right: auto;
   }
-  /*#endregion subabout article(mid castle stairs become ladder)===============================================================*/
+  /*two bottom banners now become one banner*/
   #styles::after{
     content: none;
   }
@@ -766,7 +773,6 @@ Handled differently than small screen top banner because these banners do not sh
   }
   #files .container a::before{
     border-right: none;
-    
   }
   #files h3{
     margin: 0 0 0 auto;
