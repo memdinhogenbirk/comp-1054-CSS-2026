@@ -174,7 +174,6 @@ nav ul li{
 }
 nav ul li a{
   font-size: 18px;
-  color: rgb(212, 212, 212);
 }
 /*#endregion subheader nav bar (castle merlons)=============================================================*/
 /*#endregion header (big flag/banner thingy)================================================================*/
@@ -185,6 +184,8 @@ main > .container{
 #about section blockquote{
   margin: 2rem 0;
 }
+/*wanted some windows to appear side by side, 
+some to be full width when on large screen*/
 #about section:first-of-type > p:nth-of-type(3),
 #about section:first-of-type blockquote > p{
   width: 100%;
@@ -192,6 +193,7 @@ main > .container{
   padding: 5rem;
   margin: 0;
 }
+/*and some to not be full width but not be side by side*/
 #about section:nth-of-type(2) > p:nth-of-type(1){
   margin-bottom: 0;
   width: 60%;
@@ -306,6 +308,7 @@ altered paragraph to appear as part of preceding paragraph/window*/
 #guidelines section:first-of-type > a{
   text-shadow: -2px 1px rgb(56, 53, 53);
 }
+/*window preceding mid banner*/
 #guidelines p:first-of-type{
   width: 100%;
   padding: 6rem;
@@ -337,9 +340,6 @@ altered paragraph to appear as part of preceding paragraph/window*/
   border-right: yellow 20px double;
   border-left: yellow 20px double;
 }
-#guidelines p:nth-of-type(2){
-  position: relative;
-}
 /*mid castle banner dowel*/
 #guidelines p:nth-of-type(2)::before{
   content: "";
@@ -347,13 +347,11 @@ altered paragraph to appear as part of preceding paragraph/window*/
   position: absolute;
   top: 0px;
   left: -3rem;
-  width: 34rem;
-  
+  width: 34rem; 
 }
 #guidelines p:nth-of-type(3){
   border-bottom: 20px solid transparent;
   padding-bottom: 15rem;
-  position: relative; 
 }
 /*mid castle banner tails effect*/
 #guidelines p:nth-of-type(3)::after{
@@ -391,6 +389,7 @@ altered paragraph to appear as part of preceding paragraph/window*/
 #contribute section p:first-of-type{
   padding: 5rem;
 }
+/*door surrounding stone*/
 #contribute section:last-of-type{
   display: flex;
   flex-wrap: wrap;
@@ -402,14 +401,17 @@ altered paragraph to appear as part of preceding paragraph/window*/
   background-color: rgb(148, 148, 148);
   border-bottom: none;
 }
+/*door itself*/
 #contribute .container ol{
   list-style-type: upper-roman;
   border: rgb(56, 53, 53) 40px solid;
   border-top: none;
   border-radius: 40% 40% 0 0;
   padding: 5rem 5rem;
-  width: 80%;
-  margin: 0;
+  width: calc(100% - 100px);
+  /*kept seeing calc as an option for units in VScode, figured I'd try and use it for once. Using it here so I can have the front door steps
+  shrink and grow with the door without outrunning it*/
+  margin: 0 auto;
   border-bottom: 40px solid rgb(148, 148, 148);
   background-color: rgb(136, 84, 2);
 }
@@ -450,23 +452,23 @@ altered paragraph to appear as part of preceding paragraph/window*/
   left: 0;
 }
 /*front step widths and depth effect using border*/
-#files h3{
-  width: 62.3%;
-  margin: 0 auto;
+#files h3, #files a{
   background-color: rgb(176, 176, 176);
+}
+/*top step to door*/
+#files h3{
+  width: calc(80% - 120px);/*120px here because door at 100% still has a 10px wide border on its container, so its an extra 20px needed here*/
+  margin: 0 auto;
   color: rgb(212, 212, 212)
 }
 #files .container a:first-of-type{
-  background-color: rgb(176, 176, 176);
-  width: 66.3%;
+  width: calc(80% - 80px);
 }
 #files .container a:nth-of-type(2){
-  background-color: rgb(176, 176, 176);
-  width: 70.3%;
+  width: calc(80% - 40px);
 }
 #files .container a:nth-of-type(3){
-  background-color: rgb(176, 176, 176);
-  width: 74.3%;
+  width: 80%;
 }
 /*#endregion subcontribute, files (entrance steps, footer inside main)========================================================*/
 /*#endregion contribute (third and final article, castle entrance/door)====================================================*/
@@ -581,8 +583,9 @@ Handled differently than small screen top banner because these banners do not sh
   nav ul li{
     width: 15vw;
   }
-  .profile{left: 0rem;}
-  #styles{right: 0rem;}
+  /*squeezing out a bit more space by shoving banners all the way to the side, and also moving them up a bit to hide top step ends*/
+  .profile{left: 0rem; bottom: 22rem;}
+  #styles{right: 0rem; bottom: 22rem;}
   .profile .container, 
   #styles .container{
     height: 24.3rem;
@@ -741,7 +744,7 @@ Handled differently than small screen top banner because these banners do not sh
     content: none;
   }
   .profile{
-    bottom: 40rem;
+    bottom: 32rem;
   }
   .profile::after{
     height: 45rem;
@@ -749,10 +752,13 @@ Handled differently than small screen top banner because these banners do not sh
   #styles{
     left: 0;
     border-top: none;
-    bottom: 23rem;
+    bottom: 15rem;
+  }
+  #styles::before{
+    height: 20rem;
   }
   #styles .container{
-    height: 25rem;
+    height: 20rem;
   }
   #files .container a{
     margin: 1rem 0 0 auto;
@@ -828,6 +834,7 @@ Handled differently than small screen top banner because these banners do not sh
   #files .container a, #files .container h3{
     text-align: right;
     padding-right: .5rem;
+    width: 100%;
   }
   #contribute .container ol{
     list-style: none;
